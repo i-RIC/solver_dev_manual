@@ -5,47 +5,23 @@ Outputting calculation results
 
 Outputs the calculation results to the CGNS file.
 
-Before outputting the calculation results at a specific time, be sure to output
-the time (or iteration count) information as described in :ref:`iriclib_output_time`.
+The calculation result types that iRIClib can output are as follows:
 
-Types of calculation results that can be output with iRIClib are grouped into the followings:
+* One value for each time step
+* Value defined at grid nodes
+* Value defined at grid cells
+* Value defined at particles
+* Value defined at polygon or polydata
 
-* Calculation results having one value for each time step, without reference to grid nodes
-* Calculation results having a value for each grid node
+In case of outputting every types, you have to use the
+functions in :numref:`table_iriclib_output_start_and_end_functions`
+and :numref:`table_iriclib_output_time_functions`.
 
-.. list-table:: Subroutines to use for outputting result value that have one value for each time step
-   :header-rows: 1
+Please refer to :ref:`iriclib_output_result_baseiterative`
+to :ref:`iriclib_output_result_polydata` for detailed procedure to 
+output each types.
 
-   * - Subroutine
-     - Remarks
-   * - cg_iric_write_sol_baseiterative_integer_f
-     - Outputs integer-type calculation results
-   * - cg_iric_write_sol_baseiterative_real_f
-     - Outputs double-precision real-type calculation results
-
-.. list-table:: Subroutines to use for outputting result value that have value at each grid node for each time step
-   :header-rows: 1
-
-   * - Subroutine
-     - Remarks
-   * - cg_iric_write_sol_integer_f
-     - Outputs integer-type calculation results, having a value for each grid node
-   * - cg_iric_write_sol_real_f
-     - Outputs double-precision real-type calculation results, having a value for each grid node
-
-.. list-table:: Subroutines to use for outputting particles as calculation result for each time step
-   :header-rows: 1
-
-   * - Subroutine
-     - Remarks
-   * - cg_iric_write_sol_particle_pos2d_f
-     - Outputs particle positions (two-dimensions)
-   * - cg_iric_write_sol_particle_pos3d_f
-     - Outputs particle positions (three-dimensions)
-   * - cg_iric_write_sol_particle_integer_f
-     - Outputs integer-type calculation results, having a value for each particle
-   * - cg_iric_write_sol_particle_real_f
-     - Outputs double-precision real-type calculation results, having a value for each particle
+.. _table_iriclib_output_start_and_end_functions:
 
 .. list-table:: Subroutines to use before and after outputting calculation result for each timestep
    :header-rows: 1
@@ -63,94 +39,41 @@ Types of calculation results that can be output with iRIClib are grouped into th
    * - cg_iric_flush_f
      - Flush calculation result into CGNS file
 
-:numref:`example_output_calc_result` shows an example of the process to
-output calculation results.
+.. note:: Vector quantities and scalar quantities
 
-.. code-block:: fortran
-   :caption: Example of source code to output calculation results
-   :name: example_output_calc_result
-   :linenos:
+   In iRIClib, the same subroutines are used to output vector quantities and
+   scalar quantities.
+   
+   When outputting vector quantities,
+   output each component with names like \"VelocityX\" and \"VelocityY\".
 
-   program Sample6
-     implicit none
-     include 'cgnslib_f.h'
+   Please note that if you use names whose last character is \"X\", \"Y\", or \"Z\",
+   the value is not loaded properly by GUI, and user can not visualize the value.
+   You can use lower case letters "\x\", \"y\", or \"z\" instead.
 
-     integer:: fin, ier, isize, jsize
-     double precision:: time
-     double precision:: convergence
-     double precision, dimension(:,:), allocatable::grid_x, grid_y
-     double precision, dimension(:,:), allocatable:: velocity_x, velocity_y, depth
-     integer, dimension(:,:), allocatable:: wetflag
-     double precision, dimension(:), allocatable:: particlex, particley
+.. note:: Special names for calculation results
 
-     ! Open CGNS file
-     call cg_open_f('test.cgn', CG_MODE_MODIFY, fin, ier)
-     if (ier /=0) STOP "*** Open error of CGNS file ***"
+   For calculation results, iRIC defines special names, and when you want to output
+   calculation result for certain purposes, you should use those names.
+   Refer to :ref:`special_result_names` for those names.
 
-     ! Initialize iRIClib
-     call cg_iric_init_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
+.. note:: Grid nodes and grid cells
 
-     ! Check the grid size.
-     call cg_iric_gotogridcoord2d_f(isize, jsize, ier)
-     ! Allocate memory for loading the grid.
-     allocate(grid_x(isize,jsize), grid_y(isize,jsize))
-     ! Allocate memory for storing calculation results.
-     allocate(velocity_x(isize,jsize), velocity_y(isize,jsize), depth(isize, jsize), wetflag(isize,jsize))
-     allocate(particlex(10), particley(10))
-     ! Read the grid into memory.
-     call cg_iric_getgridcoord2d_f (grid_x, grid_y, ier)
+   For grid related values, now iRIClib has function to output values defined at
+   both grid nodes and grid cells
 
-     ! Output the initial state information.
-     time = 0
-     convergence = 0.1
-     call cg_iric_write_sol_time_f(time, ier)
-     ! Output the grid.
-     call cg_iric_write_sol_gridcoord2d_f (grid_x, grid_y, ier)
-     ! Output calculation results
-     call cg_iric_write_sol_real_f ('VelocityX', velocity_x, ier)
-     call cg_iric_write_sol_real_f ('VelocityY', velocity_y, ier)
-     call cg_iric_write_sol_real_f ('Depth', depth, ier)
-     call cg_iric_write_sol_integer_f ('Wet', wetflag, ier)
-     call cg_iric_write_sol_baseiterative_real_f ('Convergence', convergence, ier)
-     do
-       time = time + 10.0
-       ! (Perform calculation here. The grid shape also changes.)
-       call iric_check_cancel_f(canceled)
-       if (canceled == 1) exit
-       call iric_check_lock_f('test.cgn', locked)
-       do while (locked == 1)
-         sleep(1)
-         call iric_check_lock_f(condFile, locked)
-       end do
-       call iric_write_sol_start_f(condFile, ier)
-       call cg_iric_write_sol_time_f(time, ier)
-       ! Output the grid.
-       call cg_iric_write_sol_gridcoord2d_f (grid_x, grid_y, ier)
-       ! Output calculation results.
-       call cg_iric_write_sol_real_f ('VelocityX', velocity_x, ier)
-       call cg_iric_write_sol_real_f ('VelocityY', velocity_y, ier)
-       call cg_iric_write_sol_real_f ('Depth', depth, ier)
-       call cg_iric_write_sol_integer_f ('Wet', wetflag, ier)
-       call cg_iric_write_sol_baseiterative_real_f ('Convergence', convergence, ier)
-       call cg_iric_write_sol_particle_pos2d_f(10, particlex, particley, ier)
-       If (time > 1000) exit
-     end do
+   Basically, please select the functions so that you can output the values at the
+   position where the variable is defined in your solver.
 
-     ! Close CGNS file
-     call cg_close_f(fin, ier)
-     stop
-   end program Sample6
+   There is an exception: Please output vector quantities at grid nodes.
+   If you output vector quantities at grid cells, iRIC GUI can not visualize
+   arrows, streamlines or particles for that value.
 
+.. toctree::
+   :maxdepth: 1
 
-In iRIClib, the same subroutines are used to output vector quantity calculation results and
-scalar quantity calculation results. When outputting vector quantity calculation results,
-output each component with names like \"VelocityX\" and \"VelocityY\".
-
-Please note that if you use names whose last character is \"X\", \"Y\", or \"Z\",
-the value is not loaded properly by GUI, and user can not visualize the value.
-You can use lower case letters "\x\", \"y\", or \"z\" instead.
-
-For calculation results, iRIC defines special names, and when you want to output
-calculation result for certain purposes, you should use those names.
-Refer to :ref:`special_result_names` for those names.
+   12_01_output_result_baseiterative
+   12_02_output_result_gridnode
+   12_03_output_result_gridcell
+   12_04_output_result_particle
+   12_05_output_result_polydata
