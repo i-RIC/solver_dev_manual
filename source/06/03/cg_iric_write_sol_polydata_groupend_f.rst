@@ -1,0 +1,17 @@
+cg_iric_write_sol_polydata_groupend_f
+==========================================
+
+-  Finish outputting calculation result defined as polygons or polylines.
+
+Format
+-------
+.. code-block:: fortran
+
+   call cg_iric_write_sol_polydata_groupend_f(ier)
+
+Arguments
+---------
+
+.. csv-table:: Arguments of cg_iric_write_sol_polydata_groupend_f
+  :file: cg_iric_write_sol_polydata_groupend_f_args.csv
+  :header-rows: 1
