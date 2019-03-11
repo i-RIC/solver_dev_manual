@@ -95,6 +95,12 @@ CGNSファイルを開く,cg_open_f,CGNS ファイルを開く,×
 計算結果の出力 (粒子),cg_iric_write_sol_particle_pos3d_f,粒子の位置を出力する (3次元),○
 計算結果の出力 (粒子),cg_iric_write_sol_particle_integer_f,整数の粒子ごとに値を持つ計算結果を出力する,○
 計算結果の出力 (粒子),cg_iric_write_sol_particle_real_f,倍精度実数の粒子ごとに値を持つ計算結果を出力する,○
+計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_groupbegin_f,ポリゴンもしくは折れ線で定義された計算結果の出力を開始する,○
+計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_groupend_f,ポリゴンもしくは折れ線で定義された計算結果の出力を終了する,○
+計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_polygon_f,計算結果としてポリゴンの形状を出力する,○
+計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_polyline_f,計算結果として折れ線の形状を出力する,○
+計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_integer_f,整数のポリゴンもしくは折れ線ごとに値を持つ計算結果を出力する,○
+計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_real_f,倍精度実数のポリゴンもしくは折れ線ごとに値を持つ計算結果を出力する,○
 計算結果の出力の前後に利用する関数,iric_check_cancel_f,ユーザがソルバーの実行をキャンセルしたか確認する,×
 計算結果の出力の前後に利用する関数,iric_check_lock_f,CGNSファイルが GUI によってロックされているか確認する,×
 計算結果の出力の前後に利用する関数,iric_write_sol_start_f,計算結果の出力開始をGUIに通知する,×
