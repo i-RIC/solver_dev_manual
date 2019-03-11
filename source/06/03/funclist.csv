@@ -95,6 +95,12 @@ Outputting calculation results (particles),cg_iric_write_sol_particle_pos2d_f,Ou
 Outputting calculation results (particles),cg_iric_write_sol_particle_pos3d_f,Outputs particle positions (three-dimensions),O
 Outputting calculation results (particles),cg_iric_write_sol_particle_integer_f,"Outputs integer-type calculation results, having a value for each particle",O
 Outputting calculation results (particles),cg_iric_write_sol_particle_real_f,"Outputs double-precision real-type calculation results, having a value for each particle",O
+"Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_groupbegin_f,Start outputting calculation result defined as polygons or polylines,O
+"Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_groupend_f,Finish outputting calculation result defined as polygons or polylines,O
+"Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_polygon_f,Output calculation result defined as polygon,O
+"Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_polyline_f,Output calculation result defined as polyline,O
+"Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_integer_f,"Outputs integer-type calculation results, giving a value for a polygon or polyline",O
+"Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_real_f,"Outputs double-precision real-type calculation results, giving a value for a polygon or polyline",O
 Functions to call befor and after outputting calculation results,iric_check_cancel_f,Checks whether user canceled solver execution,X
 Functions to call befor and after outputting calculation results,iric_check_lock_f,Checks whether the CGNS file is locked by GUI,X
 Functions to call befor and after outputting calculation results,iric_write_sol_start_f,Inform the GUI that the solver started outputting result,X
