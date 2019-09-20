@@ -41,7 +41,7 @@
      double precision:: time
      double precision, dimension(:,:), allocatable::grid_x, grid_y
      integer:: numparticles = 10
-     double precision, dimension(:), allocatable:: particle_x, particle_y, 
+     double precision, dimension(:), allocatable:: particle_x, particle_y
      double precision, dimension(:), allocatable:: velocity_x, velocity_y, temperature
      character(len=20):: condFile
 
