@@ -20,6 +20,8 @@ the process to output value for each time step.
      - Outputs integer-type calculation results
    * - cg_iric_write_sol_baseiterative_real_f
      - Outputs double-precision real-type calculation results
+   * - cg_iric_write_sol_baseiterative_string_f
+     - Outputs string-type calculation results
 
 .. code-block:: fortran
    :caption: Example source code (One value for each time step)
