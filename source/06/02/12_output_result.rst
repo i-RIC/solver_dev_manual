@@ -11,6 +11,7 @@ iRIClib で出力できる計算結果は、大きく以下に分類されます
 * 格子点ごとに値を持つ計算結果
 * 格子セルごとに値を持つ計算結果
 * 粒子の座標ごとに値を持つ計算結果
+* 粒子の座標ごとに値を持つ計算結果 (複数グループ可)
 * ポリゴンもしくは折れ線ごとに値を持つ計算結果
 
 どの種類の計算結果を出力する場合も、 :numref:`table_iriclib_output_start_and_end_functions`
@@ -86,4 +87,5 @@ iRIClib で出力できる計算結果は、大きく以下に分類されます
    12_02_output_result_gridnode
    12_03_output_result_gridcell
    12_04_output_result_particle
-   12_05_output_result_polydata
+   12_05_output_result_particlegroup
+   12_06_output_result_polydata
