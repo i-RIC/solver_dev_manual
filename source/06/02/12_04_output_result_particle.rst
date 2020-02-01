@@ -10,6 +10,13 @@
 出力するプログラムの例は、:numref:`example_output_calc_result_particle`
 を参照してください。
 
+.. note:: ここで示す関数群は現在は非推奨です
+
+   粒子の座標ごとに値を持つ計算結果を出力する場合は、
+   :ref:`iriclib_output_result_particlegroup` に示す関数を使用する
+   ことをおすすめします。そちらに示した関数を使用すれば、複数のグループの
+   粒子を出力でき、グループごとに色の設定や粒子のサイズを変えて可視化することができます。
+
 .. _table_iriclib_output_particle_functions:
 
 .. list-table:: 粒子ごとに値を持つ計算結果の出力に利用する関数
@@ -62,6 +69,7 @@
      ! 計算結果を保持するメモリを確保
      allocate(particle_x(numparticles), particle_y(numparticles))
      allocate(velocity_x(numparticles), velocity_y(numparticles), temperature(numparticles))
+
      ! 格子を読み込む
      call cg_iric_getgridcoord2d_f (grid_x, grid_y, ier)
 
