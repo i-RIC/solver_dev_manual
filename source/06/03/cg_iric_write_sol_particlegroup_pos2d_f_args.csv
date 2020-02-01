@@ -1,0 +1,4 @@
+Variable name,Type,I/O,Description
+x,"double precision",I,x coordinate.
+y,"double precision",I,y coordinate.
+ier,integer,O,Error code. 0 means success.

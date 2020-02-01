@@ -9,6 +9,15 @@ When you output value defined at particles, please use the functions in
 :numref:`example_output_calc_result_particle` shows an example of
 the process to output value defined at grid nodes.
 
+.. note:: These functions are deprecated
+
+   When you want to output value defined at particles, we recommend that
+   you use functions described at
+   :ref:`iriclib_output_result_particlegroup`.
+   Using those new functions, you can output particles with multiple groups,
+   and you can visualize particles with different settings for color and size
+   for each group.
+
 .. _table_iriclib_output_particle_functions:
 
 .. list-table:: Subroutines to use for outputting result defined at particles
@@ -61,6 +70,7 @@ the process to output value defined at grid nodes.
      ! Allocate memory for calculation result
      allocate(particle_x(numparticles), particle_y(numparticles))
      allocate(velocity_x(numparticles), velocity_y(numparticles), temperature(numparticles))
+
      ! Read the grid into memory
      call cg_iric_getgridcoord2d_f (grid_x, grid_y, ier)
 

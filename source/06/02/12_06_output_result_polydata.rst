@@ -33,9 +33,9 @@ the process to output value defined at polygons or polylines.
    * - Subroutine
      - Remarks
    * - cg_iric_write_sol_polydata_groupbegin_f
-     - Start outputting calculation result defined as polygons or polylines.
+     - Start outputting calculation result defined at polygons or polylines.
    * - cg_iric_write_sol_polydata_groupend_f
-     - End outputting calculation result defined as polygons or polylines.
+     - Finish outputting calculation result defined at polygons or polylines.
    * - cg_iric_write_sol_polydata_polygon_f
      - Output calculation result defined as polygon
    * - cg_iric_write_sol_polydata_polyline_f
