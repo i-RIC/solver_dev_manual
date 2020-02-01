@@ -21,7 +21,8 @@
      - 整数の計算結果を出力する
    * - cg_iric_write_sol_baseiterative_real_f
      - 倍精度実数の計算結果を出力する
-
+   * - cg_iric_write_sol_baseiterative_string_f
+     - 文字列の計算結果を出力する
 
 .. code-block:: fortran
    :caption: サンプルプログラム (1つのタイムステップで1つ値を持つ計算結果)

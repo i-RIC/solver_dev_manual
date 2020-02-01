@@ -95,6 +95,7 @@
    03/cg_iric_write_sol_gridcoord3d_f
    03/cg_iric_write_sol_baseiterative_integer_f
    03/cg_iric_write_sol_baseiterative_real_f
+   03/cg_iric_write_sol_baseiterative_string_f
    03/cg_iric_write_sol_integer_f
    03/cg_iric_write_sol_real_f
    03/cg_iric_write_sol_cell_integer_f
