@@ -103,6 +103,12 @@ Reference
    03/cg_iric_write_sol_particle_pos3d_f
    03/cg_iric_write_sol_particle_integer_f
    03/cg_iric_write_sol_particle_real_f
+   03/cg_iric_write_sol_particlegroup_groupbegin_f
+   03/cg_iric_write_sol_particlegroup_groupend_f
+   03/cg_iric_write_sol_particlegroup_pos2d_f
+   03/cg_iric_write_sol_particlegroup_pos3d_f
+   03/cg_iric_write_sol_particlegroup_integer_f
+   03/cg_iric_write_sol_particlegroup_real_f
    03/cg_iric_write_sol_polydata_groupbegin_f
    03/cg_iric_write_sol_polydata_groupend_f
    03/cg_iric_write_sol_polydata_polygon_f

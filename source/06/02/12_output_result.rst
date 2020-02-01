@@ -11,6 +11,7 @@ The calculation result types that iRIClib can output are as follows:
 * Value defined at grid nodes
 * Value defined at grid cells
 * Value defined at particles
+* Value defined at particles (groups supported)
 * Value defined at polygon or polydata
 
 In case of outputting every types, you have to use the
@@ -76,4 +77,5 @@ output each types.
    12_02_output_result_gridnode
    12_03_output_result_gridcell
    12_04_output_result_particle
-   12_05_output_result_polydata
+   12_05_output_result_particlegroup
+   12_06_output_result_polydata

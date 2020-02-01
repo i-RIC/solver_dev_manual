@@ -1,0 +1,3 @@
+Variable name,Type,I/O,Description
+name,character*,I,Name of the group to be output.
+ier,integer,O,Error code. 0 means success.

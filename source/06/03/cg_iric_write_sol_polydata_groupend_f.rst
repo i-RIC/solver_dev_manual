@@ -1,7 +1,7 @@
 cg_iric_write_sol_polydata_groupend_f
 ==========================================
 
--  Finish outputting calculation result defined as polygons or polylines.
+-  Finish outputting calculation result defined at polygons or polylines.
 
 Format
 -------
