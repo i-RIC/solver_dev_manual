@@ -122,6 +122,7 @@ CGNSファイルを開く,cg_open_f,CGNS ファイルを開く,×
 既存の計算結果の読み込み,cg_iric_read_sol_iteration_f,計算結果のループ回数の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_baseiterative_integer_f,整数の計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_baseiterative_real_f,倍精度実数の計算結果の値を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_baseiterative_string_f,文字列の計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_gridcoord2d_f,計算結果の2次元構造格子を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_gridcoord3d_f,計算結果の3次元構造格子を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_integer_f,整数の格子点ごとに値を持つ計算結果の値を取得する,○
