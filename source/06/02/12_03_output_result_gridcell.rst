@@ -63,8 +63,6 @@ the process to output value defined at grid cells.
      convergence = 0.1
      call cg_iric_write_sol_time_f(time, ier)
      ! Output calculation results
-     call cg_iric_write_sol_real_f('VelocityX', velocity_x, ier)
-     call cg_iric_write_sol_real_f('VelocityY', velocity_y, ier)
      call cg_iric_write_sol_cell_real_f('Depth', depth, ier)
      call cg_iric_write_sol_cell_integer_f('Wet', wetflag, ier)
      do
@@ -78,8 +76,6 @@ the process to output value defined at grid cells.
        ! Output calculation results
        call iric_write_sol_start_f(condFile, ier)
        call cg_iric_write_sol_time_f(time, ier)
-       call cg_iric_write_sol_real_f('VelocityX', velocity_x, ier)
-       call cg_iric_write_sol_real_f('VelocityY', velocity_y, ier)
        call cg_iric_write_sol_cell_real_f('Depth', depth, ier)
        call cg_iric_write_sol_cell_integer_f('Wet', wetflag, ier)
        call cg_iric_flush_f(condFile, fin, ier)
