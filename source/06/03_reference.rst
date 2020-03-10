@@ -130,6 +130,7 @@ Reference
    03/cg_iric_read_sol_iteration_f
    03/cg_iric_read_sol_baseiterative_integer_f
    03/cg_iric_read_sol_baseiterative_real_f
+   03/cg_iric_read_sol_baseiterative_string_f
    03/cg_iric_read_sol_gridcoord2d_f
    03/cg_iric_read_sol_gridcoord3d_f
    03/cg_iric_read_sol_integer_f
