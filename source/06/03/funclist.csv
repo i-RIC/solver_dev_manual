@@ -87,14 +87,25 @@ CGNSファイルを開く,cg_open_f,CGNS ファイルを開く,×
 計算結果の出力,cg_iric_write_sol_gridcoord3d_f,3次元構造格子を出力する,○
 計算結果の出力,cg_iric_write_sol_baseiterative_integer_f,整数の計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_baseiterative_real_f,倍精度実数の計算結果を出力する,○
+計算結果の出力,cg_iric_write_sol_baseiterative_string_f,文字列の計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_integer_f,整数の格子点ごとに値を持つ計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_real_f,倍精度実数の格子点ごとに値を持つ計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_cell_integer_f,整数の格子セルごとに値を持つ計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_cell_real_f,倍精度実数の格子セルごとに値を持つ計算結果を出力する,○
+計算結果の出力,cg_iric_write_sol_iface_integer_f,整数のI方向格子エッジごとに値を持つ計算結果を出力する,○
+計算結果の出力,cg_iric_write_sol_iface_real_f,倍精度実数のI方向格子エッジごとに値を持つ計算結果を出力する,○
+計算結果の出力,cg_iric_write_sol_jface_integer_f,整数のJ方向格子エッジごとに値を持つ計算結果を出力する,○
+計算結果の出力,cg_iric_write_sol_jface_real_f,倍精度実数のJ方向格子エッジごとに値を持つ計算結果を出力する,○
 計算結果の出力 (粒子),cg_iric_write_sol_particle_pos2d_f,粒子の位置を出力する (2次元),○
 計算結果の出力 (粒子),cg_iric_write_sol_particle_pos3d_f,粒子の位置を出力する (3次元),○
 計算結果の出力 (粒子),cg_iric_write_sol_particle_integer_f,整数の粒子ごとに値を持つ計算結果を出力する,○
 計算結果の出力 (粒子),cg_iric_write_sol_particle_real_f,倍精度実数の粒子ごとに値を持つ計算結果を出力する,○
+計算結果の出力 (粒子),cg_iric_write_sol_particlegroup_groupbegin_f,粒子で定義された計算結果の出力を開始する,
+計算結果の出力 (粒子),cg_iric_write_sol_particlegroup_groupend_f,粒子で定義された計算結果の出力を終了する,
+計算結果の出力 (粒子),cg_iric_write_sol_particlegroup_pos2d_f,粒子の位置を出力する (2次元),
+計算結果の出力 (粒子),cg_iric_write_sol_particlegroup_pos3d_f,粒子の位置を出力する (3次元),
+計算結果の出力 (粒子),cg_iric_write_sol_particlegroup_integer_f,整数の粒子ごとに値を持つ計算結果を出力する,
+計算結果の出力 (粒子),cg_iric_write_sol_particlegroup_real_f,倍精度実数の粒子ごとに値を持つ計算結果を出力する,
 計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_groupbegin_f,ポリゴンもしくは折れ線で定義された計算結果の出力を開始する,○
 計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_groupend_f,ポリゴンもしくは折れ線で定義された計算結果の出力を終了する,○
 計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_polygon_f,計算結果としてポリゴンの形状を出力する,○
@@ -117,5 +128,9 @@ CGNSファイルを開く,cg_open_f,CGNS ファイルを開く,×
 既存の計算結果の読み込み,cg_iric_read_sol_real_f,倍精度実数の格子点ごとに値を持つ計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_cell_integer_f,整数の格子セルごとに値を持つ計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_cell_real_f,倍精度実数の格子セルごとに値を持つ計算結果の値を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_iface_integer_f,整数のI方向格子エッジごとに値を持つ計算結果の値を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_iface_real_f,倍精度実数のI方向格子エッジごとに値を持つ計算結果の値を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_jface_integer_f,整数のJ方向格子エッジごとに値を持つ計算結果の値を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_jface_real_f,倍精度実数のJ方向格子エッジごとに値を持つ計算結果の値を取得する,○
 エラーコードの出力,cg_iric_write_errorcode_f,エラーコードを出力する,○
 CGNSファイルを閉じる,cg_close_f,CGNS ファイルを閉じる,×

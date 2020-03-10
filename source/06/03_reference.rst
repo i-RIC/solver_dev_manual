@@ -100,6 +100,10 @@
    03/cg_iric_write_sol_real_f
    03/cg_iric_write_sol_cell_integer_f
    03/cg_iric_write_sol_cell_real_f
+   03/cg_iric_write_sol_iface_integer_f
+   03/cg_iric_write_sol_iface_real_f
+   03/cg_iric_write_sol_jface_integer_f
+   03/cg_iric_write_sol_jface_real_f
    03/cg_iric_write_sol_particle_pos2d_f
    03/cg_iric_write_sol_particle_pos3d_f
    03/cg_iric_write_sol_particle_integer_f
@@ -132,5 +136,9 @@
    03/cg_iric_read_sol_real_f
    03/cg_iric_read_sol_cell_integer_f
    03/cg_iric_read_sol_cell_real_f
+   03/cg_iric_read_sol_iface_integer_f
+   03/cg_iric_read_sol_iface_real_f
+   03/cg_iric_read_sol_jface_integer_f
+   03/cg_iric_read_sol_jface_real_f
    03/cg_iric_write_errorcode_f
    03/cg_close_f
