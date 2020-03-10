@@ -41,6 +41,18 @@ output each types.
    * - cg_iric_flush_f
      - Flush calculation result into CGNS file
 
+.. _table_iriclib_output_time_functions:
+
+.. list-table:: Subroutines to output time and iteration count
+   :header-rows: 1
+
+   * - Subroutine
+     - Remarks
+   * - cg_iric_write_sol_time_f
+     - Outputs time
+   * - cg_iric_write_sol_iteration_f
+     - Outputs iteration count
+
 .. note:: Vector quantities and scalar quantities
 
    In iRIClib, the same subroutines are used to output vector quantities and
