@@ -10,6 +10,7 @@ The calculation result types that iRIClib can output are as follows:
 * One value for each time step
 * Value defined at grid nodes
 * Value defined at grid cells
+* Value defined at grid edges
 * Value defined at particles
 * Value defined at particles (groups supported)
 * Value defined at polygon or polydata
@@ -58,10 +59,10 @@ output each types.
    calculation result for certain purposes, you should use those names.
    Refer to :ref:`special_result_names` for those names.
 
-.. note:: Grid nodes and grid cells
+.. note:: Grid nodes, grid cells, and grid edges
 
    For grid related values, now iRIClib has function to output values defined at
-   both grid nodes and grid cells
+   grid nodes, grid cells and grid edges.
 
    Basically, please select the functions so that you can output the values at the
    position where the variable is defined in your solver.
@@ -76,6 +77,7 @@ output each types.
    12_01_output_result_baseiterative
    12_02_output_result_gridnode
    12_03_output_result_gridcell
-   12_04_output_result_particle
-   12_05_output_result_particlegroup
-   12_06_output_result_polydata
+   12_04_output_result_gridedge
+   12_05_output_result_particle
+   12_06_output_result_particlegroup
+   12_07_output_result_polydata
