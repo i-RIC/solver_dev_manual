@@ -122,6 +122,7 @@ Reading calculation results,cg_iric_read_sol_time_f,Reads the time value,O
 Reading calculation results,cg_iric_read_sol_iteration_f,Reads the loop iteration value,O
 Reading calculation results,cg_iric_read_sol_baseiterative_integer_f,Reads the integer-type calculation result value,O
 Reading calculation results,cg_iric_read_sol_baseiterative_real_f,Reads the double-precision real-type calculation result value,O
+Reading calculation results,cg_iric_read_sol_baseiterative_string_f,Reads the string-type calculation result value,O
 Reading calculation results,cg_iric_read_sol_gridcoord2d_f,Reads the 2D structured grid (for moving grid calculation),O
 Reading calculation results,cg_iric_read_sol_gridcoord3d_f,Reads the 3D structured grid (for moving grid calculation),O
 Reading calculation results,cg_iric_read_sol_integer_f,"Reads the integer-type calculation result, having a value for each grid node",O
