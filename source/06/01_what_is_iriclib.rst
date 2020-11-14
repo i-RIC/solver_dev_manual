@@ -22,6 +22,72 @@ iRIClibで用意された関数を利用することで簡単に記述できま�
 
 この文書では、iRIClibを構成する関数群と利用例及びコンパイル方法について説明します。
 
+利用可能な言語
+==============
+
+iRIClib は、以下の言語から利用することができます。
+
+* FORTRAN
+* C/C++
+* Python
+
+マニュアルでは、FORTRAN から利用する場合の例を主に記載しています。
+
+ここでは、FORTRAN, C/C++, Python から iRIClib を利用する方法の概要について
+説明します。
+
+なお、関数を呼び出す際の引数などは、言語によって異なります。言語ごとの関数の呼び出し方法については、
+:ref:`iriclib_reference` の各関数の解説を参照してください。
+
+FORTRAN
+---------------
+
+:numref:`iriclib_init_example_fortran` に示すように、ヘッダファイルを読み込んだ上で、
+iRIClib の関数を呼び出します。
+
+.. _iriclib_init_example_fortran:
+
+.. code-block:: fortran
+   :caption: FORTRAN から iRIClibを利用するための記述例
+   :linenos:
+
+   include 'iriclib_f.h'
+
+   call cg_iric_init_f(fid, ier)
+
+C/C++
+------------
+
+:numref:`iriclib_init_example_c` に示すように、ヘッダファイルを読み込んだ上で、
+iRIClib の関数を呼び出します。
+
+.. _iriclib_init_example_c:
+
+.. code-block:: c
+   :caption: C/C++ から iRIClibを利用するための記述例
+   :linenos:
+
+   #include "iriclib.h"
+
+   // (中略)
+   ier = cg_iric_init(fid);
+
+Python
+------------
+
+:numref:`iriclib_init_example_python` に示すように、iric モジュールから
+関数を読み込んだ上で、iRIClib の関数を呼び出します。
+
+.. _iriclib_init_example_python:
+
+.. code-block:: python
+   :caption: Python から iRIClibを利用するための記述例
+   :linenos:
+
+   from iric import *
+
+   cg_iric_init(fid)
+
 この章の読み方
 ===============
 
