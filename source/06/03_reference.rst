@@ -3,6 +3,45 @@
 リファレンス
 ============
 
+リファレンスでは、各関数の機能、呼び出す際の形式、引数について解説します。
+
+リファレンスの各関数のページでは、引数の型は FORTRAN の場合について解説しています。
+C/C++, Python から呼び出す際の引数の型については、:numref:`ref_arg_types` を参照して
+読み替えてください。
+
+Python では、エラーコードを格納する ier は出力されず、エラーが発生した場合は
+例外が発生します。エラー処理を行う場合は、try, except を利用してください。
+
+.. _ref_arg_types:
+
+.. list-table:: 引数の型の対応関係
+   :header-rows: 1
+
+   * - FORTRAN
+     - C/C++
+     - Python
+   * - integer
+     - int (出力の場合 int*)
+     - int
+   * - double precision
+     - double (出力の場合 double*)
+     - float
+   * - real
+     - float (出力の場合 float*)
+     - (なし)
+   * - character(*)
+     - char*
+     - str
+   * - integer, dimension(:), allocatable
+     - int*
+     - numpy.ndarray(dtype=int32)
+   * - double precision, dimension(:), allocatable
+     - double*
+     - numpy.ndarray(dtype=float64)
+   * - real, dimension(:), allocatable
+     - float*
+     - (なし)
+
 .. toctree::
    :maxdepth: 1
 
