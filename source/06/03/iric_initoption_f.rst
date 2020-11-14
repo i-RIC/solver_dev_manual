@@ -3,11 +3,23 @@ iric_initoption_f
 
 ソルバーのオプションを指定する。
 
-形式
-----
+形式 (FORTRAN)
+---------------
 .. code-block:: fortran
 
    call iric_initoption_f(optionval, ier)
+
+形式 (C/C++)
+---------------
+.. code-block:: c
+
+   ier = iRIC_InitOption(optionval);
+
+形式 (Python)
+---------------
+.. code-block:: python
+
+   iRIC_InitOption(optionval)
 
 引数
 ----
