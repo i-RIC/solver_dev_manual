@@ -3,11 +3,22 @@ cg_iric_read_geo_filename_f
 
 CGNSファイルから地形データのファイル名と種類を読み込みます。
 
-形式
-----
+形式 (FORTRAN)
+---------------
 .. code-block:: fortran
 
    call cg_iric_read_geo_filename_f(name, geoid, geofilename, geotype, ier)
+
+形式 (C/C++)
+---------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_Geo_Filename(name, geoid, geofilename, &geotype);
+
+形式 (Python)
+---------------
+
+Python にはこの関数は存在しない
 
 引数
 ----

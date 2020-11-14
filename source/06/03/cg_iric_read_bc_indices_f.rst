@@ -3,11 +3,23 @@ cg_iric_read_bc_indices_f
 
 境界条件が設定された要素 (格子点もしくはセル)
 
-形式
-----
+形式 (FORTRAN)
+---------------
 .. code-block:: fortran
 
    call cg_iric_read_bc_indices_f(type, num, indices, ier)
+
+形式 (C/C++)
+---------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_BC_Indices(type, num, indices);
+
+形式 (Python)
+---------------
+.. code-block:: python
+
+   indices = cg_iRIC_Read_BC_Indices(type, num)
 
 引数
 ----

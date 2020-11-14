@@ -3,11 +3,23 @@ cg_iric_write_grid_integer_cell_f
 
 構造格子のセルで定義された整数の属性を出力する。
 
-形式
-----
+形式 (FORTRAN)
+---------------
 .. code-block:: fortran
 
    call cg_iric_write_grid_integer_cell_f(label, values, ier)
+
+形式 (C/C++)
+---------------
+.. code-block:: c
+
+   ier = cg_iRIC_Write_Grid_Integer_Cell(label, values);
+
+形式 (Python)
+---------------
+.. code-block:: python
+
+   cg_iRIC_Write_Grid_Integer_Cell(label, values)
 
 引数
 ----

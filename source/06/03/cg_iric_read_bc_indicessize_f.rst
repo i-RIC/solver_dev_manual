@@ -3,11 +3,22 @@ cg_iric_read_bc_indicessize_f
 
 境界条件が設定された要素 (格子点もしくはセル) の数を取得する。
 
-形式
-----
+形式 (FORTRAN)
+---------------
 .. code-block:: fortran
 
    call cg_iric_read_bc_indicessize_f(type, num, size, ier)
+
+形式 (C/C++)
+---------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_BC_IndicesSize(type, num, &size);
+
+形式 (Python)
+---------------
+
+Python にはこの関数は存在しない
 
 引数
 ----
