@@ -3,12 +3,23 @@ cg_iric_flush_f
 
 -  Flush calculation result into CGNS file
 
-Format
-------
-
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_flush_f(filename, fin, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Flush(filename, fin);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   fin = cg_iRIC_Flush(filename, fin)
 
 Arguments
 ---------

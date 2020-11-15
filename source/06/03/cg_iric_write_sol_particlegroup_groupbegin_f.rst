@@ -3,11 +3,23 @@ cg_iric_write_sol_particlegroup_groupbegin_f
 
 -  Start outputting calculation result defined at particles
 
-Format
--------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_write_sol_particlegroup_groupbegin_f(name, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Write_Sol_ParticleGroup_GroupBegin(name);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   cg_iRIC_Write_Sol_ParticleGroup_GroupBegin(name)
 
 Arguments
 ---------

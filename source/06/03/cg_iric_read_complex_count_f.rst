@@ -3,11 +3,23 @@ cg_iric_read_complex_count_f
 
 -  Reads the number of groups of complex type grid attribute
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_read_complex_count_f(type, num, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_Complex_Count(type, &num);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   num = cg_iRIC_Read_Complex_Count(type)
 
 Arguments
 ---------

@@ -3,11 +3,22 @@ iric_geo_polygon_read_realvalue_f
 
 -  Reads the value of polygon datas double precision real
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call iric_geo_polygon_read_realvalue_f(pid, realval, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = iRIC_Geo_Polygon_Read_RealValue(pid, &realval);
+
+Format (Python)
+----------------
+
+This function does not exists for Python.
 
 Arguments
 ---------
@@ -15,4 +26,3 @@ Arguments
 .. csv-table:: Arguments of iric_geo_polygon_read_realvalue_f
    :file: iric_geo_polygon_read_realvalue_f_args.csv
    :header-rows: 1
-
