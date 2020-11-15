@@ -3,11 +3,23 @@ cg_iric_read_string_f
 
 -  Reads the value of a string-type variable from the CGNS file.
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_read_string_f(label, strvalue, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_String(label, strvalue);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   strvalue = cg_iRIC_Read_String(label)
 
 Arguments
 ---------

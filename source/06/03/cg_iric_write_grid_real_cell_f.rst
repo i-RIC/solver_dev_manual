@@ -3,11 +3,23 @@ cg_iric_write_grid_real_cell_f
 
 -  Outputs grid attribute values defined at grid cells with real number value.
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_read_grid_real_cell_f(label, values, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Write_Grid_Real_Cell(label, values);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   cg_iRIC_Write_Grid_Real_Cell(label, values)
 
 Arguments
 ---------

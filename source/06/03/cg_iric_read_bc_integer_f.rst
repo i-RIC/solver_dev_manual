@@ -3,11 +3,23 @@ cg_iric_read_bc_integer_f
 
 -  Reads the value of a string-type variable from the CGNS file.
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_read_integer_f(type, num, label, intvalue, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_BC_Integer(type, num, name, &value);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   value = cg_iRIC_Read_BC_Integer(type, num, name)
 
 Arguments
 ---------

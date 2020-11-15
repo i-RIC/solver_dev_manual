@@ -3,6 +3,44 @@
 Reference
 ============
 
+In this section, functions, formats, arguments of each function is explained.
+
+In each page for functions, the data type of arguments are described for FORTRAN.
+For data type of arguments in C/C++ and Python, please refer to :numref:`ref_arg_types`.
+
+Please note that in Python, ier (that stores the error code) is not output, and exception
+is thrown instead, if error occurs. To impelement error handling, please use try-except expression.
+
+.. _ref_arg_types:
+
+.. list-table:: Relathionship between argument data type
+   :header-rows: 1
+
+   * - FORTRAN
+     - C/C++
+     - Python
+   * - integer
+     - int (int* for output)
+     - int
+   * - double precision
+     - double (double* for output)
+     - float
+   * - real
+     - float (float* for output)
+     - --
+   * - character(*)
+     - char*
+     - str
+   * - integer, dimension(:), allocatable
+     - int*
+     - numpy.ndarray(dtype=int32)
+   * - double precision, dimension(:), allocatable
+     - double*
+     - numpy.ndarray(dtype=float64)
+   * - real, dimension(:), allocatable
+     - float*
+     - --
+
 .. toctree::
    :maxdepth: 1
 
@@ -47,7 +85,7 @@ Reference
    03/cg_iric_read_grid_functional_real_node_f
    03/cg_iric_read_grid_functional_integer_cell_f
    03/cg_iric_read_grid_functional_real_cell_f
-   03/cg_iric_bc_count_f
+   03/cg_iric_read_bc_count_f
    03/cg_iric_read_bc_indicessize_f
    03/cg_iric_read_bc_indices_f
    03/cg_iric_read_bc_integer_f

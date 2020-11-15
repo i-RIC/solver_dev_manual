@@ -3,11 +3,22 @@ iric_geo_polygon_read_integervalue_f
 
 -  Reads the value of polygon data as integer
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call iric_geo_polygon_read_integervalue_f(pid, intval, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = iRIC_Geo_Polygon_Read_IntegerValue(pid, &intval);
+
+Format (Python)
+----------------
+
+This function does not exists for Python.
 
 Arguments
 ---------
@@ -15,4 +26,3 @@ Arguments
 .. csv-table:: Arguments of iric_geo_polygon_read_integervalue_f
    :file: iric_geo_polygon_read_integervalue_f_args.csv
    :header-rows: 1
-

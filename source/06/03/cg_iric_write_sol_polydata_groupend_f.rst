@@ -3,11 +3,23 @@ cg_iric_write_sol_polydata_groupend_f
 
 -  Finish outputting calculation result defined at polygons or polylines.
 
-Format
--------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_write_sol_polydata_groupend_f(ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Write_Sol_PolyData_GroupEnd();
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   cg_iRIC_Write_Sol_PolyData_GroupEnd()
 
 Arguments
 ---------

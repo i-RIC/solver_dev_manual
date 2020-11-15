@@ -3,11 +3,23 @@ cg_iric_write_sol_cell_real_f
 
 -  Outputs double-precision real-type calculation results, having a value for each grid cell.
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_write_sol_cell_real_f(label, val, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Write_Sol_Cell_Real(label, val);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   cg_iRIC_Write_Sol_Cell_Real(label, val)
 
 Arguments
 ---------

@@ -3,11 +3,23 @@ cg_iric_read_bc_real_f
 
 -  Reads the value of a double-precision real-type variable from the
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_read_bc_real_f(type, num, label, realvalue, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_BC_Real(type, num, name, &value);
+
+Format (Python)
+----------------
+.. code-block:: python
+
+   value = cg_iRIC_Read_BC_Real(type, num, name)
 
 Arguments
 ---------

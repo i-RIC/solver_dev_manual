@@ -3,11 +3,22 @@ cg_iric_read_geo_filename_f
 
 -  Reads the file name and data type of geographic data
 
-Format
-------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_read_geo_filename_f(name, geoid, geofilename, geotype, ier)
+
+Format (C/C++)
+----------------
+.. code-block:: c
+
+   ier = cg_iRIC_Read_Geo_Filename(name, geoid, geofilename, &geotype);
+
+Format (Python)
+----------------
+
+This function does not exists for Python.
 
 Arguments
 ---------
