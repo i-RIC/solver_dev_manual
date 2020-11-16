@@ -1,3 +1,5 @@
 名前,必須,説明
 Enumeration,,"値を選択肢からのみ選べるようにしたい場合に指定する。valueType が integer, real の場合のみ指定できる。"
 Condition,,この条件が、有効になる時の条件を指定する。
+Parameter,,関数の横軸にする値。valueType が functional の場合のみ指定できる。
+Value,,関数の縦軸にする値。valueType が functional の場合のみ指定できる。
