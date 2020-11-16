@@ -1,3 +1,4 @@
 名前,値,必須,説明
 valueType,下の表を参照,○,値の種類
 default,文字列,,デフォルト値
+noSort,true もしくは false,,テーブルを Param の値でソートしたくない場合は true を指定
