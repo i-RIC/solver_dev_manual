@@ -1,3 +1,4 @@
 Name,Value,Required,Description
 valueType,Refer to the table below,Yes,Value type
 default,String,,Default value
+noSort,true or false,,When value "true" is specified, the table on the dialog is not sorted by Param value.
