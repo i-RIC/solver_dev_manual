@@ -5,5 +5,6 @@ name,String,,Identification name (in alphanumeric characters only). It is requir
 axis,Refer to table below,,Specify on which side to show Y-axis.
 axislog,true or false,,true when you want to make the vertical axis log
 axisreverse,true or false,,true when you want to reverse the vertical axis
+span,true or false,,true when you want to define values at spans
 step,true or false,,true when you want to show the chart as bar chart
 hide,true or false,,true when you want to hide the data from chart
