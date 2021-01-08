@@ -6,6 +6,7 @@ Steps of developing a solver
 .. toctree::
    :maxdepth: 2
 
+   02/00_preparing
    02/01_abstract
    02/02_folder_solverdef
    02/03_solver
