@@ -8,3 +8,5 @@ Integer (Choice),Select integer value from choices.,"Specify \\""Integer\\"" for
 Real number,Input arbitrary real number value.,"Specify \\""real\\"" for valueType"
 Functional,"Input pairs of (X, Y) values.","Specify \\""functional\\"" for valueType and define variable and value with a Parameter element and a Value element."
 Functional (with multiple values),"Input trinity of (X, Y1, Y2) values.","Specify \\""functional\\"" for valueType and define one Parameter element and two Value elements."
+CGNS file name,Input CGNS file name for reading. Users can select only files that already e3xists.,"Specify \\""cgns_filename\\"" for valueType"
+Calculation result in CGNS file,Select the name of calculatioin result,Specify \\""result_gridNodeReal\\"" etc. for valueType"
