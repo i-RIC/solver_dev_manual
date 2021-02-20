@@ -2,7 +2,17 @@ Value,Meaning
 integer,Integer
 real,Real number
 string,String
+functional,Functional type
 filename,File name
 filename_all,filename; even a file that currently does not exist can be specified
 foldername,Folder name
-functional,Functional type
+result_gridNodeInteger,Select integer value calculation result defined at grid nodes
+result_gridNodeReal,Select real value calculation result defined at grid nodes
+result_gridCellInteger,Select integer value calculation result defined at grid cells
+result_gridCellReal,Select real value calculation result defined at grid cells
+result_gridEdgeIInteger,Select integer value calculation result defined at I-direction edges
+result_gridEdgeIReal,Select real value calculation result defined at I-direction edges
+result_gridEdgeJInteger,Select integer value calculation result defined at J-direction edges
+result_gridEdgeJReal,Select real value calculation result defined at J-direction edges
+result_baseIterativeInteger,Select integer value calculation result defined globally
+result_baseIterativeReal,Select real value calculation result defined globally

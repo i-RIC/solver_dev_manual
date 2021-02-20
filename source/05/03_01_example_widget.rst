@@ -52,3 +52,4 @@ show the sample codes for loading, so please refer to :ref:`how_to_dev_solver`,
    03_01_07_example_real
    03_01_08_example_func
    03_01_09_example_func_multi
+   03_01_10_example_cgns

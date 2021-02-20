@@ -19,10 +19,10 @@ Functional (with multiple values)
 .. figure:: images/widget_example_func_multi.png
    :width: 350pt
 
-   Widget example of a functional (with multiple values) type condition (for calculation conditions and grid generating conditions)
+   Widget example of a functional (with multiple values) type condition
 
 .. code-block:: fortran
-   :caption: Code example to load a functional (with multiple values) type condition
+   :caption: Code example to load a functional (with multiple values) type condition (for calculation conditions and grid generating conditions)
    :name: widget_example_func_multi_load_calccond
    :linenos:
 
