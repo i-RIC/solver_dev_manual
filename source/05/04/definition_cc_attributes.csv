@@ -2,3 +2,4 @@
 valueType,下の表を参照,○,値の種類
 default,文字列,,デフォルト値
 noSort,true もしくは false,,テーブルを Param の値でソートしたくない場合は true を指定
+cgnsFile,文字列,,参照先のCGNSファイルの名前

@@ -8,3 +8,5 @@
 実数,任意の実数値を入力。,"valueType に ""real"" を指定"
 関数型,"(X, Y) の組を複数入力。","valueType に ""functional"" を指定し、Parameter 要素、 Value 要素で変数と値を定義"
 関数型 (複数の値),"(X, Y1, Y2) の組を複数入力。","valueType に ""functional"" を指定し、Parameter 要素を1つと Value 要素を2つ定義"
+CGNSファイル名,読み込み用のCGNSファイル名を入力。既に存在するファイルしか選択できない。,"valueType に ""cgns_filename"" を指定"
+CGNSファイル内の計算結果,計算結果の名前を選択,"valueType に ""result_gridNodeReal"" などを指定"

@@ -27,7 +27,6 @@
 
    call cg_iric_read_string_f("sampleitem", sampleitem, ier)
 
-
 .. code-block:: fortran
    :caption: 文字列の条件を読み込むための処理の記述例 (境界条件)
    :name: widget_example_string_load_bcond
