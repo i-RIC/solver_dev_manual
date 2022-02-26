@@ -1,4 +1,5 @@
 変数名,型,I/O,内容
+fid,integer,I,ファイルID
 step,integer,I,ステップ数
 label,character(*),I,名前
 val,integer,O,値

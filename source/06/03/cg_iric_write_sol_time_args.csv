@@ -1,3 +1,4 @@
 変数名,型,I/O,内容
+fid,integer,I,ファイルID
 time,double precision,I,時刻
 ier,integer,O,エラーコード。0なら成功
