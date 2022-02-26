@@ -7,19 +7,19 @@ CGNS ファイルを閉じる。
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_close(fid, fid, ier)
+   call cg_iric_close(fid, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Close(fid, fid);
+   ier = cg_iRIC_Close(fid);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Close(fid, fid)
+   cg_iRIC_Close(fid)
 
 引数
 ----

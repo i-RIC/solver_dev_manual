@@ -7,19 +7,19 @@ CGNS ファイルを開く。
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_open(fid, filename, mode, fid, ier)
+   call cg_iric_open(filename, mode, fid, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Open(fid, filename, mode, fid);
+   ier = cg_iRIC_Open(filename, mode, fid);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   fid = cg_iRIC_Open(fid, filename, mode)
+   fid = cg_iRIC_Open(filename, mode)
 
 引数
 ----
