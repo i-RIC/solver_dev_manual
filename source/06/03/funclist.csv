@@ -9,9 +9,9 @@ CGNSファイルを開く,cg_open,CGNS ファイルを開く,×
 計算条件、格子生成条件の読み込み,cg_iric_read_functional,倍精度実数の関数型変数の値を取得する,○
 計算条件、格子生成条件の読み込み,cg_iric_read_functional_realsingle,単精度実数の関数型変数の値を取得する,○
 計算条件、格子生成条件の読み込み,cg_iric_read_functionalwithname,複数の値を持つ倍精度実数の関数型変数の値を取得する,○
-計算格子の読み込み,cg_iric_gotogridcoord2d,格子を読み込む準備をする,○
+計算格子の読み込み,cg_iric_read_grid2d_str_size,格子を読み込む準備をする,○
 計算格子の読み込み,cg_iric_gotogridcoord3d,格子を読み込む準備をする,○
-計算格子の読み込み,cg_iric_getgridcoord2d,"格子のX, Y 座標を読み込む",○
+計算格子の読み込み,cg_iric_read_grid2d_coords,"格子のX, Y 座標を読み込む",○
 計算格子の読み込み,cg_iric_getgridcoord3d,"格子のX, Y, Z 座標を読み込む",○
 計算格子の読み込み,cg_iric_grid_nodecount,"格子点の数を読み込む",○
 計算格子の読み込み,cg_iric_grid_cellcount,"格子セルの数を読み込む",○
@@ -75,22 +75,22 @@ CGNSファイルを開く,cg_open,CGNS ファイルを開く,×
 地形データの読み込み,iric_geo_riversurvey_read_fixedpointr,横断線の右岸延長線のデータを返す,×
 地形データの読み込み,iric_geo_riversurvey_read_watersurfaceelevation,横断線での水面標高のデータを返す,×
 地形データの読み込み,iric_geo_riversurvey_close,河川測量データを閉じる,×
-計算格子の出力,cg_iric_writegridcoord1d,1次元構造格子を出力する,○
-計算格子の出力,cg_iric_writegridcoord2d,2次元構造格子を出力する,○
-計算格子の出力,cg_iric_writegridcoord3d,3次元構造格子を出力する,○
+計算格子の出力,cg_iric_write_grid1d_coords,1次元構造格子を出力する,○
+計算格子の出力,cg_iric_write_grid2d_coords,2次元構造格子を出力する,○
+計算格子の出力,cg_iric_write_grid3d_coords,3次元構造格子を出力する,○
 計算格子の出力,cg_iric_write_grid_integer_node,格子点で定義された整数の属性を出力する,○
 計算格子の出力,cg_iric_write_grid_real_node,格子点で定義された倍精度実数の属性を出力する,○
 計算格子の出力,cg_iric_write_grid_integer_cell,セルで定義された整数の属性を出力する,○
 計算格子の出力,cg_iric_write_grid_real_cell,セルで定義された倍精度実数の属性を出力する,○
 時刻 (ループ回数) の出力,cg_iric_write_sol_time,時刻を出力する,○
 時刻 (ループ回数) の出力,cg_iric_write_sol_iteration,ループ回数を出力する,○
-計算結果の出力,cg_iric_write_sol_gridcoord2d,2次元構造格子を出力する,○
-計算結果の出力,cg_iric_write_sol_gridcoord3d,3次元構造格子を出力する,○
+計算結果の出力,cg_iric_write_sol_grid2d_coords,2次元構造格子を出力する,○
+計算結果の出力,cg_iric_write_sol_grid3d_coords,3次元構造格子を出力する,○
 計算結果の出力,cg_iric_write_sol_baseiterative_integer,整数の計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_baseiterative_real,倍精度実数の計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_baseiterative_string,文字列の計算結果を出力する,○
-計算結果の出力,cg_iric_write_sol_integer,整数の格子点ごとに値を持つ計算結果を出力する,○
-計算結果の出力,cg_iric_write_sol_real,倍精度実数の格子点ごとに値を持つ計算結果を出力する,○
+計算結果の出力,cg_iric_write_sol_node_integer,整数の格子点ごとに値を持つ計算結果を出力する,○
+計算結果の出力,cg_iric_write_sol_node_real,倍精度実数の格子点ごとに値を持つ計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_cell_integer,整数の格子セルごとに値を持つ計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_cell_real,倍精度実数の格子セルごとに値を持つ計算結果を出力する,○
 計算結果の出力,cg_iric_write_sol_iface_integer,整数のI方向格子エッジごとに値を持つ計算結果を出力する,○
@@ -124,10 +124,10 @@ CGNSファイルを開く,cg_open,CGNS ファイルを開く,×
 既存の計算結果の読み込み,cg_iric_read_sol_baseiterative_integer,整数の計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_baseiterative_real,倍精度実数の計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_baseiterative_string,文字列の計算結果の値を取得する,○
-既存の計算結果の読み込み,cg_iric_read_sol_gridcoord2d,計算結果の2次元構造格子を取得する,○
-既存の計算結果の読み込み,cg_iric_read_sol_gridcoord3d,計算結果の3次元構造格子を取得する,○
-既存の計算結果の読み込み,cg_iric_read_sol_integer,整数の格子点ごとに値を持つ計算結果の値を取得する,○
-既存の計算結果の読み込み,cg_iric_read_sol_real,倍精度実数の格子点ごとに値を持つ計算結果の値を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_grid2d_coords,計算結果の2次元構造格子を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_grid3d_coords,計算結果の3次元構造格子を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_node_integer,整数の格子点ごとに値を持つ計算結果の値を取得する,○
+既存の計算結果の読み込み,cg_iric_read_sol_node_real,倍精度実数の格子点ごとに値を持つ計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_cell_integer,整数の格子セルごとに値を持つ計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_cell_real,倍精度実数の格子セルごとに値を持つ計算結果の値を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_iface_integer,整数のI方向格子エッジごとに値を持つ計算結果の値を取得する,○

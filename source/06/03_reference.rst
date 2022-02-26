@@ -56,9 +56,9 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/cg_iric_read_functional
    03/cg_iric_read_functional_realsingle
    03/cg_iric_read_functionalwithname
-   03/cg_iric_gotogridcoord2d
+   03/cg_iric_read_grid2d_str_size
    03/cg_iric_gotogridcoord3d
-   03/cg_iric_getgridcoord2d
+   03/cg_iric_read_grid2d_coords
    03/cg_iric_getgridcoord3d
    03/cg_iric_read_grid_nodecount
    03/cg_iric_read_grid_cellcount
@@ -122,22 +122,22 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/iric_geo_riversurvey_read_fixedpointr
    03/iric_geo_riversurvey_read_watersurfaceelevation
    03/iric_geo_riversurvey_close
-   03/cg_iric_writegridcoord1d
-   03/cg_iric_writegridcoord2d
-   03/cg_iric_writegridcoord3d
+   03/cg_iric_write_grid1d_coords
+   03/cg_iric_write_grid2d_coords
+   03/cg_iric_write_grid3d_coords
    03/cg_iric_write_grid_integer_node
    03/cg_iric_write_grid_real_node
    03/cg_iric_write_grid_integer_cell
    03/cg_iric_write_grid_real_cell
    03/cg_iric_write_sol_time
    03/cg_iric_write_sol_iteration
-   03/cg_iric_write_sol_gridcoord2d
-   03/cg_iric_write_sol_gridcoord3d
+   03/cg_iric_write_sol_grid2d_coords
+   03/cg_iric_write_sol_grid3d_coords
    03/cg_iric_write_sol_baseiterative_integer
    03/cg_iric_write_sol_baseiterative_real
    03/cg_iric_write_sol_baseiterative_string
-   03/cg_iric_write_sol_integer
-   03/cg_iric_write_sol_real
+   03/cg_iric_write_sol_node_integer
+   03/cg_iric_write_sol_node_real
    03/cg_iric_write_sol_cell_integer
    03/cg_iric_write_sol_cell_real
    03/cg_iric_write_sol_iface_integer
@@ -171,10 +171,10 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/cg_iric_read_sol_baseiterative_integer
    03/cg_iric_read_sol_baseiterative_real
    03/cg_iric_read_sol_baseiterative_string
-   03/cg_iric_read_sol_gridcoord2d
-   03/cg_iric_read_sol_gridcoord3d
-   03/cg_iric_read_sol_integer
-   03/cg_iric_read_sol_real
+   03/cg_iric_read_sol_grid2d_coords
+   03/cg_iric_read_sol_grid3d_coords
+   03/cg_iric_read_sol_node_integer
+   03/cg_iric_read_sol_node_real
    03/cg_iric_read_sol_cell_integer
    03/cg_iric_read_sol_cell_real
    03/cg_iric_read_sol_iface_integer
