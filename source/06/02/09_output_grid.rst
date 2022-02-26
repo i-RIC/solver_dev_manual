@@ -22,19 +22,26 @@ described in :ref:`iriclib_output_grid_in_sol`.
 
    * - Subroutine
      - Remarks
-   * - cg_iric_writegridcoord1d_f
+
+   * - cg_iric_write_grid1d_coords
      - Outputs a one-dimensional structured grid
-   * - cg_iric_writegridcoord2d_f
+
+   * - cg_iric_write_grid2d_coords
      - Outputs a two-dimensional structured grid
-   * - cg_iric_writegridcoord3d_f
+
+   * - cg_iric_write_grid3d_coords
      - Outputs a three-dimensional structured grid
-   * - cg_iric_write_grid_real_node_f
+
+   * - cg_iric_write_grid_real_node
      - Outputs a grid node attribute with real number value
-   * - cg_iric_write_grid_integer_node_f
+
+   * - cg_iric_write_grid_integer_node
      - Outputs a grid node attribute with integer value
-   * - cg_iric_write_grid_real_cell_f
+
+   * - cg_iric_write_grid_real_cell
      - Outputs a grid cell attribute with real number value
-   * - cg_iric_write_grid_integer_cell_f
+
+   * - cg_iric_write_grid_integer_cell
      - Outputs a grid cell attribute with integer value
 
 :numref:`example_export_three_dimensional_grid` shows an example of
@@ -47,8 +54,8 @@ generate a three-dimensional grid, and then outputting the resulting grid.
    :linenos:
 
    program Sample7
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer:: fin, ier, isize, jsize, ksize, i, j, k, aret
      double precision:: time
@@ -58,23 +65,19 @@ generate a three-dimensional grid, and then outputting the resulting grid.
      double precision, dimension(:,:,:), allocatable:: velocity, density
    
      ! Open CGNS file.
-     call cg_open_f('test3d.cgn', CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open('test3d.cgn', IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) STOP "*** Open error of CGNS file ***"
    
-     ! Initialize iRIClib.
-     call cg_iric_init_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
-   
      ! Check the grid size.
-     call cg_iric_gotogridcoord2d_f(isize, jsize, ier)
+     call cg_iric_read_grid2d_str_size(fin, isize, jsize, ier)
      ! Allocate memory for loading the grid.
      allocate(grid_x(isize,jsize), grid_y(isize,jsize), elevation(isize,jsize))
      ! Read the grid into memory.
-     call cg_iric_getgridcoord2d_f(grid_x, grid_y, ier)
-     call cg_iric_read_grid_real_node_f('Elevation', elevation, ier)
-   
+     call cg_iric_read_grid2d_coords(fin, grid_x, grid_y, ier)
+     call cg_iric_read_grid_real_node(fin, 'Elevation', elevation, ier)
+
      ! Generate a 3D grid from the 2D grid that has been read in.
-     ! To obtain a 3D grid, the grid is divided into 5 __________ with a depth of 5.
+     ! To obtain a 3D grid, the grid is divided into 5 in z direction.
    
      ksize = 6
      allocate(grid3d_x(isize,jsize,ksize), grid3d_y(isize,jsize,ksize), grid3d_z(isize,jsize,ksize))
@@ -94,35 +97,38 @@ generate a three-dimensional grid, and then outputting the resulting grid.
        end do
      end do
      ! Output the generated 3D grid
-     call cg_iric_writegridcoord3d_f(isize, jsize, ksize, grid3d_x, grid3d_y, grid3d_z, ier)
+     call cg_iric_write_grid3d_coords(fin, isize, jsize, ksize, grid3d_x, grid3d_y, grid3d_z, ier)
    
      ! Output the initial state information
      time = 0
      convergence = 0.1
-     call cg_iric_write_sol_time_f(time, ier)
+     call cg_iric_write_sol_start(fin, ier)
+     call cg_iric_write_sol_time(fin, time, ier)
      ! Output the grid.
-     call cg_iric_write_sol_gridcoord3d_f(grid3d_x, grid3d_y, grid3d_z, ier)
+     call cg_iric_write_sol_grid3d_coords(fin, grid3d_x, grid3d_y, grid3d_z, ier)
      ! Output calculation results.
-     call cg_iric_write_sol_real_f('Velocity', velocity, ier)
-     call cg_iric_write_sol_real_f('Density', density, ier)
-     call cg_iric_write_sol_baseiterative_real_f ('Convergence', convergence, ier)
-   
-   
+     call cg_iric_write_sol_node_real(fin, 'Velocity', velocity, ier)
+     call cg_iric_write_sol_node_real(fin, 'Density', density, ier)
+     call cg_iric_write_sol_baseiterative_real(fin, 'Convergence', convergence, ier)
+     call cg_iric_write_sol_end(fin, ier)
+
      do
        time = time + 10.0
        ! (Perform calculation here. The grid shape also changes.)
-       call cg_iric_write_sol_time_f(time, ier)
+       call cg_iric_write_sol_start(fin, ier)
+       call cg_iric_write_sol_time(fin, time, ier)
        ! Output the grid.
-       call cg_iric_write_sol_gridcoord3d_f(grid3d_x, grid3d_y, grid3d_z, ier)
+       call cg_iric_write_sol_grid3d_coords(fin, grid3d_x, grid3d_y, grid3d_z, ier)
        ! Output calculation results.
-       call cg_iric_write_sol_real_f('Velocity', velocity, ier)
-       call cg_iric_write_sol_real_f('Density', density, ier)
-       call cg_iric_write_sol_baseiterative_real_f ('Convergence', convergence, ier)
-   
+       call cg_iric_write_sol_node_real(fin, 'Velocity', velocity, ier)
+       call cg_iric_write_sol_node_real(fin, 'Density', density, ier)
+       call cg_iric_write_sol_baseiterative_real(fin, 'Convergence', convergence, ier)
+       call cg_iric_write_sol_end(fin, ier)
+
        If (time > 100) exit
      end do
    
      ! Close CGNS file.
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program Sample7

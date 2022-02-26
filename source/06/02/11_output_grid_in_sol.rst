@@ -29,9 +29,11 @@ described in :ref:`iriclib_output_grid`.
 
    * - Subroutine
      - Remarks
-   * - cg_iric_write_sol_gridcoord2d_f
+
+   * - cg_iric_write_sol_grid2d_coords
      - Outputs a two-dimensional structured grid
-   * - cg_iric_write_sol_gridcoord3d_f
+
+   * - cg_iric_write_sol_grid3d_coords
      - Outputs a three-dimensional structured grid
 
 :numref:`example_output_grid_in_sol` shows an example of outputting
@@ -43,44 +45,44 @@ a two-dimensional structured grid after starting calculation.
    :linenos:
 
    program Sample5
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer:: fin, ier, isize, jsize
      double precision:: time
      double precision, dimension(:,:), allocatable:: grid_x, grid_y
    
      ! Open CGNS file.
-     call cg_open_f('test.cgn', CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open('test.cgn', IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) STOP "*** Open error of CGNS file ***"
    
-     ! Initialize iRIClib.
-     call cg_iric_init_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
-   
      ! Check the grid size.
-     call cg_iric_gotogridcoord2d_f(isize, jsize, ier)
+     call cg_iric_read_grid2d_str_size(fin, isize, jsize, ier)
      ! Allocate memory for loading the grid.
      allocate(grid_x(isize,jsize), grid_y(isize,jsize))
      ! Read the grid into memory.
-     call cg_iric_getgridcoord2d_f(grid_x, grid_y, ier)
+     call cg_iric_read_grid2d_coords(fin, grid_x, grid_y, ier)
    
      ! Output the initial state information.
      time = 0
    
-     call cg_iric_write_sol_time_f(time, ier)
+     call cg_iric_write_sol_start(fin, ier)
+     call cg_iric_write_sol_time(fin, time, ier)
      ! Output the grid.
-     call cg_iric_write_sol_gridcoord2d_f (grid_x, grid_y, ier)
-   
+     call cg_iric_write_sol_grid2d_coords(fin, grid_x, grid_y, ier)
+     call cg_iric_write_sol_end(fin, ier)
+
      do
        time = time + 10.0
        ! (Perform calculation here.)
-       call cg_iric_write_sol_time_f(time, ier)
-       call cg_iric_write_sol_gridcoord2d_f (grid_x, grid_y, ier)
+       call cg_iric_write_sol_start(fin, ier)
+       call cg_iric_write_sol_time(fin, time, ier)
+       call cg_iric_write_sol_grid2d_coords(fin, grid_x, grid_y, ier)
+       call cg_iric_write_sol_end(fin, ier)
        If (time > 1000) exit
      end do
    
      ! Close CGNS file
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program Sample5

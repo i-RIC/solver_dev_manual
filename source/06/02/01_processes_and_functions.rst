@@ -11,7 +11,6 @@ The I/O processings in solvers and grid generating programs are shown in
 
    * - Process
    * - Opens a CGNS file
-   * - Initializes iRIClib
    * - Sets up options
    * - Reads calculation conditions
    * - Reads grids
@@ -29,7 +28,6 @@ The I/O processings in solvers and grid generating programs are shown in
 
    * - Process
    * - Opens a CGNS file
-   * - Initializes iRIClib 
    * - Reads grid generating condition
    * - Outputs error code
    * - Outputs grid

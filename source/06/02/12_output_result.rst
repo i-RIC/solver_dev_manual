@@ -30,16 +30,15 @@ output each types.
 
    * - Subroutine
      - Remarks
-   * - iric_check_cancel_f
+
+   * - iric_check_cancel
      - Checks whether user canceled solver execution
-   * - iric_check_lock_f
-     - Checks whether the CGNS file is locked by GUI
-   * - iric_write_sol_start_f
-     - Inform the GUI that the solver started outputting result
-   * - iric_write_sol_end_f
-     - Inform the GUI that the solver finished outputting result
-   * - cg_iric_flush_f
-     - Flush calculation result into CGNS file
+
+   * - cg_iric_write_sol_start
+     - Starts outputting calculation result
+
+   * - cg_iric_write_sol_end
+     - Ends outputting calculation result
 
 .. _table_iriclib_output_time_functions:
 
@@ -48,9 +47,11 @@ output each types.
 
    * - Subroutine
      - Remarks
-   * - cg_iric_write_sol_time_f
+
+   * - cg_iric_write_sol_time
      - Outputs time
-   * - cg_iric_write_sol_iteration_f
+
+   * - cg_iric_write_sol_iteration
      - Outputs iteration count
 
 .. note:: Vector quantities and scalar quantities

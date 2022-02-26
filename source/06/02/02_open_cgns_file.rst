@@ -3,13 +3,17 @@
 Opening a CGNS file
 ======================
 
-Open a CGNS file, read it in and make it into a writable state.
-The subroutine is defined in cgnslib.
+Open a CGNS file.
+
+When opening a CGMS file for modifying, specify IRIC_MODE_MODIFY as mode.
+
+When opening a CGMS file for reading only, specify IRIC_MODE_READ as mode.
 
 .. list-table:: Subroutine to use
    :header-rows: 1
 
    * - Subroutine
      - Remarks
-   * - cg_open_f
+
+   * - cg_iric_open
      - Opens a CGNS file

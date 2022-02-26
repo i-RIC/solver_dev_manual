@@ -10,5 +10,6 @@ Outputs error code to CGNS files. It is used only in grid generating programs.
 
    * - Subroutine
      - Remarks
-   * - cg_iric_write_errorcode_f
+
+   * - cg_iric_write_errorcode
      - Outputs error code

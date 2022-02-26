@@ -3,13 +3,13 @@
 Closing a CGNS file
 ======================
 
-Closes the CGNS file that has been opened by cg_open_f.
-The subroutine is defined in cgnslib.
+Closes the CGNS file that has been opened by cg_iric_open
 
 .. list-table:: Subroutines to use
    :header-rows: 1
 
    * - Subroutine
      - Remarks
-   * - cg_close_f
+
+   * - cg_iric_close
      - Closes the CGNS file

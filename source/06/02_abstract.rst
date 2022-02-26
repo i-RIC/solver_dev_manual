@@ -10,7 +10,6 @@ This section provides an overview of iRIClib.
 
    02/01_processes_and_functions
    02/02_open_cgns_file
-   02/03_initialize_variables
    02/04_set_options
    02/05_load_calccond
    02/06_load_grid

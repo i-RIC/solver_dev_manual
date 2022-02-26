@@ -52,9 +52,9 @@ Call iRIClib functions after including the header, like shown in :numref:`iricli
    :caption: Example of using iRIClib from FORTRAN
    :linenos:
 
-   include 'iriclib_f.h'
+   use iric
 
-   call cg_iric_init_f(fid, ier)
+   call cg_iric_open(filename, mode, fid, ier)
 
 C/C++
 ------------
@@ -70,7 +70,7 @@ Call iRIClib functions after including the header, like shown in :numref:`iricli
    #include "iriclib.h"
 
    // (abbr.)
-   ier = cg_iric_init(fid);
+   ier = cg_iRIC_Open(filename, mode, &fid);
 
 Python
 ------------
@@ -85,7 +85,7 @@ Call iRIClib functions after importing iric module, like shown in :numref:`iricl
 
    from iric import *
 
-   cg_iric_init(fid)
+   fid = cg_iRIC_Open(filename, mode)
 
 How to read this chapter
 =========================
