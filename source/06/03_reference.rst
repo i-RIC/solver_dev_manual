@@ -60,6 +60,9 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/cg_iric_gotogridcoord3d
    03/cg_iric_getgridcoord2d
    03/cg_iric_getgridcoord3d
+   03/cg_iric_read_grid_nodecount
+   03/cg_iric_read_grid_cellcount
+   03/cg_iric_read_grid_triangleelements
    03/cg_iric_read_grid_integer_node
    03/cg_iric_read_grid_real_node
    03/cg_iric_read_grid_integer_cell
