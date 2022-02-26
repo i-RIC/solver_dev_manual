@@ -114,7 +114,6 @@ Outputting calculation results (particles),cg_iric_write_sol_particle_real,"Outp
 "Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_integer,"Outputs integer-type calculation results, having a value for a polygon or polyline",O
 "Outputting calculation results (polygons, polylines)",cg_iric_write_sol_polydata_real,"Outputs double-precision real-type calculation results, having a value for a polygon or polyline",O
 Functions to call befor and after outputting calculation results,iric_check_cancel,Checks whether user canceled solver execution,X
-Functions to call befor and after outputting calculation results,iric_check_lock,Checks whether the CGNS file is locked by GUI,X
 Functions to call befor and after outputting calculation results,iric_write_sol_start,Inform the GUI that the solver started outputting result,X
 Functions to call befor and after outputting calculation results,iric_write_sol_end,Inform the GUI that the solver finished outputting result,X
 Functions to call befor and after outputting calculation results,cg_iric_flush,Flush calculation result into CGNS file,X

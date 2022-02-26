@@ -1,3 +1,0 @@
-Variable name,Type,I/O,Description
-filename,character(*),I,Filename
-locked,integer,O,If locked 1 returned.
