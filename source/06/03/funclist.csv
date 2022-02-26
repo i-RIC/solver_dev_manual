@@ -114,8 +114,8 @@ CGNSファイルを開く,cg_open,CGNS ファイルを開く,×
 計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_integer,整数のポリゴンもしくは折れ線ごとに値を持つ計算結果を出力する,○
 計算結果の出力 (ポリゴン・折れ線),cg_iric_write_sol_polydata_real,倍精度実数のポリゴンもしくは折れ線ごとに値を持つ計算結果を出力する,○
 計算結果の出力の前後に利用する関数,iric_check_cancel,ユーザがソルバーの実行をキャンセルしたか確認する,×
-計算結果の出力の前後に利用する関数,iric_write_sol_start,計算結果の出力開始をGUIに通知する,×
-計算結果の出力の前後に利用する関数,iric_write_sol_end,計算結果の出力終了をGUIに通知する,×
+計算結果の出力の前後に利用する関数,cg_iric_write_sol_start,計算結果の出力開始をGUIに通知する,×
+計算結果の出力の前後に利用する関数,cg_iric_write_sol_end,計算結果の出力終了をGUIに通知する,×
 計算結果の出力の前後に利用する関数,cg_iriclush,計算結果の出力をファイルに書き込む,×
 既存の計算結果の読み込み,cg_iric_read_sol_count,計算結果の数を取得する,○
 既存の計算結果の読み込み,cg_iric_read_sol_time,計算結果の時刻の値を取得する,○

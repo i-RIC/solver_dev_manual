@@ -3,26 +3,24 @@ iric_write_sol_end
 
 計算結果の出力終了をGUIに通知する。
 
-.. note::
-
-   この関数は、現在は何もせず、呼び出しは不要。
-
 形式 (FORTRAN)
 ---------------
 .. code-block:: fortran
 
-   call iric_write_sol_end(filename, ier)
+   call iric_write_sol_end(fid, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = iRIC_Write_Sol_End(filename);
+   ier = iRIC_Write_Sol_End(fid);
 
 形式 (Python)
 ---------------
 
-Python にはこの関数は存在しない
+.. code-block:: python
+
+   iRIC_Write_Sol_End(fid)
 
 引数
 ----
