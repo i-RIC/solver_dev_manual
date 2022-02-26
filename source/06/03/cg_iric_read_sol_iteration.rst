@@ -7,19 +7,19 @@ cg_iric_read_sol_iteration
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_iteration(step, iteration, ier)
+   call cg_iric_read_sol_iteration(fid, step, iteration, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_Iteration(step, &iteration);
+   ier = cg_iRIC_Read_Sol_Iteration(fid, step, &iteration);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   iteration = cg_iRIC_Read_Sol_Iteration(step)
+   iteration = cg_iRIC_Read_Sol_Iteration(fid, step)
 
 引数
 ----

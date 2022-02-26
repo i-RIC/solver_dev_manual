@@ -7,19 +7,19 @@ cg_iric_write_sol_baseiterative_string
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_baseiterative_string(label, val, ier)
+   call cg_iric_write_sol_baseiterative_string(fid, label, val, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_BaseIterative_String(label, val);
+   ier = cg_iRIC_Write_Sol_BaseIterative_String(fid, label, val);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_BaseIterative_String(label, val)
+   cg_iRIC_Write_Sol_BaseIterative_String(fid, label, val)
 
 引数
 ----

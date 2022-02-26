@@ -7,13 +7,13 @@ cg_iric_read_complex_realsingle
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_complex_realsingle(type, num, name, value, ier)
+   call cg_iric_read_complex_realsingle(fid, type, num, name, value, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Complex_RealSingle(type, num, name, &value);
+   ier = cg_iRIC_Read_Complex_RealSingle(fid, type, num, name, &value);
 
 形式 (Python)
 ---------------

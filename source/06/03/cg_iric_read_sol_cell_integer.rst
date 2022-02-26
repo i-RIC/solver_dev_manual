@@ -7,19 +7,19 @@ cg_iric_read_sol_cell_integer
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_cell_integer(step, label, val, ier)
+   call cg_iric_read_sol_cell_integer(fid, step, label, val, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_Cell_Integer(step, label, val);
+   ier = cg_iRIC_Read_Sol_Cell_Integer(fid, step, label, val);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   val = cg_iRIC_Read_Sol_Cell_Integer(step, label)
+   val = cg_iRIC_Read_Sol_Cell_Integer(fid, step, label)
 
 引数
 ----

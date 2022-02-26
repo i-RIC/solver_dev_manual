@@ -7,13 +7,13 @@ cg_iric_read_complex_functionalsize
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_complex_functionalsize(type, num, name, size, ier)
+   call cg_iric_read_complex_functionalsize(fid, type, num, name, size, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iric_read_complex_functionalsize(type, num, name, &size);
+   ier = cg_iric_read_complex_functionalsize(fid, type, num, name, &size);
 
 形式 (Python)
 ---------------

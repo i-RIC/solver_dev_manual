@@ -7,19 +7,19 @@ cg_iric_write_sol_particlegroup_pos3d
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_particlegroup_pos3d(x, y, z, ier)
+   call cg_iric_write_sol_particlegroup_pos3d(fid, x, y, z, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_ParticleGroup_Pos3d(x, y, z);
+   ier = cg_iRIC_Write_Sol_ParticleGroup_Pos3d(fid, x, y, z);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_ParticleGroup_Pos3d(x, y, z)
+   cg_iRIC_Write_Sol_ParticleGroup_Pos3d(fid, x, y, z)
 
 引数
 ----

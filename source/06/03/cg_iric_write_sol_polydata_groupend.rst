@@ -7,19 +7,19 @@ cg_iric_write_sol_polydata_groupend
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_polydata_groupend(ier)
+   call cg_iric_write_sol_polydata_groupend(fid, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_PolyData_GroupEnd();
+   ier = cg_iRIC_Write_Sol_PolyData_GroupEnd(fid);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_PolyData_GroupEnd()
+   cg_iRIC_Write_Sol_PolyData_GroupEnd(fid)
 
 引数
 ----

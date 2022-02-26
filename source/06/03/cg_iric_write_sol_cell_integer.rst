@@ -7,19 +7,19 @@ cg_iric_write_sol_cell_integer
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_cell_integer(label, val, ier)
+   call cg_iric_write_sol_cell_integer(fid, label, val, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_Cell_Integer(label, val);
+   ier = cg_iRIC_Write_Sol_Cell_Integer(fid, label, val);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_Cell_Integer(label, val)
+   cg_iRIC_Write_Sol_Cell_Integer(fid, label, val)
 
 引数
 ----

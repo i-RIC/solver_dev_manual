@@ -7,13 +7,13 @@ CGNSファイルから関数型の計算条件・格子生成条件のサイズ�
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_functionalsize(label, size, ier)
+   call cg_iric_read_functionalsize(fid, label, size, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functionalSize(label, &size);
+   ier = cg_iRIC_Read_F_functionalSize(fid, label, &size);
 
 形式 (Python)
 ---------------

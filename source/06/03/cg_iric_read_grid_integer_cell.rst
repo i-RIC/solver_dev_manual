@@ -7,19 +7,19 @@ cg_iric_read_grid_integer_cell
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_grid_integer_cell(label, values, ier)
+   call cg_iric_read_grid_integer_cell(fid, label, values, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_Integer_Cell(label, values);
+   ier = cg_iRIC_Read_Grid_Integer_Cell(fid, label, values);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   values = cg_iRIC_Read_Grid_Integer_Cell(label)
+   values = cg_iRIC_Read_Grid_Integer_Cell(fid, label)
 
 引数
 ----

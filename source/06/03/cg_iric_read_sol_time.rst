@@ -7,19 +7,19 @@ cg_iric_read_sol_time
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_time(step, time, ier)
+   call cg_iric_read_sol_time(fid, step, time, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_Time(step, &time);
+   ier = cg_iRIC_Read_Sol_Time(fid, step, &time);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   time = cg_iRIC_Read_Sol_Time(step)
+   time = cg_iRIC_Read_Sol_Time(fid, step)
 
 引数
 ----

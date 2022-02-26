@@ -7,19 +7,19 @@ cg_iric_read_bc_functional
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_functional(type, num, name, x, y, ier)
+   call cg_iric_read_bc_functional(fid, type, num, name, x, y, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_F_functional(type, num, name, x, y);
+   ier = cg_iRIC_Read_BC_F_functional(fid, type, num, name, x, y);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   x, y = cg_iRIC_Read_BC_F_functional(type, num, name)
+   x, y = cg_iRIC_Read_BC_F_functional(fid, type, num, name)
 
 引数
 ----

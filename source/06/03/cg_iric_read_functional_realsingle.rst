@@ -7,13 +7,13 @@ CGNSファイルから単精度実数の関数型の計算条件・格子生成�
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_functional_realsingle(label, x, y, ier)
+   call cg_iric_read_functional_realsingle(fid, label, x, y, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functional_RealSingle(label, x, y);
+   ier = cg_iRIC_Read_F_functional_RealSingle(fid, label, x, y);
 
 形式 (Python)
 ---------------

@@ -7,19 +7,19 @@ cg_iric_write_sol_iteration
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_iteration(iteration, ier)
+   call cg_iric_write_sol_iteration(fid, iteration, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_Iteration(iteration);
+   ier = cg_iRIC_Write_Sol_Iteration(fid, iteration);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_Iteration(iteration)
+   cg_iRIC_Write_Sol_Iteration(fid, iteration)
 
 引数
 ----

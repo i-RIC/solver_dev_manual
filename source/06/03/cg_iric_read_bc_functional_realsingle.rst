@@ -7,13 +7,13 @@ cg_iric_read_bc_functional_realsingle
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_functional_realsingle(type, num, name, x, y, ier)
+   call cg_iric_read_bc_functional_realsingle(fid, type, num, name, x, y, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_F_functional_RealSingle(type, num, name, x, y);
+   ier = cg_iRIC_Read_BC_F_functional_RealSingle(fid, type, num, name, x, y);
 
 形式 (Python)
 ---------------

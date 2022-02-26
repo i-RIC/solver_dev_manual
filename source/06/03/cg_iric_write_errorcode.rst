@@ -7,19 +7,19 @@ cg_iric_write_errorcode
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_errorcode(code, ier)
+   call cg_iric_write_errorcode(fid, code, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_ErrorCode(code);
+   ier = cg_iRIC_Write_ErrorCode(fid, code);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_ErrorCode(code)
+   cg_iRIC_Write_ErrorCode(fid, code)
 
 引数
 ----

@@ -7,19 +7,19 @@ cg_iric_read_complex_string
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_complex_string(type, num, name, value, ier)
+   call cg_iric_read_complex_string(fid, type, num, name, value, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Complex_String(type, num, name, value);
+   ier = cg_iRIC_Read_Complex_String(fid, type, num, name, value);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   value = cg_iRIC_Read_Complex_String(type, num, name)
+   value = cg_iRIC_Read_Complex_String(fid, type, num, name)
 
 引数
 ----

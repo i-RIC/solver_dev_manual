@@ -7,19 +7,19 @@ cg_iric_read_grid_integer_node
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_grid_integer_node(label, values, ier)
+   call cg_iric_read_grid_integer_node(fid, label, values, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_Integer_Node(label, values);
+   ier = cg_iRIC_Read_Grid_Integer_Node(fid, label, values);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   values = cg_iRIC_Read_Grid_Integer_Node(label)
+   values = cg_iRIC_Read_Grid_Integer_Node(fid, label)
 
 引数
 ----

@@ -7,19 +7,19 @@ cg_iric_read_sol_gridcoord3d
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_gridcoord3d(step, x, y, z, ier)
+   call cg_iric_read_sol_gridcoord3d(fid, step, x, y, z, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_GridCoord3d(step, x, y, z);
+   ier = cg_iRIC_Read_Sol_GridCoord3d(fid, step, x, y, z);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   x, y, z = cg_iRIC_Read_Sol_GridCoord3d(step)
+   x, y, z = cg_iRIC_Read_Sol_GridCoord3d(fid, step)
 
 引数
 ----

@@ -7,19 +7,19 @@ cg_iric_read_grid_functional_real_node
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_grid_functional_real_node(label, dimid, values, ier)
+   call cg_iric_read_grid_functional_real_node(fid, label, dimid, values, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functional_Real_Node(label, dimid, values);
+   ier = cg_iRIC_Read_Grid_F_functional_Real_Node(fid, label, dimid, values);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   values = cg_iRIC_Read_Grid_F_functional_Real_Node(label, dimid)
+   values = cg_iRIC_Read_Grid_F_functional_Real_Node(fid, label, dimid)
 
 引数
 ----

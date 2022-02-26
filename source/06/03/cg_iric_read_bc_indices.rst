@@ -7,19 +7,19 @@ cg_iric_read_bc_indices
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_indices(type, num, indices, ier)
+   call cg_iric_read_bc_indices(fid, type, num, indices, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_Indices(type, num, indices);
+   ier = cg_iRIC_Read_BC_Indices(fid, type, num, indices);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   indices = cg_iRIC_Read_BC_Indices(type, num)
+   indices = cg_iRIC_Read_BC_Indices(fid, type, num)
 
 引数
 ----

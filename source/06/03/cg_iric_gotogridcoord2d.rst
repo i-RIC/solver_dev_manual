@@ -7,19 +7,19 @@ cg_iric_gotogridcoord2d
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_gotogridcoord2d(nx, ny, ier)
+   call cg_iric_gotogridcoord2d(fid, nx, ny, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_GotoGridCoord2d(nx, ny);
+   ier = cg_iRIC_GotoGridCoord2d(fid, nx, ny);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   nx, ny = cg_iRIC_GotoGridCoord2d()
+   nx, ny = cg_iRIC_GotoGridCoord2d(fid)
 
 引数
 ----

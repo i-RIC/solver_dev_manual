@@ -7,19 +7,19 @@ cg_iric_write_sol_polydata_polygon
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_polydata_polygon(numpoints, x, y, ier)
+   call cg_iric_write_sol_polydata_polygon(fid, numpoints, x, y, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_PolyData_Polygon(numpoints, x, y);
+   ier = cg_iRIC_Write_Sol_PolyData_Polygon(fid, numpoints, x, y);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_PolyData_Polygon(x, y)
+   cg_iRIC_Write_Sol_PolyData_Polygon(fid, x, y)
 
 引数
 ----

@@ -7,19 +7,19 @@ cg_iric_read_bc_real
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_real(type, num, name, value, ier)
+   call cg_iric_read_bc_real(fid, type, num, name, value, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_Real(type, num, name, &value);
+   ier = cg_iRIC_Read_BC_Real(fid, type, num, name, &value);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   value = cg_iRIC_Read_BC_Real(type, num, name)
+   value = cg_iRIC_Read_BC_Real(fid, type, num, name)
 
 引数
 ----

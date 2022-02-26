@@ -7,19 +7,19 @@ CGNSファイルから関数型の計算条件・格子生成条件の値を読�
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_functionalwithname(label, name, data, ier)
+   call cg_iric_read_functionalwithname(fid, label, name, data, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functionalWithName(label, name, data);
+   ier = cg_iRIC_Read_F_functionalWithName(fid, label, name, data);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   data = cg_iRIC_Read_F_functionalWithName(label, name)
+   data = cg_iRIC_Read_F_functionalWithName(fid, label, name)
 
 引数
 ----

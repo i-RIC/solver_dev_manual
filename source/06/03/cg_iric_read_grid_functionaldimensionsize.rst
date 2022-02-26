@@ -7,13 +7,13 @@ cg_iric_read_grid_functionaldimensionsize
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_grid_functionaltime(label, dimname, count, ier)
+   call cg_iric_read_grid_functionaltime(fid, label, dimname, count, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functionalTime(label, dimname, &count);
+   ier = cg_iRIC_Read_Grid_F_functionalTime(fid, label, dimname, &count);
 
 形式 (Python)
 ---------------

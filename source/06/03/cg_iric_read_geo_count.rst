@@ -7,13 +7,13 @@ CGNSファイルから地形データの数を読み込みます。
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_geo_count(name, geocount, ier)
+   call cg_iric_read_geo_count(fid, name, geocount, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Geo_Count(name, geocount);
+   ier = cg_iRIC_Read_Geo_Count(fid, name, geocount);
 
 形式 (Python)
 ---------------

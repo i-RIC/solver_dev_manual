@@ -7,19 +7,19 @@ cg_iric_read_sol_count
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_count(count, ier)
+   call cg_iric_read_sol_count(fid, count, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_Count(&count);
+   ier = cg_iRIC_Read_Sol_Count(fid, &count);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   count = cg_iRIC_Read_Sol_Count()
+   count = cg_iRIC_Read_Sol_Count(fid)
 
 引数
 ----

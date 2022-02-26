@@ -7,19 +7,19 @@ cg_iric_write_sol_polydata_groupbegin
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_polydata_groupbegin(name, ier)
+   call cg_iric_write_sol_polydata_groupbegin(fid, name, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_PolyData_GroupBegin(name);
+   ier = cg_iRIC_Write_Sol_PolyData_GroupBegin(fid, name);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_PolyData_GroupBegin(name)
+   cg_iRIC_Write_Sol_PolyData_GroupBegin(fid, name)
 
 引数
 ----

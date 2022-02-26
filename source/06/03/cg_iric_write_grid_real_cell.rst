@@ -7,19 +7,19 @@ cg_iric_write_grid_real_cell
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_grid_real_cell(label, values, ier)
+   call cg_iric_write_grid_real_cell(fid, label, values, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Grid_Real_Cell(label, values);
+   ier = cg_iRIC_Write_Grid_Real_Cell(fid, label, values);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Grid_Real_Cell(label, values)
+   cg_iRIC_Write_Grid_Real_Cell(fid, label, values)
 
 引数
 ----

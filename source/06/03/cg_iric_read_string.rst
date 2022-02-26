@@ -7,19 +7,19 @@ CGNSファイルから文字列型の計算条件・格子生成条件の値を�
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_string(label, strvalue, ier)
+   call cg_iric_read_string(fid, label, strvalue, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_String(label, strvalue);
+   ier = cg_iRIC_Read_String(fid, label, strvalue);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   strvalue = cg_iRIC_Read_String(label)
+   strvalue = cg_iRIC_Read_String(fid, label)
 
 引数
 ----

@@ -7,19 +7,19 @@ cg_iric_write_grid_real_node
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_grid_real_node(label, values, ier)
+   call cg_iric_write_grid_real_node(fid, label, values, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Grid_Real_Node(label, values);
+   ier = cg_iRIC_Write_Grid_Real_Node(fid, label, values);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Grid_Real_Node(label, values)
+   cg_iRIC_Write_Grid_Real_Node(fid, label, values)
 
 引数
 ----

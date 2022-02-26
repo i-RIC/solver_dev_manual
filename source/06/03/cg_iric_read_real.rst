@@ -7,19 +7,19 @@ CGNSファイルから倍精度の実数型の計算条件・格子生成条件�
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_real(label, realvalue, ier)
+   call cg_iric_read_real(fid, label, realvalue, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Real(label, &realvalue);
+   ier = cg_iRIC_Read_Real(fid, label, &realvalue);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   realvalue = cg_iRIC_Read_Real(label)
+   realvalue = cg_iRIC_Read_Real(fid, label)
 
 引数
 ----

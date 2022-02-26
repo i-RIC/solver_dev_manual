@@ -7,13 +7,13 @@ cg_iric_read_bc_indicessize
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_indicessize(type, num, size, ier)
+   call cg_iric_read_bc_indicessize(fid, type, num, size, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_IndicesSize(type, num, &size);
+   ier = cg_iRIC_Read_BC_IndicesSize(fid, type, num, &size);
 
 形式 (Python)
 ---------------

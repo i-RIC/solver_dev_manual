@@ -7,19 +7,19 @@ cg_iric_write_sol_time
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_time(time, ier)
+   call cg_iric_write_sol_time(fid, time, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_Time(time);
+   ier = cg_iRIC_Write_Sol_Time(fid, time);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_Time(time)
+   cg_iRIC_Write_Sol_Time(fid, time)
 
 引数
 ----

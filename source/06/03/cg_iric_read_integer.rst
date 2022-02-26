@@ -7,19 +7,19 @@ CGNSファイルから整数型の計算条件・格子生成条件の値を読�
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_read_integer(label, intvalue, ier)
+   call cg_iric_read_integer(fid, label, intvalue, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Integer(label, &intvalue);
+   ier = cg_iRIC_Read_Integer(fid, label, &intvalue);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   intvalue = cg_iRIC_Read_Integer(label)
+   intvalue = cg_iRIC_Read_Integer(fid, label)
 
 引数
 ----

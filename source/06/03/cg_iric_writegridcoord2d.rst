@@ -7,19 +7,19 @@ cg_iric_writegridcoord2d
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_writegridcoord2d(nx, ny, x, y, ier)
+   call cg_iric_writegridcoord2d(fid, nx, ny, x, y, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_WriteGridCoord2d(nx, ny, x, y);
+   ier = cg_iRIC_WriteGridCoord2d(fid, nx, ny, x, y);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_WriteGridCoord2d(nx, ny, x, y)
+   cg_iRIC_WriteGridCoord2d(fid, nx, ny, x, y)
 
 引数
 ----
