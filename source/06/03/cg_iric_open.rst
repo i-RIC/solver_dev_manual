@@ -1,4 +1,4 @@
-cg_iRIC_Open
+cg_iric_open
 ===============
 
 CGNS ファイルを開く。

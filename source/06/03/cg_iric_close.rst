@@ -1,4 +1,4 @@
-cg_iRIC_Close
+cg_iric_close
 ================
 
 CGNS ファイルを閉じる。
