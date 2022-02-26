@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_iface_integer(step, label, val, ier)
+   call cg_iric_read_sol_iface_integer(fid, step, label, val, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_IFace_Integer(step, label, val);
+   ier = cg_iRIC_Read_Sol_IFace_Integer(fid, step, label, val);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   val = cg_iRIC_Read_Sol_IFace_Integer(step, label)
+   val = cg_iRIC_Read_Sol_IFace_Integer(fid, step, label)
 
 Arguments
 ---------

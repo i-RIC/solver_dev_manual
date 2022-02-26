@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_polydata_polyline(numpoints, x, y, ier)
+   call cg_iric_write_sol_polydata_polyline(fid, numpoints, x, y, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_PolyData_Polyline(numpoints, x, y);
+   ier = cg_iRIC_Write_Sol_PolyData_Polyline(fid, numpoints, x, y);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_PolyData_Polyline(x, y)
+   cg_iRIC_Write_Sol_PolyData_Polyline(fid, x, y)
 
 Arguments
 ---------

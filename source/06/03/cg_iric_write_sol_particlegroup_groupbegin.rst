@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_particlegroup_groupbegin(name, ier)
+   call cg_iric_write_sol_particlegroup_groupbegin(fid, name, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_ParticleGroup_GroupBegin(name);
+   ier = cg_iRIC_Write_Sol_ParticleGroup_GroupBegin(fid, name);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_ParticleGroup_GroupBegin(name)
+   cg_iRIC_Write_Sol_ParticleGroup_GroupBegin(fid, name)
 
 Arguments
 ---------

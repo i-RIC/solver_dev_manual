@@ -7,13 +7,13 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_complex_functional_realsingle(type, num, name, x, y, ier)
+   call cg_iric_read_complex_functional_realsingle(fid, type, num, name, x, y, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Complex_F_functional_RealSingle(type, num, name, x, y);
+   ier = cg_iRIC_Read_Complex_F_functional_RealSingle(fid, type, num, name, x, y);
 
 Format (Python)
 ----------------

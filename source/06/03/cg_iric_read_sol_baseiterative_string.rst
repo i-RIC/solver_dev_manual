@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_baseiterative_string(step, label, val, ier)
+   call cg_iric_read_sol_baseiterative_string(fid, step, label, val, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_BaseIterative_String(step, label, val);
+   ier = cg_iRIC_Read_Sol_BaseIterative_String(fid, step, label, val);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   val = cg_iRIC_Read_Sol_BaseIterative_String(step, label)
+   val = cg_iRIC_Read_Sol_BaseIterative_String(fid, step, label)
 
 Arguments
 ---------

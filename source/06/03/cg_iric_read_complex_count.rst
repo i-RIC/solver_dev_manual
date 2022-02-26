@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_complex_count(type, num, ier)
+   call cg_iric_read_complex_count(fid, type, num, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Complex_Count(type, &num);
+   ier = cg_iRIC_Read_Complex_Count(fid, type, &num);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   num = cg_iRIC_Read_Complex_Count(type)
+   num = cg_iRIC_Read_Complex_Count(fid, type)
 
 Arguments
 ---------

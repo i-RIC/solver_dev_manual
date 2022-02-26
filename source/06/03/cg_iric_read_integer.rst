@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_integer(label, intvalue, ier)
+   call cg_iric_read_integer(fid, label, intvalue, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Integer(label, &intvalue);
+   ier = cg_iRIC_Read_Integer(fid, label, &intvalue);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   intvalue = cg_iRIC_Read_Integer(label)
+   intvalue = cg_iRIC_Read_Integer(fid, label)
 
 Arguments
 ---------

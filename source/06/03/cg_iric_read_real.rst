@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_real(label, realvalue, ier)
+   call cg_iric_read_real(fid, label, realvalue, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Real(label, &realvalue);
+   ier = cg_iRIC_Read_Real(fid, label, &realvalue);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   realvalue = cg_iRIC_Read_Real(label)
+   realvalue = cg_iRIC_Read_Real(fid, label)
 
 Arguments
 ---------

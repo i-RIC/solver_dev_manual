@@ -7,13 +7,13 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_realsingle(type, num, label, realvalue, ier)
+   call cg_iric_read_bc_realsingle(fid, type, num, label, realvalue, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_RealSingle(type, num, label, &realvalue);
+   ier = cg_iRIC_Read_BC_RealSingle(fid, type, num, label, &realvalue);
 
 Format (Python)
 ----------------

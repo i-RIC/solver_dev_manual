@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_particle_pos2d(count, x, y, ier)
+   call cg_iric_write_sol_particle_pos2d(fid, count, x, y, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_Particle_Pos2d(count, x, y);
+   ier = cg_iRIC_Write_Sol_Particle_Pos2d(fid, count, x, y);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_Particle_Pos2d(x, y)
+   cg_iRIC_Write_Sol_Particle_Pos2d(fid, x, y)
 
 Arguments
 ---------

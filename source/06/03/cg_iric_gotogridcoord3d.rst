@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_gotogridcoord3d(nx, ny, nz, ier)
+   call cg_iric_gotogridcoord3d(fid, nx, ny, nz, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_GotoGridCoord3d(nx, ny, nz);
+   ier = cg_iRIC_GotoGridCoord3d(fid, nx, ny, nz);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   nx, ny, nz = cg_iRIC_GotoGridCoord3d()
+   nx, ny, nz = cg_iRIC_GotoGridCoord3d(fid)
 
 Arguments
 ---------

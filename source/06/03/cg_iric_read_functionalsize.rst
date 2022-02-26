@@ -7,13 +7,13 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_functionalsize(label, size, ier)
+   call cg_iric_read_functionalsize(fid, label, size, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functionalSize(label, &size);
+   ier = cg_iRIC_Read_F_functionalSize(fid, label, &size);
 
 Format (Python)
 ----------------

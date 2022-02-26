@@ -7,13 +7,13 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_grid_functionaltimesize(label, count, ier)
+   call cg_iric_read_grid_functionaltimesize(fid, label, count, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functionalTimeSize(label, &count);
+   ier = cg_iRIC_Read_Grid_F_functionalTimeSize(fid, label, &count);
 
 Format (Python)
 ----------------

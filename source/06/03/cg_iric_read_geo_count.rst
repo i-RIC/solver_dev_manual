@@ -7,13 +7,13 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_geo_count(name, geocount, ier)
+   call cg_iric_read_geo_count(fid, name, geocount, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Geo_Count(name, geocount);
+   ier = cg_iRIC_Read_Geo_Count(fid, name, geocount);
 
 Format (Python)
 ----------------

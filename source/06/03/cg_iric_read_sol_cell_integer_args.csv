@@ -1,4 +1,5 @@
 Variable name,Type,I/O,Description
+fid,integer,I,File ID
 step,integer,I,Result Step Number
 label,character(*),I,Name
 val,"integer, dimension(:,:),allocatable",O,"Value (In case of 3D grid, integer, dimension(:,:,:), allocatable)"

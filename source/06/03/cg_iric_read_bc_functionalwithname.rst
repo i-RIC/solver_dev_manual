@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_functionalwithname(type, num, label, name, data, ier)
+   call cg_iric_read_bc_functionalwithname(fid, type, num, label, name, data, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_F_functionalWithName(type, num, name, paramname, data);
+   ier = cg_iRIC_Read_BC_F_functionalWithName(fid, type, num, name, paramname, data);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   data = cg_iRIC_Read_BC_F_functionalWithName(type, num, name, paramname)
+   data = cg_iRIC_Read_BC_F_functionalWithName(fid, type, num, name, paramname)
 
 Arguments
 ---------

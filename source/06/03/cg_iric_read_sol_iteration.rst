@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_iteration(step, iteration, ier)
+   call cg_iric_read_sol_iteration(fid, step, iteration, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_Iteration(step, &iteration);
+   ier = cg_iRIC_Read_Sol_Iteration(fid, step, &iteration);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   iteration = cg_iRIC_Read_Sol_Iteration(step)
+   iteration = cg_iRIC_Read_Sol_Iteration(fid, step)
 
 Arguments
 ---------

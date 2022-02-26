@@ -6,13 +6,14 @@ cg_iric_read_geo_filename
 Format (FORTRAN)
 ------------------
 .. code-block:: fortran
-   call cg_iric_read_geo_filename(name, geoid, geofilename, geotype, ier)
+
+   call cg_iric_read_geo_filename(fid, name, geoid, geofilename, geotype, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Geo_Filename(name, geoid, geofilename, &geotype);
+   ier = cg_iRIC_Read_Geo_Filename(fid, name, geoid, geofilename, &geotype);
 
 Format (Python)
 ----------------

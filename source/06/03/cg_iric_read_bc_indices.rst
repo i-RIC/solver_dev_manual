@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_bc_indices(type, num, indices, ier)
+   call cg_iric_bc_indices(fid, type, num, indices, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_Indices(type, num, indices);
+   ier = cg_iRIC_Read_BC_Indices(fid, type, num, indices);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   indices = cg_iRIC_Read_BC_Indices(type, num)
+   indices = cg_iRIC_Read_BC_Indices(fid, type, num)
 
 Arguments
 ---------

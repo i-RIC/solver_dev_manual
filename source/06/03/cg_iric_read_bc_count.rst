@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_count(type, num)
+   call cg_iric_read_bc_count(fid, type, num)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   cg_iRIC_Read_BC_Count(type, &num);
+   cg_iRIC_Read_BC_Count(fid, type, &num);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   num = cg_iRIC_Read_BC_Count(type)
+   num = cg_iRIC_Read_BC_Count(fid, type)
 
 Arguments
 ---------

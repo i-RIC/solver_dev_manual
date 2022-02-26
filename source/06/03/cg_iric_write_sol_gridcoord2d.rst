@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_gridcoord2d(x, y, ier)
+   call cg_iric_write_sol_gridcoord2d(fid, x, y, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_GridCoord2d(x, y);
+   ier = cg_iRIC_Write_Sol_GridCoord2d(fid, x, y);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_GridCoord2d(x, y)
+   cg_iRIC_Write_Sol_GridCoord2d(fid, x, y)
 
 Arguments
 ---------

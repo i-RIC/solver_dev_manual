@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_gridcoord3d(step, x, y, z, ier)
+   call cg_iric_read_sol_gridcoord3d(fid, step, x, y, z, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_GridCoord3d(step, x, y, z);
+   ier = cg_iRIC_Read_Sol_GridCoord3d(fid, step, x, y, z);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   x, y, z = cg_iRIC_Read_Sol_GridCoord3d(step)
+   x, y, z = cg_iRIC_Read_Sol_GridCoord3d(fid, step)
 
 Arguments
 ---------

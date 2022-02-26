@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_functional(label, x, y, ier)
+   call cg_iric_read_functional(fid, label, x, y, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functional(label, x, y);
+   ier = cg_iRIC_Read_F_functional(fid, label, x, y);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   x, y = cg_iRIC_Read_F_functional(label)
+   x, y = cg_iRIC_Read_F_functional(fid, label)
 
 Arguments
 ---------

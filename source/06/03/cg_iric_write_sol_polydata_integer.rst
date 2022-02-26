@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_polydata_integer(label, val, ier)
+   call cg_iric_write_sol_polydata_integer(fid, label, val, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_PolyData_Integer(label, val);
+   ier = cg_iRIC_Write_Sol_PolyData_Integer(fid, label, val);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_PolyData_Integer(label, val)
+   cg_iRIC_Write_Sol_PolyData_Integer(fid, label, val)
 
 Arguments
 ---------

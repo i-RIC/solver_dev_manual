@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_writegridcoord2d(nx, ny, x, y, ier)
+   call cg_iric_writegridcoord2d(fid, nx, ny, x, y, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_WriteGridCoord3d(nx, ny, nz, x, y, z);
+   ier = cg_iRIC_WriteGridCoord3d(fid, nx, ny, nz, x, y, z);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_WriteGridCoord3d(nx, ny, nz, x, y, z)
+   cg_iRIC_WriteGridCoord3d(fid, nx, ny, nz, x, y, z)
 
 Arguments
 ---------

@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_write_sol_particlegroup_pos3d(x, y, z, ier)
+   call cg_iric_write_sol_particlegroup_pos3d(fid, x, y, z, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_ParticleGroup_Pos3d(x, y, z);
+   ier = cg_iRIC_Write_Sol_ParticleGroup_Pos3d(fid, x, y, z);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_ParticleGroup_Pos3d(x, y, z)
+   cg_iRIC_Write_Sol_ParticleGroup_Pos3d(fid, x, y, z)
 
 Arguments
 ---------

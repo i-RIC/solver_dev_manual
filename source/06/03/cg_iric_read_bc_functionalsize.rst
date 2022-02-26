@@ -7,13 +7,13 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_bc_functionalsize(type, num, name, size, ier)
+   call cg_iric_read_bc_functionalsize(fid, type, num, name, size, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_F_functionalSize(type, num, name, &size);
+   ier = cg_iRIC_Read_BC_F_functionalSize(fid, type, num, name, &size);
 
 Format (Python)
 ----------------

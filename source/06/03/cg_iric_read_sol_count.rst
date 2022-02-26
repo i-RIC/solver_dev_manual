@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_sol_count(count, ier)
+   call cg_iric_read_sol_count(fid, count, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Sol_Count(&count);
+   ier = cg_iRIC_Read_Sol_Count(fid, &count);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   count = cg_iRIC_Read_Sol_Count()
+   count = cg_iRIC_Read_Sol_Count(fid)
 
 Arguments
 ---------

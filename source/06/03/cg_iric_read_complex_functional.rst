@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_read_complex_functional(type, num, name, x, y, ier)
+   call cg_iric_read_complex_functional(fid, type, num, name, x, y, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iric_read_complex_functional(type, num, name, x, y);
+   ier = cg_iric_read_complex_functional(fid, type, num, name, x, y);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   x, y = cg_iric_read_complex_functional(type, num, name)
+   x, y = cg_iric_read_complex_functional(fid, type, num, name)
 
 Arguments
 ---------

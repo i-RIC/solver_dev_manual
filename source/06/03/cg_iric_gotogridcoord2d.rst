@@ -7,19 +7,19 @@ Format (FORTRAN)
 ------------------
 .. code-block:: fortran
 
-   call cg_iric_gotogridcoord2d(nx, ny, ier)
+   call cg_iric_gotogridcoord2d(fid, nx, ny, ier)
 
 Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_GotoGridCoord2d(nx, ny);
+   ier = cg_iRIC_GotoGridCoord2d(fid, nx, ny);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   nx, ny = cg_iRIC_GotoGridCoord2d()
+   nx, ny = cg_iRIC_GotoGridCoord2d(fid)
 
 Arguments
 ---------
