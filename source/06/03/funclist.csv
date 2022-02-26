@@ -1,7 +1,5 @@
 Classification,Name,Description,Multi
 Opening a CGNS file,cg_iric_open,Opens a CGNS file,X
-Initializing iRIClib,cg_iric_init,Initializes the CGNS file for reading and writing,X
-Initializing iRIClib,cg_iric_initread,Initializes the CGNS file for reading,X
 Setting up options,cg_initoption,Set up solver option,X
 Reading the calculation conditions,cg_iric_read_integer,Gets the value of an integer variable,O
 Reading the calculation conditions,cg_iric_read_real,Gets the value of a real (double-precision) variable,O
