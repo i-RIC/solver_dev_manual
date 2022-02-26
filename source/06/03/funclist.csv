@@ -13,6 +13,9 @@ Reading a calculation grid,cg_iric_gotogridcoord2d,Makes preparations for readin
 Reading a calculation grid,cg_iric_gotogridcoord3d,Makes preparations for reading a grid,O
 Reading a calculation grid,cg_iric_getgridcoord2d,Reads the x and y coordinates of a grid,O
 Reading a calculation grid,cg_iric_getgridcoord3d,"Reads the x, y and z coordinates of a grid",O
+Reading a calculation grid,cg_iric_grid_nodecount,"Reads node count of a grid",O
+Reading a calculation grid,cg_iric_grid_cellcount,"Reads cell count of a grid",O
+Reading a calculation grid,cg_iric_grid_triangleelements,"Reads the list of ids of triangles for unstructured grid",O
 Reading a calculation grid,cg_iric_read_grid_integer_node,Reads the integer attribute values defined for grid nodes,O
 Reading a calculation grid,cg_iric_read_grid_real_node,Reads double-precision attribute values defined for grid nodes,O
 Reading a calculation grid,cg_iric_read_grid_integer_cell,Reads the integer attribute values defined for cells,O
