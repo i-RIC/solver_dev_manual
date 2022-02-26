@@ -9,9 +9,9 @@ Reading the calculation conditions,cg_iric_read_functionalsize,Gets the size of 
 Reading the calculation conditions,cg_iric_read_functional,Gets the value of a f_functional-type double-precision variable,O
 Reading the calculation conditions,cg_iric_read_functional_realsingle,Gets the value of a f_functional-type single-precision variable,O
 Reading the calculation conditions,cg_iric_read_functionalwithname,Gets the value of a f_functional-type variable (with multiple values),O
-Reading a calculation grid,cg_iric_gotogridcoord2d,Makes preparations for reading a grid,O
+Reading a calculation grid,cg_iric_read_grid2d_str_size,Makes preparations for reading a grid,O
 Reading a calculation grid,cg_iric_gotogridcoord3d,Makes preparations for reading a grid,O
-Reading a calculation grid,cg_iric_getgridcoord2d,Reads the x and y coordinates of a grid,O
+Reading a calculation grid,cg_iric_read_grid2d_coords,Reads the x and y coordinates of a grid,O
 Reading a calculation grid,cg_iric_getgridcoord3d,"Reads the x, y and z coordinates of a grid",O
 Reading a calculation grid,cg_iric_grid_nodecount,"Reads node count of a grid",O
 Reading a calculation grid,cg_iric_grid_cellcount,"Reads cell count of a grid",O
@@ -75,22 +75,22 @@ Reading geographic data,iric_geo_riversurvey_read_fixedpointl,Reads the data of 
 Reading geographic data,iric_geo_riversurvey_read_fixedpointr,Reads the data of right bank extension line of the crosssection,X
 Reading geographic data,iric_geo_riversurvey_read_watersurfaceelevation,Reads the water elevation at the crosssection,X
 Reading geographic data,iric_geo_riversurvey_close,Closes the geographic data file,X
-Outputting a calculation grid,cg_iric_writegridcoord1d,Outputs a one-dimensional structured grid,O
-Outputting a calculation grid,cg_iric_writegridcoord2d,Outputs a two-dimensional structured grid,O
-Outputting a calculation grid,cg_iric_writegridcoord3d,Outputs a three-dimensional structured grid,O
+Outputting a calculation grid,cg_iric_write_grid1d_coords,Outputs a one-dimensional structured grid,O
+Outputting a calculation grid,cg_iric_write_grid2d_coords,Outputs a two-dimensional structured grid,O
+Outputting a calculation grid,cg_iric_write_grid3d_coords,Outputs a three-dimensional structured grid,O
 Outputting a calculation grid,cg_iric_write_grid_integer_node,Outputs a grid attributed defined at grid nodes with integer values.,O
 Outputting a calculation grid,cg_iric_write_grid_real_node,Outputs a grid attributed defined at grid nodes with real number (double-precision) values.,O
 Outputting a calculation grid,cg_iric_write_grid_integer_cell,Outputs a grid attributed defined at grid cells with integer values.,O
 Outputting a calculation grid,cg_iric_write_grid_real_cell,Outputs a grid attributed defined at grid cells with real number (double-precision) values.,O
 Outputting time (or iteration count) information,cg_iric_write_sol_time,Outputs time,O
 Outputting time (or iteration count) information,cg_iric_write_sol_iteration,Outputs the iteration count,O
-Outputting calculation results,cg_iric_write_sol_gridcoord2d,Outputs a two-dimensional structured grid,O
-Outputting calculation results,cg_iric_write_sol_gridcoord3d,Outputs a three-dimensional structured grid,O
+Outputting calculation results,cg_iric_write_sol_grid2d_coords,Outputs a two-dimensional structured grid,O
+Outputting calculation results,cg_iric_write_sol_grid3d_coords,Outputs a three-dimensional structured grid,O
 Outputting calculation results,cg_iric_write_sol_baseiterative_integer,Outputs integer-type calculation results,O
 Outputting calculation results,cg_iric_write_sol_baseiterative_real,Outputs double-precision real-type calculation results,O
 Outputting calculation results,cg_iric_write_sol_baseiterative_string,Outputs string-type calculation results,O
-Outputting calculation results,cg_iric_write_sol_integer,"Outputs integer-type calculation results, having a value for each grid node",O
-Outputting calculation results,cg_iric_write_sol_real,"Outputs double-precision real-type calculation results, having a value for each grid node",O
+Outputting calculation results,cg_iric_write_sol_node_integer,"Outputs integer-type calculation results, having a value for each grid node",O
+Outputting calculation results,cg_iric_write_sol_node_real,"Outputs double-precision real-type calculation results, having a value for each grid node",O
 Outputting calculation results,cg_iric_write_sol_cell_integer,"Outputs integer-type calculation results, having a value for each grid cell",O
 Outputting calculation results,cg_iric_write_sol_cell_real,"Outputs double-precision real-type calculation results, having a value for each grid cell",O
 Outputting calculation results,cg_iric_write_sol_iface_integer,"Outputs integer-type calculation results, having a value for each grid edge at i-direction",O
@@ -124,10 +124,10 @@ Reading calculation results,cg_iric_read_sol_iteration,Reads the loop iteration 
 Reading calculation results,cg_iric_read_sol_baseiterative_integer,Reads the integer-type calculation result value,O
 Reading calculation results,cg_iric_read_sol_baseiterative_real,Reads the double-precision real-type calculation result value,O
 Reading calculation results,cg_iric_read_sol_baseiterative_string,Reads the string-type calculation result value,O
-Reading calculation results,cg_iric_read_sol_gridcoord2d,Reads the 2D structured grid (for moving grid calculation),O
-Reading calculation results,cg_iric_read_sol_gridcoord3d,Reads the 3D structured grid (for moving grid calculation),O
-Reading calculation results,cg_iric_read_sol_integer,"Reads the integer-type calculation result, having a value for each grid node",O
-Reading calculation results,cg_iric_read_sol_real,"Reads the double-precision real-type calculation result, having a value for each grid node",O
+Reading calculation results,cg_iric_read_sol_grid2d_coords,Reads the 2D structured grid (for moving grid calculation),O
+Reading calculation results,cg_iric_read_sol_grid3d_coords,Reads the 3D structured grid (for moving grid calculation),O
+Reading calculation results,cg_iric_read_sol_node_integer,"Reads the integer-type calculation result, having a value for each grid node",O
+Reading calculation results,cg_iric_read_sol_node_real,"Reads the double-precision real-type calculation result, having a value for each grid node",O
 Reading calculation results,cg_iric_read_sol_cell_integer,"Reads the integer-type calculation result, having a value for each grid cell",O
 Reading calculation results,cg_iric_read_sol_cell_real,"Reads the double-precision real-type calculation result, having a value for each grid cell",O
 Reading calculation results,cg_iric_read_sol_iface_integer,"Reads the integer-type calculation result, having a value for each grid edge at i-direction",O
