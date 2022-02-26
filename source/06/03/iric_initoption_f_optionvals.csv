@@ -1,3 +1,0 @@
-optionval value,Content
-IRIC_OPTION_CANCEL,Inform that the solver detects cancel operation using iric_check_cancel_f
-IRIC_OPTION_DIVIDESOLUTIONS,Saves calculation results in divided CGNS files
