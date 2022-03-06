@@ -29,16 +29,15 @@ iRIClib で出力できる計算結果は、大きく以下に分類されます
 
    * - 関数
      - 備考
-   * - iric_check_cancel_f
+
+   * - iric_check_cancel
      - ユーザがソルバーの実行をキャンセルしたか確認する
-   * - iric_check_lock_f
-     - CGNSファイルが GUI によってロックされているか確認する
-   * - iric_write_sol_start_f
-     - 計算結果の出力開始をGUIに通知する
-   * - iric_write_sol_end_f
-     - 計算結果の出力終了をGUIに通知する
-   * - cg_iric_flush_f
-     - 計算結果の出力をファイルに書き込む
+
+   * - cg_iric_write_sol_start
+     - 計算結果の出力処理を開始する
+
+   * - cg_iric_write_sol_end
+     - 計算結果の出力処理を終了する
 
 .. _table_iriclib_output_time_functions:
 
@@ -47,9 +46,11 @@ iRIClib で出力できる計算結果は、大きく以下に分類されます
 
    * - 関数
      - 備考
-   * - cg_iric_write_sol_time_f
+
+   * - cg_iric_write_sol_time
      - 時刻を出力する
-   * - cg_iric_write_sol_iteration_f
+
+   * - cg_iric_write_sol_iteration
      - ループ回数を出力する
 
 .. note:: ベクトル量とスカラー量

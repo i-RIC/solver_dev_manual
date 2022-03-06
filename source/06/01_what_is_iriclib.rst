@@ -51,9 +51,9 @@ iRIClib の関数を呼び出します。
    :caption: FORTRAN から iRIClibを利用するための記述例
    :linenos:
 
-   include 'iriclib_f.h'
+   use iric
 
-   call cg_iric_init_f(fid, ier)
+   call cg_iric_open(filename, mode, fid, ier)
 
 C/C++
 ------------
@@ -70,7 +70,7 @@ iRIClib の関数を呼び出します。
    #include "iriclib.h"
 
    // (中略)
-   ier = cg_iric_init(fid);
+   ier = cg_iRIC_Open(filename, mode, &fid);
 
 Python
 ------------
@@ -86,7 +86,7 @@ Python
 
    from iric import *
 
-   cg_iric_init(fid)
+   fid = cg_iRIC_Open(filename, mode)
 
 この章の読み方
 ===============

@@ -3,12 +3,13 @@
 CGNSファイルを閉じる
 ======================
 
-cg_open_f で開いた CGNSファイルを閉じます。この関数は、 cgnslib で定義された関数です。
+cg_iric_open で開いた CGNSファイルを閉じます。
 
 .. list-table:: 利用する関数
    :header-rows: 1
 
    * - 関数
      - 備考
-   * - cg_close_f
+
+   * - cg_iric_close
      - CGNSファイルを閉じる。

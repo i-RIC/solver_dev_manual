@@ -14,9 +14,17 @@ CGNSファイルに、時刻もしくはループ回数を出力します。
 
    * - 関数
      - 備考
-   * - cg_iric_write_sol_time_f
+
+   * - cg_iric_write_sol_start
+     - 計算結果の出力を開始する
+
+   * - cg_iric_write_sol_end
+     - 計算結果の出力を終了する
+
+   * - cg_iric_write_sol_time
      - 時刻を出力する
-   * - cg_iric_write_sol_iteration_f
+
+   * - cg_iric_write_sol_iteration
      - ループ回数を出力する
 
 時刻を出力する処理の例を :numref:`example_output_time` に示します。
@@ -27,36 +35,35 @@ CGNSファイルに、時刻もしくはループ回数を出力します。
    :linenos:
 
    program Sample4
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer:: fin, ier, i
      double precision:: time
    
      ! CGNS ファイルのオープン
-     call cg_open_f('test.cgn', CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open('test.cgn', IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) STOP "*** Open error of CGNS file ***"
-   
-     ! 内部変数の初期化
-     call cg_iric_init_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
    
      ! 初期状態の情報を出力
      time = 0
    
-     call cg_iric_write_sol_time_f(time, ier)
+     call cg_iric_write_sol_start(fin, ier)
+     call cg_iric_write_sol_time(fin, time, ier)
      ! (ここで、初期の計算格子や計算結果を出力)
+     call cg_iric_write_sol_end(fin, ier)
    
      do
        time = time + 10.0
        ! (ここで計算を実行)
-       call cg_iric_write_sol_time_f(time, ier)
+       call cg_iric_write_sol_start(fin, ier)
+       call cg_iric_write_sol_time(fin, time, ier)
        ! (ここで、計算格子や計算結果を出力)
+       call cg_iric_write_sol_end(fin, ier)
        If (time > 1000) exit
      end do
    
      ! CGNS ファイルのクローズ
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program Sample4
-

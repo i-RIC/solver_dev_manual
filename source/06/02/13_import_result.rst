@@ -8,27 +8,38 @@
 
    * - 関数
      - 備考
-   * - cg_iric_read_sol_count_f
+
+   * - cg_iric_read_sol_count
      - 計算結果の数を取得する
-   * - cg_iric_read_sol_time_f
+
+   * - cg_iric_read_sol_time
      - 計算結果の時刻の値を取得する
-   * - cg_iric_read_sol_iteration_f
+
+   * - cg_iric_read_sol_iteration
      - 計算結果のループ回数の値を取得する
-   * - cg_iric_read_sol_baseiterative_integer_f
+
+   * - cg_iric_read_sol_baseiterative_integer
      - 整数の計算結果の値を取得する
-   * - cg_iric_read_sol_baseiterative_real_f
+
+   * - cg_iric_read_sol_baseiterative_real
      - 倍精度実数の計算結果の値を取得する
-   * - cg_iric_read_sol_gridcoord2d_f
+
+   * - cg_iric_read_sol_grid2d_coords
      - 計算結果の2次元構造格子を取得する
-   * - cg_iric_read_sol_gridcoord3d_f
+
+   * - cg_iric_read_sol_grid3d_coords
      - 計算結果の3次元構造格子を取得する
-   * - cg_iric_read_sol_integer_f
+
+   * - cg_iric_read_sol_integer
      - 整数の格子点ごとに値を持つ計算結果の値を取得する
-   * - cg_iric_read_sol_real_f
+
+   * - cg_iric_read_sol_real
      - 倍精度実数の格子点ごとに値を持つ計算結果の値を取得する
-   * - cg_iric_read_sol_cell_integer_f
+
+   * - cg_iric_read_sol_cell_integer
      - 整数の格子セルごとに値を持つ計算結果の値を取得する
-   * - cg_iric_read_sol_cell_real_f
+
+   * - cg_iric_read_sol_cell_real
      - 倍精度実数の格子セルごとに値を持つ計算結果の値を取得する
 
 既存のCGNSファイルを読み込み、格納されている計算結果を標準出力に
@@ -41,33 +52,29 @@
    :linenos:
 
    program SampleX
+     use iric
      implicit none
-     include 'cgnslib_f.h'
 
      integer:: fin, ier, isize, jsize, solid, solcount, iter, i, j
      double precision, dimension(:,:), allocatable::grid_x, grid_y, result_real
 
      ! CGNS ファイルのオープン
-     call cg_open_f('test.cgn', CG_MODE_READ, fin, ier)
+     call cg_iric_open('test.cgn', IRIC_MODE_READ, fin, ier)
      if (ier /=0) STOP "*** Open error of CGNS file ***"
 
-     ! 内部変数の初期化
-     call cg_iric_initread_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
-
      ! 格子のサイズを調べる
-     call cg_iric_gotogridcoord2d_f(isize, jsize, ier)
+     call cg_iric_read_grid2d_str_size(fin, isize, jsize, ier)
 
      ! 計算結果を読み込むためのメモリを確保
      allocate(grid_x(isize,jsize), grid_y(isize,jsize))
      allocate(result_real(isize, jsize))
 
      ! 計算結果を読み込み出力
-     call cg_iric_read_sol_count_f(solcount, ier)
+     call cg_iric_read_sol_count(fin, solcount, ier)
      do solid = 1, solcount
-       call cg_iric_read_sol_iteration_f(solid, iter, ier)
-       call cg_iric_read_sol_gridcoord2d_f(solid, grid_x, grid_y, ier)
-       call cg_iric_read_sol_real_f(solid, 'result_real', result_real, ier)
+       call cg_iric_read_sol_iteration(fin, solid, iter, ier)
+       call cg_iric_read_sol_gridcoord2d(fin, solid, grid_x, grid_y, ier)
+       call cg_iric_read_sol_real(fin, solid, 'result_real', result_real, ier)
 
        print *, 'iteration: ', iter
        print *, 'grid_x, grid_y, result: '
@@ -79,7 +86,7 @@
      end do
 
      ! CGNS ファイルのクローズ
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program SampleX
 

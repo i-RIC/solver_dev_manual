@@ -13,135 +13,54 @@
 
    * - 関数
      - 備考
-   * - cg_iric_read_geo_count_f
+
+   * - cg_iric_read_geo_count
      - 地形データの数を返す
-   * - cg_iric_read_geo_filename_f
+
+   * - cg_iric_read_geo_filename
      - 地形データのファイル名と種類を返す
-   * - iric_geo_polygon_open_f
-     - ポリゴンファイルを開く
-   * - iric_geo_polygon_read_integervalue_f
-     - ポリゴンの値を整数で返す
-   * - iric_geo_polygon_read_realvalue_f
-     - ポリゴンの値を実数で返す
-   * - iric_geo_polygon_read_pointcount_f
-     - ポリゴンの頂点の数を返す
-   * - iric_geo_polygon_read_points_f
-     - ポリゴンの頂点の座標を返す
-   * - iric_geo_polygon_read_holecount_f
-     - ポリゴンに開いた穴の数を返す
-   * - iric_geo_polygon_read_holepointcount_f
-     - ポリゴンの穴の頂点の数を返す
-   * - iric_geo_polygon_read_holepoints_f
-     - ポリゴンの穴の頂点の座標を返す
-   * - iric_geo_polygon_close_f
-     - ポリゴンファイルを閉じる
-   * - iric_geo_riversurvey_open_f
+
+   * - iric_geo_riversurvey_open
      - 河川測量データを開く
-   * - iric_geo_riversurvey_read_count_f
+
+   * - iric_geo_riversurvey_read_count
      - 河川横断線の数を返す
-   * - iric_geo_riversurvey_read_position_f
+
+   * - iric_geo_riversurvey_read_position
      - 横断線の中心点の座標を返す
-   * - iric_geo_riversurvey_read_direction_f
+
+   * - iric_geo_riversurvey_read_direction
      - 横断線の向きを返す
-   * - iric_geo_riversurvey_read_name_f
+
+   * - iric_geo_riversurvey_read_name
      - 横断線の名前を文字列として返す
-   * - iric_geo_riversurvey_read_realname_f
+
+   * - iric_geo_riversurvey_read_realname
      - 横断線の名前を実数値として返す
-   * - iric_geo_riversurvey_read_leftshift_f
+
+   * - iric_geo_riversurvey_read_leftshift
      - 横断線の標高データのシフト量を返す
-   * - iric_geo_riversurvey_read_altitudecount_f
+
+   * - iric_geo_riversurvey_read_altitudecount
      - 横断線の標高データの数を返す
-   * - iric_geo_riversurvey_read_altitudes_f
+
+   * - iric_geo_riversurvey_read_altitudes
      - 横断線の標高データを返す
-   * - iric_geo_riversurvey_read_fixedpointl_f
+
+   * - iric_geo_riversurvey_readixedpointl
      - 横断線の左岸延長線のデータを返す
-   * - iric_geo_riversurvey_read_fixedpointr_f
+
+   * - iric_geo_riversurvey_readixedpointr
      - 横断線の右岸延長線のデータを返す
-   * - iric_geo_riversurvey_read_watersurfaceelevation_f
+
+   * - iric_geo_riversurvey_read_watersurfaceelevation
      - 横断線での水面標高のデータを返す
-   * - iric_geo_riversurvey_close_f
+
+   * - iric_geo_riversurvey_close
      - 河川測量データを閉じる
 
-地形データのうち、ポリゴンを読み込む処理の記述例を
-:numref:`example_load_polygon` に、
-河川測量データを読み込む処理の記述例を :numref:`example_load_riversurvey`
-にそれぞれ示します。
-
-.. code-block:: fortran
-   :caption: ポリゴンを読み込む処理の記述例
-   :name: example_load_polygon
-   :linenos:
-
-   program TestPolygon
-     implicit none
-     include 'cgnslib_f.h'
-     include 'iriclib_f.h'
-     integer:: fin, ier
-     integer:: icount, istatus
-   
-     integer:: geoid
-     integer:: elevation_geo_count
-     character(len=1000):: filename
-     integer:: geotype
-     integer:: polygonid
-     double precision:: polygon_value
-     integer:: region_pointcount
-     double precision, dimension(:), allocatable:: region_pointx
-     double precision, dimension(:), allocatable:: region_pointy
-     integer:: hole_id
-     integer:: hole_count
-     integer:: hole_pointcount
-     double precision, dimension(:), allocatable:: hole_pointx
-     double precision, dimension(:), allocatable:: hole_pointy
-   
-   
-     ! 計算データファイルを開く
-     call cg_open_f("test.cgn", CG_MODE_MODIFY, fin, ier)
-     if (ier /=0) stop "*** Open error of CGNS file ***"
-   
-     ! iRIClib の初期化
-     call cg_iric_init_f(fin, ier)
-   
-     ! 地形データの数を取得
-     call cg_iric_read_geo_count_f("Elevation", elevation_geo_count, ier)
-   
-     do geoid = 1, elevation_geo_count
-       call cg_iric_read_geo_filename_f('Elevation', geoid, &
-         filename, geotype, ier)
-       if (geotype .eq. iRIC_GEO_POLYGON) then
-         call iric_geo_polygon_open_f(filename, polygonid, ier)
-         call iric_geo_polygon_read_realvalue_f(polygonid, polygon_value, ier)
-         print *, polygon_value
-         call iric_geo_polygon_read_pointcount_f(polygonid, region_pointcount, ier)
-         allocate(region_pointx(region_pointcount))
-         allocate(region_pointy(region_pointcount))
-         call iric_geo_polygon_read_points_f(polygonid, region_pointx, region_pointy, ier)
-         print *, 'region_x: ', region_pointx
-         print *, 'region_y: ', region_pointy
-         deallocate(region_pointx)
-         deallocate(region_pointy)
-         call iric_geo_polygon_read_holecount_f(polygonid, hole_count, ier)
-         print *, 'hole count: ', hole_count
-         do hole_id = 1, hole_count
-           print *, 'hole ', hole_id
-           call iric_geo_polygon_read_holepointcount_f(polygonid, hole_id, hole_pointcount, ier)
-           print *, 'hole pointcount: ', hole_pointcount
-           allocate(hole_pointx(hole_pointcount))
-           allocate(hole_pointy(hole_pointcount))
-           call iric_geo_polygon_read_holepoints_f(polygonid, hole_id, hole_pointx, hole_pointy, ier)
-           print *, 'hole_x: ', hole_pointx
-           print *, 'hole_y: ', hole_pointy
-           deallocate(hole_pointx)
-           deallocate(hole_pointy)
-         end do
-         call iric_geo_polygon_close_f(polygonid, ier)
-       end if
-     end do
-   
-     ! 計算データファイルを閉じる
-     call cg_close_f(fin, ier)
-     stop
-   end program TestPolygon
+地形データのうち、河川測量データを読み込む処理の記述例を :numref:`example_load_riversurvey`
+に示します。
 
 .. code-block:: fortran
    :caption: 河川測量データを読み込む処理の記述例
@@ -149,9 +68,9 @@
    :linenos:
 
    program TestRiverSurvey
+     use iric
      implicit none
-     include 'cgnslib_f.h'
-     include 'iriclib_f.h'
+
      integer:: fin, ier
      integer:: icount, istatus
    
@@ -176,36 +95,33 @@
      double precision:: xsec_wse
    
      ! 計算データファイルを開く
-     call cg_open_f("test.cgn", CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open("test.cgn", IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) stop "*** Open error of CGNS file ***"
    
-     ! iRIClib の初期化
-     call cg_iric_init_f(fin, ier)
-   
      ! 地形データの数を取得
-     call cg_iric_read_geo_count_f("Elevation", elevation_geo_count, ier)
+     call cg_iric_read_geo_count(fin, "Elevation", elevation_geo_count, ier)
    
      do geoid = 1, elevation_geo_count
-       call cg_iric_read_geo_filename_f('Elevation', geoid, &
+       call cg_iric_read_geo_filename(fin, 'Elevation', geoid, &
          filename, geotype, ier)
        if (geotype .eq. iRIC_GEO_RIVERSURVEY) then
-         call iric_geo_riversurvey_open_f(filename, rsid, ier)
-         call iric_geo_riversurvey_read_count_f(rsid, xsec_count, ier)
+         call iric_geo_riversurvey_open(filename, rsid, ier)
+         call iric_geo_riversurvey_read_count(rsid, xsec_count, ier)
          do xsec_id = 1, xsec_count
-           call iric_geo_riversurvey_read_name_f(rsid, xsec_id, xsec_name, ier)
+           call iric_geo_riversurvey_read_name(rsid, xsec_id, xsec_name, ier)
            print *, 'xsec ', xsec_name
-           call iric_geo_riversurvey_read_position_f(rsid, xsec_id, xsec_x, xsec_y, ier)
+           call iric_geo_riversurvey_read_position(rsid, xsec_id, xsec_x, xsec_y, ier)
            print *, 'position: ', xsec_x, xsec_y
-           call iric_geo_riversurvey_read_direction_f(rsid, xsec_id, xsec_x, xsec_y, ier)
+           call iric_geo_riversurvey_read_direction(rsid, xsec_id, xsec_x, xsec_y, ier)
            print *, 'direction: ', xsec_x, xsec_y
-           call iric_geo_riversurvey_read_leftshift_f(rsid, xsec_id, xsec_leftshift, ier)
+           call iric_geo_riversurvey_read_leftshift(rsid, xsec_id, xsec_leftshift, ier)
            print *, 'leftshift: ', xsec_leftshift
-           call iric_geo_riversurvey_read_altitudecount_f(rsid, xsec_id, xsec_altcount, ier)
+           call iric_geo_riversurvey_read_altitudecount(rsid, xsec_id, xsec_altcount, ier)
            print *, 'altitude count: ', xsec_altcount
            allocate(xsec_altpos(xsec_altcount))
            allocate(xsec_altheight(xsec_altcount))
            allocate(xsec_altactive(xsec_altcount))
-           call iric_geo_riversurvey_read_altitudes_f( &
+           call iric_geo_riversurvey_read_altitudes( &
              rsid, xsec_id, xsec_altpos, xsec_altheight, xsec_altactive, ier)
            do xsec_altid = 1, xsec_altcount
              print *, 'Altitude ', xsec_altid, ': ', &
@@ -214,22 +130,22 @@
                xsec_altactive(xsec_altid:xsec_altid)
            end do
            deallocate(xsec_altpos, xsec_altheight, xsec_altactive)
-           call iric_geo_riversurvey_read_fixedpointl_f( &
+           call iric_geo_riversurvey_readixedpointl( &
              rsid, xsec_id, xsec_set, xsec_x, xsec_y, xsec_index, ier)
            print *, 'FixedPointL: ', xsec_set, xsec_x, xsec_y, xsec_index
-           call iric_geo_riversurvey_read_fixedpointr_f( &
+           call iric_geo_riversurvey_readixedpointr( &
              rsid, xsec_id, xsec_set, xsec_x, xsec_y, xsec_index, ier)
            print *, 'FixedPointR: ', xsec_set, xsec_x, xsec_y, xsec_index
-           call iric_geo_riversurvey_read_watersurfaceelevation_f( &
+           call iric_geo_riversurvey_read_watersurfaceelevation( &
              rsid, xsec_id, xsec_set, xsec_wse, ier)
            print *, 'WaterSurfaceElevation: ', xsec_set, xsec_wse
          end do
-         call iric_geo_riversurvey_close_f(rsid, ier)
+         call iric_geo_riversurvey_close(rsid, ier)
        end if
      end do
    
      ! 計算データファイルを閉じる
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program TestRiverSurvey
 
