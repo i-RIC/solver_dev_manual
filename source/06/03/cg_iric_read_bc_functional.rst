@@ -13,13 +13,13 @@ cg_iric_read_bc_functional
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_F_functional(fid, type, num, name, x, y);
+   ier = cg_iRIC_Read_BC_functional(fid, type, num, name, x, y);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   x, y = cg_iRIC_Read_BC_F_functional(fid, type, num, name)
+   x, y = cg_iRIC_Read_BC_functional(fid, type, num, name)
 
 引数
 ----

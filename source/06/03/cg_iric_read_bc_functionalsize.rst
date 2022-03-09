@@ -13,7 +13,7 @@ cg_iric_read_bc_functionalsize
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_F_functionalSize(fid, type, num, name, &size);
+   ier = cg_iRIC_Read_BC_functionalSize(fid, type, num, name, &size);
 
 形式 (Python)
 ---------------

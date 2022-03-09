@@ -13,7 +13,7 @@ cg_iric_read_grid_functionaltimesize
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functionalTimeSize(fid, label, &count);
+   ier = cg_iRIC_Read_Grid_functionalTimeSize(fid, label, &count);
 
 形式 (Python)
 ---------------

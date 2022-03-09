@@ -13,7 +13,7 @@ cg_iric_read_complex_functional_realsingle
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Complex_F_functional_RealSingle(fid, type, num, name, x, y);
+   ier = cg_iRIC_Read_Complex_functional_RealSingle(fid, type, num, name, x, y);
 
 形式 (Python)
 ---------------

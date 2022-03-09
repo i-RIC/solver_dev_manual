@@ -13,13 +13,13 @@ CGNSファイルから関数型の計算条件・格子生成条件の値を読�
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functionalWithName(fid, label, name, data);
+   ier = cg_iRIC_Read_functionalWithName(fid, label, name, data);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   data = cg_iRIC_Read_F_functionalWithName(fid, label, name)
+   data = cg_iRIC_Read_functionalWithName(fid, label, name)
 
 引数
 ----

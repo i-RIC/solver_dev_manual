@@ -13,13 +13,13 @@ CGNSファイルから倍精度実数の関数型の計算条件・格子生成�
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functional(fid, label, x, y);
+   ier = cg_iRIC_Read_functional(fid, label, x, y);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   x, y = cg_iRIC_Read_F_functional(fid, label)
+   x, y = cg_iRIC_Read_functional(fid, label)
 
 引数
 ----
