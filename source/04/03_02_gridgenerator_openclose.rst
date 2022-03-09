@@ -56,6 +56,6 @@ Compile the executable file, just like in :ref:`gridgenerator_dev_skeleton`.
 
 Check that the source code can be compiled successfully.
 
-Refer to :ref:`iriclib_open_cgns`, :ref:`iriclib_init_iriclib` and
+Refer to :ref:`iriclib_open_cgns` and
 :ref:`iriclib_close_cgns` for the details of the
 subroutines added in this section.

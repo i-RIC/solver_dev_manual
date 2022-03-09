@@ -67,6 +67,6 @@ Compile and deploy the executable file, just like in
 Check whether it can be launched from iRIC successfully, just like in
 :ref:`solver_dev_skeleton`.
 
-Refer to :ref:`iriclib_open_cgns`, :ref:`iriclib_init_iriclib` and
+Refer to :ref:`iriclib_open_cgns` and
 :ref:`iriclib_close_cgns` for the details of the
 subroutines added in this section.
