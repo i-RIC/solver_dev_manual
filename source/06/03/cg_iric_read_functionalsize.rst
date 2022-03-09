@@ -13,7 +13,7 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functionalSize(fid, label, &size);
+   ier = cg_iRIC_Read_functionalSize(fid, label, &size);
 
 Format (Python)
 ----------------

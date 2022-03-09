@@ -13,13 +13,13 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functionalTime(fid, label, values);
+   ier = cg_iRIC_Read_Grid_functionalTime(fid, label, values);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   values = cg_iRIC_Read_Grid_F_functionalTime(fid, label)
+   values = cg_iRIC_Read_Grid_functionalTime(fid, label)
 
 Arguments
 ---------

@@ -13,13 +13,13 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functional_Real_Node(fid, label, dimid, values);
+   ier = cg_iRIC_Read_Grid_functional_Real_Node(fid, label, dimid, values);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   values = cg_iRIC_Read_Grid_F_functional_Real_Node(fid, label, dimid)
+   values = cg_iRIC_Read_Grid_functional_Real_Node(fid, label, dimid)
 
 Arguments
 ---------

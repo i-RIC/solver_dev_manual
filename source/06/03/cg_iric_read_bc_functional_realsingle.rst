@@ -13,7 +13,7 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_BC_F_functional_RealSingle(fid, type, num, name, x, y);
+   ier = cg_iRIC_Read_BC_functional_RealSingle(fid, type, num, name, x, y);
 
 Format (Python)
 ----------------

@@ -13,13 +13,13 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_F_functionalWithName(fid, label, name, data);
+   ier = cg_iRIC_Read_functionalWithName(fid, label, name, data);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   data = cg_iRIC_Read_F_functionalWithName(fid, label, name)
+   data = cg_iRIC_Read_functionalWithName(fid, label, name)
 
 Arguments
 ---------

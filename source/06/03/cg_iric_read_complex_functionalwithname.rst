@@ -13,13 +13,13 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Complex_F_functionalWithName(fid, type, num, name, paramname, data);
+   ier = cg_iRIC_Read_Complex_functionalWithName(fid, type, num, name, paramname, data);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   data = cg_iRIC_Read_Complex_F_functionalWithName(fid, type, num, name, paramname)
+   data = cg_iRIC_Read_Complex_functionalWithName(fid, type, num, name, paramname)
 
 Arguments
 ---------

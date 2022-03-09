@@ -13,7 +13,7 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functionalTime(fid, label, dimname, &count);
+   ier = cg_iRIC_Read_Grid_functionalTime(fid, label, dimname, &count);
 
 Format (Python)
 ----------------

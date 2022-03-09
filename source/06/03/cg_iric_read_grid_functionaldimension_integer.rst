@@ -13,13 +13,13 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Read_Grid_F_functionalDimension_Integer(fid, label, dimname, values);
+   ier = cg_iRIC_Read_Grid_functionalDimension_Integer(fid, label, dimname, values);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   values = cg_iRIC_Read_Grid_F_functionalDimension_Integer(fid, label, dimname)
+   values = cg_iRIC_Read_Grid_functionalDimension_Integer(fid, label, dimname)
 
 Arguments
 ---------
