@@ -56,9 +56,7 @@ is thrown instead, if error occurs. To impelement error handling, please use try
    03/cg_iric_read_functional_realsingle
    03/cg_iric_read_functionalwithname
    03/cg_iric_read_grid2d_str_size
-   03/cg_iric_gotogridcoord3d
    03/cg_iric_read_grid2d_coords
-   03/cg_iric_getgridcoord3d
    03/cg_iric_read_grid_nodecount
    03/cg_iric_read_grid_cellcount
    03/cg_iric_read_grid_triangleelements
