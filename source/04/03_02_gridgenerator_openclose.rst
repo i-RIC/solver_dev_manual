@@ -54,6 +54,5 @@ compiler でコンパイルする場合の方法で記述します。
 :ref:`gridgenerator_dev_skeleton` と同様に、ファイルのコンパイルを行います。
 問題なくコンパイルが成功することを確認してください。
 
-この節で追加した関数の詳細については、:ref:`iriclib_open_cgns`,
-:ref:`iriclib_init_iriclib`, :ref:`iriclib_close_cgns`
+この節で追加した関数の詳細については、:ref:`iriclib_open_cgns`, :ref:`iriclib_close_cgns`
 を参照してください。

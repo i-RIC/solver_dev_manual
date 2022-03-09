@@ -68,5 +68,5 @@ Intel Fortran Compiler, gfortran
 確認します。エラーメッセージが表示されずに終了すれば成功です。
 
 この節で追加した関数の詳細については、
-:ref:`iriclib_open_cgns`, :ref:`iriclib_init_iriclib`, :ref:`iriclib_close_cgns`
+:ref:`iriclib_open_cgns`, :ref:`iriclib_close_cgns`
 を参照してください。
