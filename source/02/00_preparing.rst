@@ -11,4 +11,4 @@ When building solvers, you need to link against cgnslib and iriclib.
 Headers and Libraries are bundled with iRIC GUI. If you've installed to standard folder, they are stored
 in the folder below:
 
-C:\\Users\\(userid)\\iRIC\\guis\\prepost\\sdk
+C:\\Users\\(userid)\\iRIC\\sdk
