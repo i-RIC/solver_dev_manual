@@ -10,7 +10,7 @@ necessary to make and deploy files shown in
 :numref:`files_related_to_gridgen`.
 
 Grid generating program
-developers have to create a new folder under \"gridcreators\" folder, and
+developers have to create a new folder under \"private\\gridcreators\" folder, and
 deploy files related to the new grid generating program under that.
 
 .. _files_related_to_gridgen:
