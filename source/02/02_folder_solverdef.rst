@@ -3,7 +3,7 @@
 Creating a folder
 ==================
 
-Create a special folder for the solver you develop under the \"solvers\"
+Create a special folder for the solver you develop under the \"private\\solvers\"
 folder under the installation folder of iRIC. 
 This time, please create \"example\" folder.
 

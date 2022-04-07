@@ -7,7 +7,7 @@ river simulation, and output calculation results.
 To add a solver to iRIC, it is necessary to make and deploy files shown
 in :numref:`files_related_to_solver`.
 
-Solver developers have to create a new folder under \"solvers\" folder under
+Solver developers have to create a new folder under \"private\\solvers\" folder under
 iRIC install folder, and deploy files in :numref:`files_related_to_solver`
 that you\'ve prepared for your new solver.
 
