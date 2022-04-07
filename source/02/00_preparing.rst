@@ -11,4 +11,4 @@ iRIC ソルバの開発環境を準備します。
 必要なヘッダファイルとライブラリは、 iRIC GUI に同梱されています。標準的な場所にインストールした場合、
 ファイルは以下にあります。
 
-C:\\Users\\(userid)\\iRIC\\guis\\prepost\\sdk
+C:\\Users\\(userid)\\iRIC\\sdk
