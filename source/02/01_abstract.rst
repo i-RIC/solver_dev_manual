@@ -45,7 +45,7 @@ writing calculation condition, grids, and calculation results. Solvers
 can also use arbitrary files for data I/O that cannot be loaded from or
 written into calculation data files.
 
-Solvers can be developed using FORTRAN, C or C++. In this chapter, a
+Solvers can be developed using FORTRAN, Python, C or C++. In this chapter, a
 sample solver is developed in FORTRAN.
 
 translation\_ja\_JP.ts etc.

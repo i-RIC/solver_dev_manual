@@ -46,7 +46,7 @@ condition, generate a grid, and outputs it.
 Grid generating programs use grid generating data file created by iRIC,
 for loading and writing grid generating condition and grids.
 
-Grid generating programs can be developed using FORTRAN, C, or C++. In
+Grid generating programs can be developed using FORTRAN, Python, C, or C++. In
 this chapter, a sample grid generating program is developed in FORTRAN.
 
 translation\_ja\_JP.ts etc.
