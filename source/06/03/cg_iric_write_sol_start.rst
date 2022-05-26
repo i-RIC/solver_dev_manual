@@ -1,5 +1,5 @@
-iric_write_sol_start
-======================
+cg_iric_write_sol_start
+===========================
 
 -  Inform the GUI that the solver started outputting result
 
