@@ -1,5 +1,5 @@
-iric_write_sol_start
-======================
+cg_iric_write_sol_start
+========================
 
 計算結果の出力開始をGUIに通知する。
 
@@ -13,19 +13,19 @@ iric_write_sol_start
 ---------------
 .. code-block:: c
 
-   ier = iRIC_Write_Sol_Start(fid);
+   ier = cg_iRIC_Write_Sol_Start(fid);
 
 形式 (Python)
 ---------------
 
 .. code-block:: python
 
-   iRIC_Write_Sol_Start(fid)
+   cg_iRIC_Write_Sol_Start(fid)
 
 引数
 ----
 
-.. csv-table:: iric_write_sol_start の引数
-   :file: iric_write_sol_start_args.csv
+.. csv-table:: cg_iric_write_sol_start の引数
+   :file: cg_iric_write_sol_start_args.csv
    :header-rows: 1
 

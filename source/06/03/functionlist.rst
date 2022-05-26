@@ -11,4 +11,3 @@
 .. csv-table:: iRIClibサブルーチン一覧
    :file: funclist.csv
    :header-rows: 1
-

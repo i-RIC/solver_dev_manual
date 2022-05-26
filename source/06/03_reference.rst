@@ -159,9 +159,9 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/cg_iric_write_sol_polydata_integer
    03/cg_iric_write_sol_polydata_real
    03/iric_check_cancel
-   03/iric_write_sol_start
-   03/iric_write_sol_end
-   03/cg_iric_flush
+   03/cg_iric_check_update
+   03/cg_iric_write_sol_start
+   03/cg_iric_write_sol_end
    03/cg_iric_read_sol_count
    03/cg_iric_read_sol_time
    03/cg_iric_read_sol_iteration
