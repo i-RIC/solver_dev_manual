@@ -7,7 +7,7 @@ cg_iric_write_sol_start
 ---------------
 .. code-block:: fortran
 
-   call iric_write_sol_start(fid, ier)
+   call cg_iric_write_sol_start(fid, ier)
 
 形式 (C/C++)
 ---------------
