@@ -17,8 +17,8 @@ gfortran, Intel Fortran Compiler でのコンパイル方法を
    :linenos:
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    end program SampleProgram
 
 

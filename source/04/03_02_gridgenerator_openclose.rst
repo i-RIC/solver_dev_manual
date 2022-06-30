@@ -9,11 +9,9 @@
 は引数として格子生成データファイルのファイル名を渡すため、
 そのファイル名を開きます。
 
-引数の数と引数を取得するための方法は、コンパイラによって異なります。
-Intel Fortran compiler, gfortran での引数の取得方法を
-:ref:`handling_arguments` で説明していますので、参考にしてください。
-ここでは、Intel Fortran
-compiler でコンパイルする場合の方法で記述します。
+Intel Fortran Compiler
+での引数の取得方法を :ref:`handling_arguments`
+で説明していますので、参考にしてください。
 
 処理を追記したソースコードを :numref:`gridgenerator_with_open_close`
 に示します。追記した部分を強調して示します。
@@ -25,8 +23,8 @@ compiler でコンパイルする場合の方法で記述します。
    :emphasize-lines: 5-25
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer:: fin, ier
      integer:: icount, istatus
@@ -41,14 +39,11 @@ compiler でコンパイルする場合の方法で記述します。
      endif
    
      ! 格子生成データファイルを開く
-     call cg_open_f(condFile, CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open(condFile, IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) stop "*** Open error of CGNS file ***"
    
-     ! 内部変数の初期化。戻り値は 1 になるが問題ない。
-     call cg_iric_init_f(fin, ier)
-   
      ! 格子生成データファイルを閉じる
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
    end program SampleProgram
 
 :ref:`gridgenerator_dev_skeleton` と同様に、ファイルのコンパイルを行います。

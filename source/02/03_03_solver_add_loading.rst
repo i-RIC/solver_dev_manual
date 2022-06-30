@@ -20,9 +20,8 @@ iRIC は、 :ref:`how_to_create_solver_def_file` で作成したソルバー定�
    :emphasize-lines: 8-32,34-106
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
-     include 'iriclib_f.h'
      integer:: fin, ier
      integer:: icount, istatus
      character(200)::condFile
@@ -55,39 +54,32 @@ iRIC は、 :ref:`how_to_create_solver_def_file` で作成したソルバー定�
 
      ! (略)
 
-     ! 内部変数の初期化
-     call cg_iric_init_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
-     ! オプションの設定
-     call iric_initoption_f(IRIC_OPTION_CANCEL, ier)
-     if (ier /=0) STOP "*** Initialize option error***"
-
      ! 計算条件の読み込み
-     call cg_iric_read_integer_f("maxIteretions", maxiterations, ier)
-     call cg_iric_read_real_f("timeStep", timestep, ier)
-     call cg_iric_read_integer_f("surfaceType", surfacetype, ier)
-     call cg_iric_read_real_f("constantSurface", constantsurface, ier)
+     call cg_iric_read_integer(fin, "maxIteretions", maxiterations, ier)
+     call cg_iric_read_real(fin, "timeStep", timestep, ier)
+     call cg_iric_read_integer(fin, "surfaceType", surfacetype, ier)
+     call cg_iric_read_real(fin, "constantSurface", constantsurface, ier)
 
-     call cg_iric_read_functionalsize_f("variableSurface", variable_surface_size, ier)
+     call cg_iric_read_functionalsize(fin, "variableSurface", variable_surface_size, ier)
      allocate(variable_surface_time(variable_surface_size))
      allocate(variable_surface_elevation(variable_surface_size))
-     call cg_iric_read_functional_f("variableSurface", variable_surface_time, variable_surface_elevation, ier)
+     call cg_iric_read_functional(fin, "variableSurface", variable_surface_time, variable_surface_elevation, ier)
 
      ! 格子のサイズを調べる
-     call cg_iric_gotogridcoord2d_f(isize, jsize, ier)
+     call cg_iric_read_grid2d_str_size(fin, isize, jsize, ier)
 
      ! 格子を読み込むためのメモリを確保
      allocate(grid_x(isize,jsize), grid_y(isize,jsize))
      ! 格子を読み込む
-     call cg_iric_getgridcoord2d_f(grid_x, grid_y, ier)
+     call cg_iric_read_grid2d_coords(fin, grid_x, grid_y, ier)
 
      ! 格子点で定義された属性 のメモリを確保
      allocate(elevation(isize, jsize))
      allocate(obstacle(isize - 1, jsize - 1))
 
      ! 属性を読み込む
-     call cg_iric_read_grid_real_node_f("Elevation", elevation, ier)
-     call cg_iric_read_grid_integer_cell_f("Obstacle", obstacle, ier)
+     call cg_iric_read_grid_real_node(fin, "Elevation", elevation, ier)
+     call cg_iric_read_grid_integer_cell(fin, "Obstacle", obstacle, ier)
 
      ! 流入口の数に従って、境界条件を保持するメモリを確保。
      allocate(inflow_element_count(inflow_count))
@@ -98,12 +90,12 @@ iRIC は、 :ref:`how_to_create_solver_def_file` で作成したソルバー定�
      inflow_element_max = 0
      do inflowid = 1, inflow_count
        ! 流入口に指定された格子点の数
-       call cg_iric_read_bc_indicessize_f('inflow', inflowid, inflow_element_count(inflowid))
+       call cg_iric_read_bc_indicessize(fin, 'inflow', inflowid, inflow_element_count(inflowid))
        if (inflow_element_max < inflow_element_count(inflowid)) then
          inflow_element_max = inflow_element_count(inflowid)
        end if
        ! 流入口の時間依存の流入量のデータの数
-       call cg_iric_read_bc_functionalsize_f('inflow', inflowid, 'FunctionalDischarge', discharge_variable_size(inflowid), ier);
+       call cg_iric_read_bc_functionalsize(fin, 'inflow', inflowid, 'FunctionalDischarge', discharge_variable_size(inflowid), ier);
        if (discharge_variable_sizemax < discharge_variable_size(inflowid)) then
          discharge_variable_sizemax = discharge_variable_size(inflowid)
        end if
@@ -117,17 +109,17 @@ iRIC は、 :ref:`how_to_create_solver_def_file` で作成したソルバー定�
      ! 境界条件の読み込み
      do inflowid = 1, inflow_count
        ! 流入口に指定された格子点
-       call cg_iric_read_bc_indices_f('inflow', inflowid, inflow_element(inflowid:inflowid,:,:), ier)
+       call cg_iric_read_bc_indices(fin, 'inflow', inflowid, inflow_element(inflowid:inflowid,:,:), ier)
        ! 流入量の種類 (0 = 一定、1 = 時間依存)
-       call cg_iric_read_bc_integer_f('inflow', inflowid, 'Type', discharge_type(inflowid:inflowid), ier)
+       call cg_iric_read_bc_integer(fin, 'inflow', inflowid, 'Type', discharge_type(inflowid:inflowid), ier)
        ! 流入量 (一定)
-       call cg_iric_read_bc_real_f('inflow', inflowid, 'ConstantDischarge', discharge_constant(inflowid:inflowid), ier)
+       call cg_iric_read_bc_real(fin, 'inflow', inflowid, 'ConstantDischarge', discharge_constant(inflowid:inflowid), ier)
        ! 流入量 (時間依存)
-       call cg_iric_read_bc_functional_f('inflow', inflowid, 'FunctionalDischarge', discharge_variable_time(inflowid:inflowid,:), discharge_variable_value(inflowid:inflowid,:), ier)
+       call cg_iric_read_bc_functional(fin, 'inflow', inflowid, 'FunctionalDischarge', discharge_variable_time(inflowid:inflowid,:), discharge_variable_value(inflowid:inflowid,:), ier)
      end do
 
      ! 計算データファイルを閉じる
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program SampleProgram
 

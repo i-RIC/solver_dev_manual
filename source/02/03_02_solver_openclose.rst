@@ -11,11 +11,9 @@
 iRIC は引数として計算データファイルのファイル名を渡すため、
 そのファイルを開きます。
 
-引数の数と引数を取得するための方法は、コンパイラによって異なります。
-Intel Fortran Compiler, gfortran
+Intel Fortran Compiler
 での引数の取得方法を :ref:`handling_arguments`
 で説明していますので、参考にしてください。
-ここでは、Intel Fortran Compiler でコンパイルする場合の方法で記述します。
 
 計算データファイルを開く処理と閉じる処理を追記したソースコードを
 :numref:`solver_with_open_close`
@@ -25,12 +23,10 @@ Intel Fortran Compiler, gfortran
    :caption: 計算データファイルを開く処理、閉じる処理を追記したソースコード
    :name: solver_with_open_close
    :linenos:
-   :emphasize-lines: 5-7,11-31
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
-     include 'iriclib_f.h'
      integer:: fin, ier
      integer:: icount, istatus
      character(200)::condFile
@@ -46,18 +42,11 @@ Intel Fortran Compiler, gfortran
      endif
 
      ! 計算データファイルを開く
-     call cg_open_f(condFile, CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open(condFile, IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) stop "*** Open error of CGNS file ***"
 
-     ! 内部変数の初期化
-     call cg_iric_init_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
-     ! オプションの設定
-     call iric_initoption_f(IRIC_OPTION_CANCEL, ier)
-     if (ier /=0) STOP "*** Initialize option error***"
-
      ! 計算データファイルを閉じる
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program SampleProgram
 

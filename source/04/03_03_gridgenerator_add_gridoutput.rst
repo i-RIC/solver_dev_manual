@@ -19,8 +19,8 @@
    :emphasize-lines: 7-8,25-40
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer:: fin, ier
      integer:: icount, istatus
@@ -36,11 +36,8 @@
      endif
    
      ! 格子生成データファイルを開く
-     call cg_open_f(condFile, CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open(condFile, IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) stop "*** Open error of CGNS file ***"
-   
-     ! 内部変数の初期化。戻り値は 1 になるが問題ない。
-     call cg_iric_init_f(fin, ier)
    
      imax = 10
      jmax = 10
@@ -57,10 +54,10 @@
      end do
    
      ! 格子を出力
-     cg_iric_writegridcoord2d_f(imax, jmax, grid_x, grid_y, ier)
+     cg_iric_write_grid2d_coords(fin, imax, jmax, grid_x, grid_y, ier)
    
      ! 格子生成データファイルを閉じる
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
    end program SampleProgram
 
 コンパイルしたら、できた実行プログラムを :ref:`create_gridgen_folder`

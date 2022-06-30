@@ -7,9 +7,7 @@
 :numref:`solver_skeleton` に示すソースコードを作成して、
 sample.f90 という名前で保存します。この時点では、ソルバーは何もしていません。
 
-このソースコードをコンパイルします。コンパイル方法は、コンパイラによって異なります。
-Intel Fortran Compiler, gfortran でのコンパイル方法を
-:ref:`how_to_link` で解説していますので、参考にしてください。
+このソースコードをコンパイルします。
 
 .. code-block:: fortran
    :caption: サンプルソルバー ソースコード
@@ -17,9 +15,8 @@ Intel Fortran Compiler, gfortran でのコンパイル方法を
    :linenos:
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
-     include 'iriclib_f.h'
 
      write(*,*) "Sample Program"
      stop
