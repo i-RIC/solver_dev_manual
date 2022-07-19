@@ -1,7 +1,7 @@
 cg_iric_read_functionalwithname
 =================================
 
--  Reads the value of a f_functional-type real variable from the CGNS
+Reads the value of a f_functional-type real variable from the CGNS file.
 
 Format (FORTRAN)
 ------------------

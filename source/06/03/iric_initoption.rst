@@ -1,7 +1,7 @@
 iric_initoption
 ===================
 
--  Set up the options for the solver.
+Set up the options for the solver.
 
 Format (FORTRAN)
 ------------------

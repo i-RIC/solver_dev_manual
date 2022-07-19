@@ -1,7 +1,7 @@
 cg_iric_read_complex_functionalwithname
 =========================================
 
--  Reads f_functional attribute of complex type grid attribute (with
+Reads f_functional attribute of complex type grid attribute with name.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 iric_geo_polygon_read_holepoints
 ==================================
 
--  Reads the coordinates of hole polygon vertices
+Reads the coordinates of hole polygon vertices.
 
 Format (FORTRAN)
 ------------------

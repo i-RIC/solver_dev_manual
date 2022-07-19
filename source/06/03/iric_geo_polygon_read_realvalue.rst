@@ -1,7 +1,7 @@
 iric_geo_polygon_read_realvalue
 =================================
 
--  Reads the value of polygon datas double precision real
+Reads the value of polygon datas double precision real.
 
 Format (FORTRAN)
 ------------------

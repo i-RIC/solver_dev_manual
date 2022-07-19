@@ -1,7 +1,7 @@
 cg_iric_read_bc_indicessize
 =============================
 
--  Reads the number of elements (nodes or cells) where the boundary
+Reads the number of elements (nodes or cells) where the boundary.
 
 Format (FORTRAN)
 ------------------

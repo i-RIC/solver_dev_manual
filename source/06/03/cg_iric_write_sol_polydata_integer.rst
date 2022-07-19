@@ -1,7 +1,7 @@
 cg_iric_write_sol_polydata_integer
 ========================================
 
--  Outputs integer-type calculation results, giving a value for a polygon or polyline.
+Outputs integer-type calculation results defined at polygons or polylines.
 
 Format (FORTRAN)
 ------------------

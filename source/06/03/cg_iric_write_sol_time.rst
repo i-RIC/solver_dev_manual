@@ -1,7 +1,7 @@
 cg_iric_write_sol_time
 ========================
 
--  Outputs time.
+Outputs time.
 
 Format (FORTRAN)
 ------------------

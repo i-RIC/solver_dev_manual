@@ -1,7 +1,7 @@
 iric_geo_riversurvey_close
 ============================
 
--  Closes the geographic data file
+Closes the geographic data file.
 
 Format (FORTRAN)
 ------------------

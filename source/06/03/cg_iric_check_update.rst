@@ -1,7 +1,7 @@
 cg_iric_check_update
 =========================
 
--  Inform the GUI that the solver finished outputting result
+Inform the GUI that the solver finished outputting result.
 
 Format (FORTRAN)
 ------------------

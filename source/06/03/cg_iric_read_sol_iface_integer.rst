@@ -1,7 +1,7 @@
 cg_iric_read_sol_iface_integer
 ================================
 
--  Reads the integer-type calculation result, having a value for each grid edge at i-direction.
+Reads the integer-type calculation result defined at grid edge at i-direction.
 
 Format (FORTRAN)
 ------------------

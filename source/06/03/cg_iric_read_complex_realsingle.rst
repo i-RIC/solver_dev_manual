@@ -1,7 +1,7 @@
 cg_iric_read_complex_realsingle
 =================================
 
--  Reads the single precision attribute values of complex type grid
+Reads the single precision attribute values of complex type grid.
 
 Format (FORTRAN)
 ------------------

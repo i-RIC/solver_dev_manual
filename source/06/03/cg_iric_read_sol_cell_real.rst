@@ -1,7 +1,7 @@
 cg_iric_read_sol_cell_real
 ============================
 
--  Reads the double-precision real-type calculation result, having a value for each grid cell.
+Reads the double-precision real-type calculation result defined at grid cells.
 
 Format (FORTRAN)
 ------------------

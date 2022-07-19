@@ -1,7 +1,7 @@
 cg_iric_open
 ================
 
--  Opens a CGNS file.
+Opens a CGNS file.
 
 Format (FORTRAN)
 ------------------

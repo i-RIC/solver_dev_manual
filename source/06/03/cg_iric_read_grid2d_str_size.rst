@@ -1,7 +1,7 @@
 cg_iric_read_grid2d_str_size
 ==============================
 
--  Makes preparations for reading a two-dimensional structured grid.
+Makes preparations for reading a two-dimensional structured grid.
 
 Format (FORTRAN)
 ------------------

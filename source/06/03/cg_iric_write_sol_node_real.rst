@@ -1,7 +1,7 @@
 cg_iric_write_sol_node_real
 ============================
 
--  Outputs double-precision real-type calculation results, having a value for each grid node.
+Outputs double-precision real-type calculation results defined at grid nodes.
 
 Format (FORTRAN)
 ------------------

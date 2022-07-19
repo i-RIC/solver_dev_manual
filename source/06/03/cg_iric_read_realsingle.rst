@@ -1,7 +1,7 @@
 cg_iric_read_realsingle
 =========================
 
--  Reads the value of a single-precision real-type variable from the
+Reads the value of a single-precision real-type variable from the CGNS file.
 
 Format (FORTRAN)
 ------------------

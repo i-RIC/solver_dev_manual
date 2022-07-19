@@ -1,7 +1,7 @@
 cg_iric_write_sol_iteration
 =============================
 
--  Outputs iteration count.
+Outputs iteration count.
 
 Format (FORTRAN)
 ------------------

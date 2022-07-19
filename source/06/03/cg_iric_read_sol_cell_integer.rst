@@ -1,7 +1,7 @@
 cg_iric_read_sol_cell_integer
 ===============================
 
--  Reads the integer-type calculation result, having a value for each grid cell.
+Reads the integer-type calculation result defined at grid cells.
 
 Format (FORTRAN)
 ------------------

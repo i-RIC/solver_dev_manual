@@ -1,7 +1,7 @@
 cg_iric_read_grid_integer_node
 ================================
 
--  Reads the integer attribute values defined for nodes of a structured
+Reads the integer attribute values defined at nodes of a grid.
 
 Format (FORTRAN)
 ------------------

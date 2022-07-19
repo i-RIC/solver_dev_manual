@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_altitudes
 =====================================
 
--  Reads the altitude data of the crosssection
+Reads the altitude data of the crosssection.
 
 Format (FORTRAN)
 ------------------

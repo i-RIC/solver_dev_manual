@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_name
 ================================
 
--  Reads the name of the crosssection as string
+Reads the name of the crosssection as string.
 
 Format (FORTRAN)
 ------------------

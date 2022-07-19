@@ -1,7 +1,7 @@
 cg_iric_write_grid3d_coords
 ============================
 
--  Outputs a three-dimensional structured grid.
+Outputs a three-dimensional structured grid.
 
 Format (FORTRAN)
 ------------------

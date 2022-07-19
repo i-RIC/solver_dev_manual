@@ -1,7 +1,7 @@
 cg_iric_read_sol_jface_integer
 ================================
 
--  Reads the integer-type calculation result, having a value for each grid edge at j-direction.
+Reads the integer-type calculation result defined at grid edge at j-direction.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 cg_iric_read_complex_string
 =============================
 
--  Reads the string attribute values of complex type grid attribute
+Reads the string attribute values of complex type grid attribute.
 
 Format (FORTRAN)
 ------------------

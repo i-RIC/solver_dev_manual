@@ -1,7 +1,7 @@
 cg_iric_read_bc_count
 =======================
 
--  Reads the number of boundary condition.
+Reads the number of boundary condition.
 
 Format (FORTRAN)
 ------------------

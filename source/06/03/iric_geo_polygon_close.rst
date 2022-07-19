@@ -1,7 +1,7 @@
 iric_geo_polygon_close
 ========================
 
--  Closes the geographic data file
+Closes the geographic data file.
 
 Format (FORTRAN)
 ------------------

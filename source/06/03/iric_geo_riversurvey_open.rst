@@ -1,7 +1,7 @@
 iric_geo_riversurvey_open
 ===========================
 
--  Opens the geographic data file that contains river survey data
+Opens the geographic data file that contains river survey data.
 
 Format (FORTRAN)
 ------------------

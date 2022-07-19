@@ -1,7 +1,9 @@
+.. _sec_iriclibfunc_cg_iric_read_grid_cellcount:
+
 cg_iric_read_grid_cellcount
 ================================
 
--  Reads cell count of a grid.
+Reads cell count of a grid.
 
 Format (FORTRAN)
 ------------------

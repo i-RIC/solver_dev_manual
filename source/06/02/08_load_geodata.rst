@@ -61,7 +61,7 @@ The procedure of reading geographic data is as follows:
    * - iric_geo_riversurvey_close_f
      - Closes the geographic data file
 
-:numref:`example_load_riversurvey` shows an example of reading river survey data. 
+:numref:`example_load_riversurvey` shows an example of reading river survey data.
 
 .. code-block:: fortran
    :caption: Example source code of reading river survey data

@@ -1,7 +1,7 @@
 cg_iric_read_sol_baseiterative_real
 =====================================
 
--  Reads the double-precision real-type calculation result value
+Reads the double-precision real-type calculation result value.
 
 Format (FORTRAN)
 ------------------

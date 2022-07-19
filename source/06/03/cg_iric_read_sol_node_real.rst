@@ -1,7 +1,7 @@
 cg_iric_read_sol_node_real
 ============================
 
--  Reads the double-precision real-type calculation result, having a value for each grid node.
+Reads the double-precision real-type calculation result defined at grid nodes.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 cg_iric_write_sol_iface_integer
 =================================
 
--  Outputs integer-type calculation results, giving a value for each grid edge at i-direction.
+Outputs integer-type calculation results defined at grid edges at i-direction.
 
 Format (FORTRAN)
 ------------------

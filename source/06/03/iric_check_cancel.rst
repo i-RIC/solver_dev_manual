@@ -1,7 +1,7 @@
 iric_check_cancel
 ===================
 
--  Checks whether user canceled solver execution
+Checks whether user canceled solver execution.
 
 Format (FORTRAN)
 ------------------

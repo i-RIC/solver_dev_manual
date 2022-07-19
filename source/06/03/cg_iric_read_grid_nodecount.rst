@@ -1,7 +1,7 @@
 cg_iric_read_grid_nodecount
 ================================
 
--  Reads node count of a grid.
+Reads node count of a grid.
 
 Format (FORTRAN)
 ------------------
@@ -9,22 +9,22 @@ Format (FORTRAN)
 
    call cg_iric_read_grid_nodecount(fid, count, ier)
 
-形式 (C/C++)
----------------
+Format (C/C++)
+----------------
 .. code-block:: c
 
    ier = cg_iRIC_Read_Grid_NodeCount(fid, &count);
 
-形式 (Python)
----------------
+Format (Python)
+----------------
 .. code-block:: python
 
    count = cg_iRIC_Read_Grid_NodeCount(fid)
 
-引数
-----
+Arguments
+-----------
 
-.. csv-table:: cg_iric_read_grid_nodecount の引数
+.. csv-table:: Arguments of cg_iric_read_grid_nodecount
    :file: cg_iric_read_grid_nodecount_args.csv
    :header-rows: 1
 

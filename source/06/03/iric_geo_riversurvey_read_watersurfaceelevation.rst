@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_watersurfaceelevation
 =================================================
 
--  Reads the water elevation at the crosssection
+Reads the water elevation at the crosssection.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_realname
 ====================================
 
--  Reads the name of the crosssection as real number
+Reads the name of the crosssection as real number.
 
 Format (FORTRAN)
 ------------------

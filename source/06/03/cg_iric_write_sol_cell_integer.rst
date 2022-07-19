@@ -1,7 +1,7 @@
 cg_iric_write_sol_cell_integer
 ================================
 
--  Outputs integer-type calculation results, giving a value for each grid cell.
+Outputs integer-type calculation results, giving a value for each grid cell.
 
 Format (FORTRAN)
 ------------------

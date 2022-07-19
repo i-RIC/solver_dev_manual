@@ -1,7 +1,7 @@
 iric_geo_polygon_read_holepointcount
 ======================================
 
--  Reads the number of vertices of hole polygon
+Reads the number of vertices of hole polygon.
 
 Format (FORTRAN)
 ------------------

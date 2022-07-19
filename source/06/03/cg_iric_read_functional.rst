@@ -1,7 +1,7 @@
 cg_iric_read_functional
 =========================
 
--  Reads the value of a f_functional-type double-precision real variable
+Reads the value of a f_functional-type double-precision real variable.
 
 Format (FORTRAN)
 ------------------

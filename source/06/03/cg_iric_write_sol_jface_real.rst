@@ -1,7 +1,7 @@
 cg_iric_write_sol_jface_real
 =================================
 
--  Outputs double-precision real-type calculation results, giving a value for each grid edge at j-direction.
+Outputs double-precision real-type calculation results defined atgrid edge at j-direction.
 
 Format (FORTRAN)
 ------------------

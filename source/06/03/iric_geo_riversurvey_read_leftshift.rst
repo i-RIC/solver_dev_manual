@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_leftshift
 =====================================
 
--  Reads the shift offset value of the crosssection
+Reads the shift offset value of the crosssection.
 
 Format (FORTRAN)
 ------------------

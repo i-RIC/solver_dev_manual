@@ -1,7 +1,7 @@
 cg_iric_read_bc_realsingle
 ============================
 
--  Reads the value of a single-precision real-type variable from the
+Reads the value of a single-precision real-type variable defined at the boundary condition.
 
 Format (FORTRAN)
 ------------------

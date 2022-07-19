@@ -1,0 +1,5 @@
+Variable name,Type,I/O,Description
+g_handle,integer,I,Grid handle
+cell_id,integer,I,Cell ID
+count,integer,O,The number of nodes of the cell (3 or 4)
+ier,integer,O,Error code. 0 means success.

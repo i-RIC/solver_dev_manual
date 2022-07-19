@@ -1,7 +1,7 @@
 cg_iric_write_sol_particlegroup_groupbegin
 ===================================================
 
--  Start outputting calculation result defined at particles
+Start outputting calculation result defined at particles.
 
 Format (FORTRAN)
 ------------------

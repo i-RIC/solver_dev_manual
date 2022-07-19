@@ -1,7 +1,7 @@
 cg_iric_read_sol_iface_real
 ================================
 
--  Reads the double-precision real-type calculation result, having a value for each grid edge at i-direction.
+Reads the double-precision real-type calculation result defined at grid edge at i-direction.
 
 Format (FORTRAN)
 ------------------

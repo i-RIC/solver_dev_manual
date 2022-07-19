@@ -1,7 +1,7 @@
 cg_iric_write_sol_polydata_polygon
 ==========================================
 
--  Output calculation result defined as polygon.
+Output calculation result defined as polygon.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 cg_iric_read_grid_real_cell
 =============================
 
--  Reads the double-precision real-type attribute values defined for
+Reads the double-precision real-type attribute values defined at cells of a grid.
 
 Format (FORTRAN)
 ------------------

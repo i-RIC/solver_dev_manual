@@ -1,7 +1,7 @@
 cg_iric_read_grid_functionaldimension_real
 ============================================
 
--  Reads the values of double-precision dimension for f_functional grid
+Reads the values of double-precision dimension for f_functional grid attribute.
 
 Format (FORTRAN)
 ------------------

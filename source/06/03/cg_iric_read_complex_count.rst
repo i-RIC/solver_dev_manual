@@ -1,7 +1,7 @@
 cg_iric_read_complex_count
 ============================
 
--  Reads the number of groups of complex type grid attribute
+Reads the number of groups of complex type grid attribute.
 
 Format (FORTRAN)
 ------------------

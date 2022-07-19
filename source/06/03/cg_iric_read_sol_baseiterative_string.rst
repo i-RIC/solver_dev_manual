@@ -1,7 +1,7 @@
 cg_iric_read_sol_baseiterative_string
 ========================================
 
--  Reads the string-type calculation result value
+Reads the string-type calculation result value.
 
 Format (FORTRAN)
 ------------------

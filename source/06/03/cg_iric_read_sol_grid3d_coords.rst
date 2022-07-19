@@ -1,7 +1,7 @@
 cg_iric_read_sol_grid3d_coords
 ==============================
 
--  Reads the 3D structured grid (for moving grid calculation)
+Reads the 3D structured grid (for moving grid calculation).
 
 Format (FORTRAN)
 ------------------

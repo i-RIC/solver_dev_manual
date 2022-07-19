@@ -1,7 +1,7 @@
 cg_iric_read_grid_functional_integer_cell
 ===========================================
 
--  Reads the values of f_functional integer grid attribute with dimension
+Reads the values of f_functional integer grid attribute with dimension.
 
 Format (FORTRAN)
 ------------------

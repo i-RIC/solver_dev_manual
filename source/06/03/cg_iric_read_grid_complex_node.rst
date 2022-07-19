@@ -1,7 +1,7 @@
 cg_iric_read_grid_complex_node
 ================================
 
--  Reads the complex attribute values defined for grid nodes
+Reads the complex attribute values defined for grid nodes.
 
 Format (FORTRAN)
 ------------------

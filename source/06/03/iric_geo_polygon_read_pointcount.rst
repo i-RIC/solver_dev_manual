@@ -1,7 +1,7 @@
 iric_geo_polygon_read_pointcount
 ==================================
 
--  Reads the number of polygon vertices
+Reads the number of polygon vertices.
 
 Format (FORTRAN)
 ------------------

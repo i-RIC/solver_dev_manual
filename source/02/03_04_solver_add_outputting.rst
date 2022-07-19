@@ -26,7 +26,6 @@ calculations. The added lines are shown with highlight.
    :caption: Source code with lines to output time and calculation results
    :name: solver_with_outputting
    :linenos:
-   :emphasize-lines: 6-13,21-49
 
      ! (abbr.)
      integer:: isize, jsize

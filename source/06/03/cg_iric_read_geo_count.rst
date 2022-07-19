@@ -1,7 +1,7 @@
 cg_iric_read_geo_count
 ========================
 
--  Reads the number of geographic data
+Reads the number of geographic data.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 cg_iric_write_sol_polydata_real
 ========================================
 
--  Outputs double-precision real-type calculation results, giving a value for a polygon or polyline.
+Outputs double-precision real-type calculation results defined at polygons or polylines.
 
 Format (FORTRAN)
 ------------------

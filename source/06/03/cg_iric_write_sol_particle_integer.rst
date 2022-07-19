@@ -1,7 +1,7 @@
 cg_iric_write_sol_particle_integer
 ========================================
 
--  Outputs integer-type calculation results, giving a value for each particle.
+Outputs integer-type calculation results defined at particles.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 cg_iric_read_sol_time
 =======================
 
--  Reads the time value
+Reads the time value
 
 Format (FORTRAN)
 ------------------

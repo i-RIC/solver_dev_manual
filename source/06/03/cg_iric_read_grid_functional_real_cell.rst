@@ -1,7 +1,7 @@
 cg_iric_read_grid_functional_real_cell
 ========================================
 
--  Reads the values of f_functional double-precision grid attribute with
+Reads the values of f_functional double-precision grid attribute.
 
 Format (FORTRAN)
 ------------------

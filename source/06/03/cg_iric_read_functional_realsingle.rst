@@ -1,7 +1,7 @@
 cg_iric_read_functional_realsingle
 ====================================
 
--  Reads the value of a f_functional-type single-precision real variable
+Reads the value of a f_functional-type single-precision real variable.
 
 Format (FORTRAN)
 ------------------

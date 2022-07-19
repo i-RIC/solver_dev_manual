@@ -1,7 +1,7 @@
 cg_iric_write_sol_particlegroup_groupend
 ============================================
 
--  Finish outputting calculation result defined as particles.
+Finish outputting calculation result defined as particles.
 
 Format (FORTRAN)
 ------------------

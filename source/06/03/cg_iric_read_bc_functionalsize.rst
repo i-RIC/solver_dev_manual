@@ -1,7 +1,7 @@
 cg_iric_read_bc_functionalsize
 ================================
 
--  Reads the size of a f_functional-type variable from the CGNS file.
+Reads the size of a f_functional-type variable from the CGNS file.
 
 Format (FORTRAN)
 ------------------

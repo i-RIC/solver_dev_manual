@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_count
 =================================
 
--  Reads the number of the crosssections in river survey data
+Reads the number of the crosssections in river survey data.
 
 Format (FORTRAN)
 ------------------

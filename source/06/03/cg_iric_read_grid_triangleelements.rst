@@ -1,35 +1,38 @@
 cg_iric_read_grid_triangleelements
 =====================================
 
-非構造格子の三角形頂点のIDリストを読み込む。
+Reads the list of IDs of nodes for each triangles in an unstructured grid.
 
-ids に、セルの数 x 3 のサイズの配列を渡すと、 1, 2, 3 番目, 4, 5, 6 番目, ...
-にそれぞれ 1番目, 2番目の三角形を構成する頂点の ID が返される。
+You should pass an array with size (numcells * 3) for ids.
+The returned values of ids will be the IDs of nodes for each triangles.
+1st, 2nd, 3rd values will be the IDs of nodes of the 1st triangle,
+4th, 5th, 6th values will be the IDs of nodes of the 2nd triangle, etc.
 
-配列 ids を作成するために、先に cg_iric_read_cellcount で三角形の数を調べる。
+You can use :ref:`sec_iriclibfunc_cg_iric_read_grid_cellcount`
+to know the number of cells, to allocate memory for ids.
 
-形式 (FORTRAN)
----------------
+Format (FORTRAN)
+------------------
 .. code-block:: fortran
 
    call cg_iric_read_grid_triangleelements(fid, ids, ier)
 
-形式 (C/C++)
----------------
+Format (C/C++)
+----------------
 .. code-block:: c
 
    ier = cg_iRIC_Read_Grid_TriangleElements(fid, ids);
 
-形式 (Python)
----------------
+Format (Python)
+----------------
 .. code-block:: python
 
    ids = cg_iRIC_Read_Grid_TriangleElements(fid)
 
-引数
-----
+Arguments
+---------
 
-.. csv-table:: cg_iric_read_grid_triangleelements の引数
+.. csv-table:: Arguments of cg_iric_read_grid_triangleelements
    :file: cg_iric_read_grid_triangleelements_args.csv
    :header-rows: 1
 

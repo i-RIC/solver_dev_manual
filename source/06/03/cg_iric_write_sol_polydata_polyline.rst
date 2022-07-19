@@ -1,7 +1,7 @@
 cg_iric_write_sol_polydata_polyline
 ==========================================
 
--  Output calculation result defined as polyline.
+Output calculation result defined as polyline.
 
 Format (FORTRAN)
 ------------------

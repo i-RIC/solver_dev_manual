@@ -1,7 +1,7 @@
 cg_iric_read_sol_count
 ========================
 
--  Reads the number of calculation result
+Reads the number of calculation result.
 
 Format (FORTRAN)
 ------------------

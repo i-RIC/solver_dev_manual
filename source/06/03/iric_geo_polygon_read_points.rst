@@ -1,7 +1,7 @@
 iric_geo_polygon_read_points
 ==============================
 
--  Reads the coorinates of polygon vertices
+Reads the coorinates of polygon vertices.
 
 Format (FORTRAN)
 ------------------

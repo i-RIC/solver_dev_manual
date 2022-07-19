@@ -1,7 +1,7 @@
 cg_iric_close
 ===================
 
--  Closing the CGNS file
+Closes the CGNS file.
 
 Format (FORTRAN)
 ------------------

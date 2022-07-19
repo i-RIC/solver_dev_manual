@@ -1,7 +1,7 @@
 cg_iric_write_grid_integer_cell
 =================================
 
--  Outputs grid attribute values defined at grid cells with integer value.
+Outputs grid attribute values defined at grid cells with integer value.
 
 Format (FORTRAN)
 ------------------

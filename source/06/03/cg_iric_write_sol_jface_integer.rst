@@ -1,7 +1,7 @@
 cg_iric_write_sol_jface_integer
 =================================
 
--  Outputs integer-type calculation results, giving a value for each grid edge at j-direction.
+Outputs integer-type calculation results defined atgrid edge at j-direction.
 
 Format (FORTRAN)
 ------------------

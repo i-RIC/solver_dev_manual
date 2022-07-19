@@ -1,7 +1,7 @@
 cg_iric_write_sol_cell_real
 =============================
 
--  Outputs double-precision real-type calculation results, having a value for each grid cell.
+Outputs double-precision real-type calculation results, having a value for each grid cell.
 
 Format (FORTRAN)
 ------------------

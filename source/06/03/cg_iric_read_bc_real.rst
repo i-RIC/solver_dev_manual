@@ -1,7 +1,7 @@
 cg_iric_read_bc_real
 ======================
 
--  Reads the value of a double-precision real-type variable from the
+Reads the value of a double-precision real-type variable defined at the boundary condition.
 
 Format (FORTRAN)
 ------------------

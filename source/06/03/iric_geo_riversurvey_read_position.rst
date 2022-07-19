@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_position
 ====================================
 
--  Reads the coordinates of the crosssection center point
+Reads the coordinates of the crosssection center point.
 
 Format (FORTRAN)
 ------------------

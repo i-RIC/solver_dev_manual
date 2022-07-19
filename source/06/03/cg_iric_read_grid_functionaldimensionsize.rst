@@ -1,7 +1,7 @@
 cg_iric_read_grid_functionaldimensionsize
 ===========================================
 
--  Reads the number of values of dimension for f_functional grid attribute
+Reads the number of values of dimension for f_functional grid attribute.
 
 Format (FORTRAN)
 ------------------

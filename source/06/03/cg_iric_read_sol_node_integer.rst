@@ -1,7 +1,7 @@
 cg_iric_read_sol_node_integer
 ================================
 
--  Reads the integer-type calculation result, having a value for each grid node.
+Reads the integer-type calculation result defined at grid nodes.
 
 Format (FORTRAN)
 ------------------

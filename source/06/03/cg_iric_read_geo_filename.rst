@@ -1,7 +1,7 @@
 cg_iric_read_geo_filename
 ===========================
 
--  Reads the file name and data type of geographic data
+Reads the file name and data type of geographic data.
 
 Format (FORTRAN)
 ------------------

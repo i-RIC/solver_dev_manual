@@ -1,7 +1,7 @@
 cg_iric_read_grid_integer_cell
 ================================
 
--  Reads the integer attribute values defined for cells of a structured
+Reads the integer attribute values defined at cells of a grid.
 
 Format (FORTRAN)
 ------------------
@@ -22,7 +22,7 @@ Format (Python)
    values = cg_iRIC_Read_Grid_Integer_Cell(fid, label)
 
 Arguments
----------
+-----------
 
 .. csv-table:: Arguments of cg_iric_read_grid_integer_cell
    :file: cg_iric_read_grid_integer_cell_args.csv

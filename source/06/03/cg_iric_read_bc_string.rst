@@ -1,7 +1,7 @@
 cg_iric_read_bc_string
 ========================
 
--  Reads the value of a string-type variable from the CGNS file.
+Reads the value of a string-type variable defined at the boundary condition.
 
 Format (FORTRAN)
 ------------------

@@ -1,7 +1,7 @@
 cg_iric_write_sol_particlegroup_real
 ==========================================
 
--  Outputs double-precision real-type calculation results, giving a value for each particle.
+Outputs double-precision real-type calculation results defined at particles.
 
 Format (FORTRAN)
 ------------------

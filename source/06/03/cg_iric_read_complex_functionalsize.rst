@@ -1,7 +1,7 @@
 cg_iric_read_complex_functionalsize
 =====================================
 
--  Checks the size of a f_functional-type attribute of complex type grid
+Checks the size of a f_functional-type attribute of complex type grid.
 
 Format (FORTRAN)
 ------------------

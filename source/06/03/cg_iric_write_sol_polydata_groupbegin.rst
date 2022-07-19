@@ -1,7 +1,7 @@
 cg_iric_write_sol_polydata_groupbegin
 ==========================================
 
--  Start outputting calculation result defined at polygons or polylines.
+Start outputting calculation result defined at polygons or polylines.
 
 Format (FORTRAN)
 ------------------

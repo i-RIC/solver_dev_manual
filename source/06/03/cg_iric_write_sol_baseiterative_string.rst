@@ -1,7 +1,7 @@
 cg_iric_write_sol_baseiterative_string
 ==========================================
 
--  Outputs string-type calculation results.
+Outputs string-type calculation results.
 
 Format (FORTRAN)
 ------------------

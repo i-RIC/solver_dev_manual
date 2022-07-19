@@ -1,7 +1,7 @@
 cg_iric_read_complex_functional_realsingle
 ============================================
 
--  Reads f_functional attribute data of complex type grid attribute
+Reads f_functional attribute data of complex type grid attribute.
 
 Format (FORTRAN)
 ------------------

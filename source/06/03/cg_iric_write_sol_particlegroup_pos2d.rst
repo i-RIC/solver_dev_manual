@@ -1,7 +1,7 @@
 cg_iric_write_sol_particlegroup_pos2d
 ============================================
 
--  Outputs particle positions (two-dimensions)
+Outputs particle positions (two-dimensions).
 
 Format (FORTRAN)
 ------------------

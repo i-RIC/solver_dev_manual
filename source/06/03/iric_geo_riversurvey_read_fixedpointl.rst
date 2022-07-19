@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_fixedpointl
 =======================================
 
--  Reads the data of left bank extension line of the crosssection
+Reads the data of left bank extension line of the crosssection.
 
 Format (FORTRAN)
 ------------------

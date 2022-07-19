@@ -1,7 +1,7 @@
 iric_geo_polygon_open
 =======================
 
--  Opens the geographic data file that contains polygon data
+Opens the geographic data file that contains polygon data.
 
 Format (FORTRAN)
 ------------------

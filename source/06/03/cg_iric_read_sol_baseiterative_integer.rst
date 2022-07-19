@@ -1,7 +1,7 @@
 cg_iric_read_sol_baseiterative_integer
 ========================================
 
--  Reads the integer-type calculation result value
+Reads the integer-type calculation result value.
 
 Format (FORTRAN)
 ------------------

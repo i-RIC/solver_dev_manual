@@ -1,7 +1,7 @@
 cg_iric_read_grid_complex_cell
 ================================
 
--  Reads the complex attribute values defined for grid cells
+Reads the complex attribute values defined for grid cells.
 
 Format (FORTRAN)
 ------------------

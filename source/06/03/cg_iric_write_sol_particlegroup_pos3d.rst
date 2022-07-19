@@ -1,7 +1,7 @@
 cg_iric_write_sol_particlegroup_pos3d
 ===========================================
 
--  Outputs particle positions (three-dimensions)
+Outputs particle positions (three-dimensions).
 
 Format (FORTRAN)
 ------------------

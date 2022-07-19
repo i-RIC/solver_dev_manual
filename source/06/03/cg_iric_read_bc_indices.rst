@@ -1,7 +1,7 @@
 cg_iric_read_bc_indices
 =========================
 
--  Reads the elements (nodes or cells) where the boundary condition is
+Reads the elements (nodes or cells) where the boundary condition is defined.
 
 Format (FORTRAN)
 ------------------

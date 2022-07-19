@@ -1,7 +1,7 @@
 cg_iric_write_grid2d_coords
 ============================
 
--  Outputs a two-dimensional structured grid.
+Outputs a two-dimensional structured grid.
 
 Format (FORTRAN)
 ------------------

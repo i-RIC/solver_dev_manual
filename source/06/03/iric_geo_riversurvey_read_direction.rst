@@ -1,7 +1,7 @@
 iric_geo_riversurvey_read_direction
 =====================================
 
--  Reads the direction of the crosssection as normalized vector
+Reads the direction of the crosssection as normalized vector.
 
 Format (FORTRAN)
 ------------------

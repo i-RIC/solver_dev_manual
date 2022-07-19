@@ -1,7 +1,7 @@
 cg_iric_write_sol_node_integer
 ===============================
 
--  Outputs integer-type calculation results, giving a value for each grid node.
+Outputs integer-type calculation results defined at grid nodes.
 
 Format (FORTRAN)
 ------------------

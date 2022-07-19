@@ -1,7 +1,7 @@
 cg_iric_write_sol_baseiterative_integer
 =========================================
 
--  Outputs integer-type calculation results.
+Outputs integer-type calculation results.
 
 Format (FORTRAN)
 ------------------

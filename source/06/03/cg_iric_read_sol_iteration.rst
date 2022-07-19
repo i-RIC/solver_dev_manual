@@ -1,7 +1,7 @@
 cg_iric_read_sol_iteration
 ============================
 
--  Reads the loop iteration value
+Reads the loop iteration value.
 
 Format (FORTRAN)
 ------------------

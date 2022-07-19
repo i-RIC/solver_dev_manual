@@ -1,7 +1,7 @@
 cg_iric_read_complex_real
 ===========================
 
--  Reads the double precision attribute values of complex type grid
+Reads the double precision attribute values of complex type grid.
 
 Format (FORTRAN)
 ------------------

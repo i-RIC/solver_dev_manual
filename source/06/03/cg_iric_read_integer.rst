@@ -1,7 +1,7 @@
 cg_iric_read_integer
 ======================
 
--  Reads the value of a integer-type variable from the CGNS file.
+Reads the value of a integer-type variable from the CGNS file.
 
 Format (FORTRAN)
 ------------------

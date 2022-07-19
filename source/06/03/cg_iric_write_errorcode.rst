@@ -1,7 +1,7 @@
 cg_iric_write_errorcode
 =========================
 
--  Outputs error code
+Outputs error code.
 
 Format (FORTRAN)
 ------------------

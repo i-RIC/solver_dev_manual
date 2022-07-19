@@ -1,7 +1,7 @@
 cg_iric_write_sol_baseiterative_real
 ======================================
 
--  Outputs double-precision real-type calculation results.
+Outputs double-precision real-type calculation results.
 
 Format (FORTRAN)
 ------------------

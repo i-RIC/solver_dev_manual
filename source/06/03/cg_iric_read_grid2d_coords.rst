@@ -1,7 +1,7 @@
 cg_iric_read_grid2d_coords
 =============================
 
--  Reads a two-dimensional structured grid.
+Reads a two-dimensional structured grid.
 
 Format (FORTRAN)
 ------------------

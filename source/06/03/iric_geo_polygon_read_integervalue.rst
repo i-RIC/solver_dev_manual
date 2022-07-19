@@ -1,7 +1,7 @@
 iric_geo_polygon_read_integervalue
 ====================================
 
--  Reads the value of polygon data as integer
+Reads the value of polygon data as integer.
 
 Format (FORTRAN)
 ------------------
