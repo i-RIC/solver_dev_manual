@@ -20,7 +20,6 @@ Intel Fortran Compiler
    :caption: 計算データファイルを開く処理、閉じる処理を追記したソースコード
    :name: gridgenerator_with_open_close
    :linenos:
-   :emphasize-lines: 5-25
 
    program SampleProgram
      use iric

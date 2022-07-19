@@ -27,7 +27,6 @@ iRIC は、 :ref:`how_to_create_gridgen_def_file` で作成した
    :caption: 格子生成条件の読み込み処理を追記したソースコード
    :name: gridgenerator_with_grid_loadgridgencond
    :linenos:
-   :emphasize-lines: 8-9,11,29-34,38,45,51-53
 
    program SampleProgram
      use iric
