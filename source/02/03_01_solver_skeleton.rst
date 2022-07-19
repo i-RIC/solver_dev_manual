@@ -7,9 +7,7 @@ First, create a scelton of a solver. Create a new file with the source
 code in :numref:`solver_skeleton`, and save as \"sample.f90\".
 At this point, the solver does nothing.
 
-Compile this source code. The way to compile a source code differs by
-the compiler. Refer to :ref:`how_to_link` for the procedure
-to compile using Intel Fortran Compiler and gfortran.
+Compile this source code.
 
 .. code-block:: fortran
    :caption: Sample solver source code
@@ -18,8 +16,6 @@ to compile using Intel Fortran Compiler and gfortran.
 
    program SampleProgram
      implicit none
-     include 'cgnslib_f.h'
-     include 'iriclib_f.h'
 
      write(*,*) "Sample Program"
      stop

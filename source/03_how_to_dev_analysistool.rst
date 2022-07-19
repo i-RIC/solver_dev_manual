@@ -15,16 +15,8 @@ The steps of developing a calculation result analysis program is
 basically the same to that of a solver (See :ref:`how_to_develop_solver`). The difference
 is that it handles multiple CGNS files.
 
-To handle multiple CGNS files at the same time, you should use different
-functions than those used in :ref:`how_to_develop_solver`
-(See :ref:`iriclib_list_of_functions`). 
-The names of functions for handling multiple CGNS files ends with
-\"_mul_f\", and the first argument is the file ID. You should call
-\"cg_iric_initread_f\" instead of \"cg_iric_init_f\" when
-initializing the CGNS file to be used by iRIClib.
-
-:numref:`solver_with_multi_cgns` shows the source code to handle
-multiple CGNS files.
+:numref:`solver_with_multi_cgns` shows the source code of sample  
+calculation result analysis program.
 
 .. code-block:: fortran
    :caption: Source code that handles multiple CGNS files (abstract)
@@ -34,24 +26,22 @@ multiple CGNS files.
    ! (abbr.)
 
    ! File opening and initialization
-   call cg_open_f(cgnsfile, CG_MODE_MODIFY, fin1, ier)
-   call cg_iric_init_f(fin1, ier)
+   call cg_iric_open(cgnsfile, IRIC_MODE_MODIFY, fin1, ier)
 
    ! (abbr.)
 
    ! Reading calculation condition etc.
-   call cg_iric_read_functionalsize_mul_f(fin1, 'func', param_func_size, ier)
+   call cg_iric_read_functionalsize(fin1, 'func', param_func_size, ier)
 
    ! (abbr.)
 
    ! File opening and initialization for reading calculation result
-   call cg_open_f(param_inputfile, CG_MODE_READ, fin2, ier)
-   call cg_iric_initread_f(fin2, ier)
+   call cg_iric_open(param_inputfile, IRIC_MODE_READ, fin2, ier)
 
    ! (abbr.)
 
    ! Reading calculation result etc.
-   call cg_iric_read_sol_count_mul_f(fin2, solcount, ier)
+   call cg_iric_read_sol_count(fin2, solcount, ier)
 
    ! (abbr.)
 
@@ -60,13 +50,13 @@ multiple CGNS files.
    ! (abbr.)
 
    ! Outputting analysis result
-   call cg_iric_write_sol_time_mul_f(fin1, t, ier)
+   call cg_iric_write_sol_time(fin1, t, ier)
 
    ! (abbr.)
 
    ! Closing files
-   call cg_close_f(fin1, ier)
-   call cg_close_f(fin2, ier)
+   call cg_iric_close(fin1, ier)
+   call cg_iric_close(fin2, ier)
 
    ! (abbr.)
 
@@ -80,8 +70,8 @@ calculation result from CGNS file, and executes fish habitat analysis.
    :linenos:
 
    program SampleProgram2
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer icount
      character(len=300) cgnsfile
@@ -106,7 +96,6 @@ calculation result from CGNS file, and executes fish habitat analysis.
      integer:: i, j, f, solid, solcount, iter
      double precision:: t
    
-     ! Code for Intel Fortran
      icount = nargs()
      if (icount.eq.2) then
        call getarg(1, cgnsfile, istatus)
@@ -116,48 +105,45 @@ calculation result from CGNS file, and executes fish habitat analysis.
      end if
    
      ! Opening CGNS file
-     call cg_open_f(cgnsfile, CG_MODE_MODIFY, fin1, ier)
+     call cg_iric_open(cgnsfile, IRIC_MODE_MODIFY, fin1, ier)
      if (ier /=0) STOP "*** Open error of CGNS file ***"
-     ! Initializing internal variables
-     call cg_iric_init_f(fin1, ier)
    
      ! Read analysis conditions
-     call cg_iric_read_string_mul_f(fin1, 'inputfile', param_inputfile, ier)
-     call cg_iric_read_integer_mul_f(fin1, 'result', param_result, ier)
-     call cg_iric_read_string_mul_f(fin1, 'resultother', param_resultother, ier)
+     call cg_iric_read_string(fin1, 'inputfile', param_inputfile, ier)
+     call cg_iric_read_integer(fin1, 'result', param_result, ier)
+     call cg_iric_read_string(fin1, 'resultother', param_resultother, ier)
    
-     call cg_iric_read_functionalsize_mul_f(fin1, 'func', param_func_size, ier)
+     call cg_iric_read_functionalsize(fin1, 'func', param_func_size, ier)
      allocate(param_func_param(param_func_size), param_func_value(param_func_size))
-     call cg_iric_read_functional_mul_f(fin1, 'func', param_func_param, param_func_value, ier)
+     call cg_iric_read_functional(fin1, 'func', param_func_param, param_func_value, ier)
    
      if (param_result .eq. 0) resultname = 'Depth(m)'
      if (param_result .eq. 1) resultname = 'Elevation(m)'
      if (param_result .eq. 2) resultname = param_resultother
    
      ! Read grid from the specified CGNS file
-     call cg_open_f(param_inputfile, CG_MODE_READ, fin2, ier)
+     call cg_iric_open(param_inputfile, IRIC_MODE_READ, fin2, ier)
      if (ier /=0) STOP "*** Open error of CGNS file 2 ***"
-     call cg_iric_initread_f(fin2, ier)
      
      ! Reads grid
-     call cg_iric_gotogridcoord2d_mul_f(fin2, isize, jsize, ier)
+     call cg_iric_read_grid2d_str_size(fin2, isize, jsize, ier)
      allocate(grid_x(isize, jsize), grid_y(isize, jsize))
-     call cg_iric_getgridcoord2d_mul_f(fin2, grid_x, grid_y, ier)
+     call cg_iric_read_grid2d_coords(fin2, grid_x, grid_y, ier)
    
      ! Output the grid to CGNS file
-     call cg_iric_writegridcoord2d_mul_f(fin1, isize, jsize, &
+     call cg_iric_write_grid2d_coords(fin1, isize, jsize, &
        grid_x, grid_y, ier)
    
      ! Allocate memory used for analysis
      allocate(target_result(isize, jsize), analysis_result(isize, jsize))
    
      ! Start analysis of calculation results
-     call cg_iric_read_sol_count_mul_f(fin2, solcount, ier)
+     call cg_iric_read_sol_count(fin2, solcount, ier)
    
      do solid = 1, solcount
        ! Read calculation result
-       call cg_iric_read_sol_time_mul_f(fin2, solid, t, ier)
-       call cg_iric_read_sol_real_mul_f(fin2, solid, resultname, &
+       call cg_iric_read_sol_time(fin2, solid, t, ier)
+       call cg_iric_read_sol_node_real(fin2, solid, resultname, &
          target_result, ier)
    
        ! Do fish habitat analysis
@@ -180,12 +166,12 @@ calculation result from CGNS file, and executes fish habitat analysis.
        end do
    
        ! Output analysis result
-       call cg_iric_write_sol_time_mul_f(fin1, t, ier)
-       call cg_iric_write_sol_real_mul_f(fin1, 'fish_existence', analysis_result, ier)
+       call cg_iric_write_sol_time(fin1, t, ier)
+       call cg_iric_write_sol_node_real(fin1, 'fish_existence', analysis_result, ier)
      end do
    
      ! Close CGNS files
-     call cg_close_f(fin1, ier)
-     call cg_close_f(fin2, ier)
+     call cg_iric_close(fin1, ier)
+     call cg_iric_close(fin2, ier)
      stop
    end program SampleProgram2

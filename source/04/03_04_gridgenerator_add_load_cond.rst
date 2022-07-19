@@ -28,11 +28,10 @@ load grid generating conditions.
    :caption: Source codewith lines to load grid generating conditions
    :name: gridgenerator_with_grid_loadgridgencond
    :linenos:
-   :emphasize-lines: 8-9,11,29-34,38,45,51-53
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer:: fin, ier
      integer:: icount, istatus
@@ -52,18 +51,15 @@ load grid generating conditions.
      endif
    
      ! Opens grid generating data file.
-     call cg_open_f(condFile, CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open(condFile, IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) stop "*** Open error of CGNS file ***"
-   
-     ! Initializes iRIClib. ier will be 1, but that is not a problem.
-     call cg_iric_init_f(fin, ier)
    
      ! Loads grid generating condition
      ! To make it simple, no error handling codes are written.
-     call cg_iric_read_integer_f("imax", imax, ier)
-     call cg_iric_read_integer_f("jmax", jmax, ier)
-     call cg_iric_read_integer_f("elev_on", elev_on, ier)
-     call cg_iric_read_real_f("elev_value", elev_value, ier)
+     call cg_iric_read_integer(fin, "imax", imax, ier)
+     call cg_iric_read_integer(fin, "jmax", jmax, ier)
+     call cg_iric_read_integer(fin, "elev_on", elev_on, ier)
+     call cg_iric_read_real(fin, "elev_value", elev_value, ier)
    
      ! Allocate memory for creating grid
      allocate(grid_x(imax,jmax), grid_y(imax,jmax)
@@ -79,11 +75,11 @@ load grid generating conditions.
      end do
    
      ! Outputs grid 
-     cg_iric_writegridcoord2d_f(imax, jmax, grid_x, grid_y, ier)
+     cg_iric_write_grid2d_coords(fin, imax, jmax, grid_x, grid_y, ier)
      if (elev_on == 1) then
-       cg_iric_write_grid_real_node_f("Elevation", elevation, ier);
+       cg_iric_write_grid_real_node(fin, "Elevation", elevation, ier);
      end if
    
      ! Closes grid generating data file.
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
    end program SampleProgram

@@ -10,7 +10,7 @@ the file name and opens that file.
 
 In FORTRAN, the functions prepared for handling arguments are
 different by compilers. In this section, functions for handling
-arguments are explained for Intel Fortran Complier and GNU Fortran compiler.
+arguments are explained for Intel Fortran Complier.
 
 Intel Fortran Compiler
 ------------------------
@@ -29,26 +29,3 @@ and obtain the argument value using getarg().
      write(*,*) "Input File not specified."
      stop
    endif
-
-GNU Fortran, G95
------------------
-
-Obtain the number of command line arguments using iargc(),
-and obtain the argument value using getarg().
-
-Note that nargs(), getargs() in GNU Fortran has different specification
-to those in Intel Fortran Compiler.
-
-.. code-block:: fortran
-   :caption: Example source code for reading arguments for GNU Fortran or G95
-   :linenos:
-
-   icount = iargc()  ! The number does not includes the executable name, so if user passed one argument, 1 is returned.
-   if ( icount.eq.1 ) then
-     call getarg(0, str1)      ! The file name of the executable.
-     call getarg(1, condfile)  ! The first argument
-   else
-     write(*,*) "Input File not specified."
-     stop
-   endif
-

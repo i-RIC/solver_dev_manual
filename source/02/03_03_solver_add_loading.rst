@@ -20,12 +20,10 @@ The added lines are shown with highlight.
    :caption: The source code with lines to load calculation condition, grid and boundary condition
    :name: solver_with_loading
    :linenos:
-   :emphasize-lines: 8-32,34-106
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
-     include 'iriclib_f.h'
      integer:: fin, ier
      integer:: icount, istatus
      character(200)::condFile
@@ -58,39 +56,32 @@ The added lines are shown with highlight.
 
      ! (abbr)
 
-     ! Initializes iRIClib
-     call cg_iric_init_f(fin, ier)
-     if (ier /=0) STOP "*** Initialize error of CGNS file ***"
-     ! Set options
-     call iric_initoption_f(IRIC_OPTION_CANCEL, ier)
-     if (ier /=0) STOP "*** Initialize option error***"
-
      ! Loads calculation condition
-     call cg_iric_read_integer_f("maxIteretions", maxiterations, ier)
-     call cg_iric_read_real_f("timeStep", timestep, ier)
-     call cg_iric_read_integer_f("surfaceType", surfacetype, ier)
-     call cg_iric_read_real_f("constantSurface", constantsurface, ier)
+     call cg_iric_read_integer(fin, "maxIteretions", maxiterations, ier)
+     call cg_iric_read_real(fin, "timeStep", timestep, ier)
+     call cg_iric_read_integer(fin, "surfaceType", surfacetype, ier)
+     call cg_iric_read_real(fin, "constantSurface", constantsurface, ier)
 
-     call cg_iric_read_functionalsize_f("variableSurface", variable_surface_size, ier)
+     call cg_iric_read_functionalsize(fin, "variableSurface", variable_surface_size, ier)
      allocate(variable_surface_time(variable_surface_size))
      allocate(variable_surface_elevation(variable_surface_size))
-     call cg_iric_read_functional_f("variableSurface", variable_surface_time, variable_surface_elevation, ier)
+     call cg_iric_read_functional(fin, "variableSurface", variable_surface_time, variable_surface_elevation, ier)
 
      ! Check the grid size
-     call cg_iric_gotogridcoord2d_f(isize, jsize, ier)
+     call cg_iric_read_grid2d_str_size(fin, isize, jsize, ier)
 
      ! Allocate the memory to read grid coordinates
      allocate(grid_x(isize,jsize), grid_y(isize,jsize))
      ! Loads grid coordinates
-     call cg_iric_getgridcoord2d_f(grid_x, grid_y, ier)
+     call cg_iric_read_grid2d_coords(fin, grid_x, grid_y, ier)
 
      ! Allocate the memory to load grid attributes defined at grid nodes and grid cells
      allocate(elevation(isize, jsize))
      allocate(obstacle(isize - 1, jsize - 1))
 
      ! Loads grid attributes
-     call cg_iric_read_grid_real_node_f("Elevation", elevation, ier)
-     call cg_iric_read_grid_integer_cell_f("Obstacle", obstacle, ier)
+     call cg_iric_read_grid_real_node(fin, "Elevation", elevation, ier)
+     call cg_iric_read_grid_integer_cell(fin, "Obstacle", obstacle, ier)
 
      ! Allocate memory to load boundary conditions (inflow)
      allocate(inflow_element_count(inflow_count))
@@ -101,12 +92,12 @@ The added lines are shown with highlight.
      inflow_element_max = 0
      do inflowid = 1, inflow_count
        ! Read the number of grid nodes assigned as inflow
-       call cg_iric_read_bc_indicessize_f('inflow', inflowid, inflow_element_count(inflowid))
+       call cg_iric_read_bc_indicessize(fin, 'inflow', inflowid, inflow_element_count(inflowid))
        if (inflow_element_max < inflow_element_count(inflowid)) then
          inflow_element_max = inflow_element_count(inflowid)
        end if
        ! Read the size of time-dependent discharge
-       call cg_iric_read_bc_functionalsize_f('inflow', inflowid, 'FunctionalDischarge', discharge_variable_size(inflowid), ier);
+       call cg_iric_read_bc_functionalsize(fin, 'inflow', inflowid, 'FunctionalDischarge', discharge_variable_size(inflowid), ier);
        if (discharge_variable_sizemax < discharge_variable_size(inflowid)) then
          discharge_variable_sizemax = discharge_variable_size(inflowid)
        end if
@@ -120,17 +111,17 @@ The added lines are shown with highlight.
      ! Loads boundary condition
      do inflowid = 1, inflow_count
        ! Loads the grid nodes assigned as inflow
-       call cg_iric_read_bc_indices_f('inflow', inflowid, inflow_element(inflowid:inflowid,:,:), ier)
+       call cg_iric_read_bc_indices(fin, 'inflow', inflowid, inflow_element(inflowid:inflowid,:,:), ier)
        ! Loads the inflow type (0 = constant, 1 = time-dependent)
-       call cg_iric_read_bc_integer_f('inflow', inflowid, 'Type', discharge_type(inflowid:inflowid), ier)
+       call cg_iric_read_bc_integer(fin, 'inflow', inflowid, 'Type', discharge_type(inflowid:inflowid), ier)
        ! Loads the discharge (constant)
-       call cg_iric_read_bc_real_f('inflow', inflowid, 'ConstantDischarge', discharge_constant(inflowid:inflowid), ier)
+       call cg_iric_read_bc_real(fin, 'inflow', inflowid, 'ConstantDischarge', discharge_constant(inflowid:inflowid), ier)
        ! Loads the discharge (time-dependent)
-       call cg_iric_read_bc_functional_f('inflow', inflowid, 'FunctionalDischarge', discharge_variable_time(inflowid:inflowid,:), discharge_variable_value(inflowid:inflowid,:), ier)
+       call cg_iric_read_bc_functional(fin, 'inflow', inflowid, 'FunctionalDischarge', discharge_variable_time(inflowid:inflowid,:), discharge_variable_value(inflowid:inflowid,:), ier)
      end do
 
      ! Closes the calculation data file
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program SampleProgram
 

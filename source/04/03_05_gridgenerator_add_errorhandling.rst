@@ -31,15 +31,15 @@ output error codes.
    
      ! Loads grid generating condition
      ! To make it simple, no error handling codes are written.
-     call cg_iric_read_integer_f("imax", imax, ier)
-     call cg_iric_read_integer_f("jmax", jmax, ier)
-     call cg_iric_read_integer_f("elev_on", elev_on, ier)
-     call cg_iric_read_real_f("elev_value", elev_value, ier)
+     call cg_iric_read_integer(fin, "imax", imax, ier)
+     call cg_iric_read_integer(fin, "jmax", jmax, ier)
+     call cg_iric_read_integer(fin, "elev_on", elev_on, ier)
+     call cg_iric_read_real(fin, "elev_value", elev_value, ier)
    
      ! Error handling
      if (imax * jmax > 100000 ) then
        ! It is now possible to create a grid with more than 100000 nodes
-       call cg_iric_write_errorcode(1, ier)
+       call cg_iric_write_errorcode(fin, 1, ier)
        cg_close_f(fin, ier)
        stop
      endif

@@ -17,8 +17,8 @@ Intel Fortran Compiler and gfortran.
    :linenos:
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    end program SampleProgram
 
 Make sure that the compilation succeeds.

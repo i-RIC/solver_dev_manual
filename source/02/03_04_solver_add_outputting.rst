@@ -45,8 +45,8 @@ calculations. The added lines are shown with highlight.
      ! (abbr.)
 
      ! Loads grid attributes 
-     call cg_iric_read_grid_real_node_f("Elevation", elevation, ier)
-     call cg_iric_read_grid_integer_cell_f("Obstacle", obstacle, ier)
+     call cg_iric_read_grid_real_node(fin, "Elevation", elevation, ier)
+     call cg_iric_read_grid_integer_cell(fin, "Obstacle", obstacle, ier)
 
      allocate(velocity_x(isize,jsize), velocity_y(isize,jsize), depth(isize,jsize), wetflag(isize,jsize))
      iteration = 0
@@ -57,29 +57,23 @@ calculations. The added lines are shown with highlight.
 
        call iric_check_cancel_f(canceled)
        if (canceled == 1) exit
-       call iric_check_lock_f(condFile, locked)
-       do while (locked == 1)
-         sleep(1)
-         call iric_check_lock_f(condFile, locked)
-       end do
-       call iric_write_sol_start_f(condFile, ier)
-       call cg_iric_write_sol_time_f(time, ier)
+       call cg_iric_write_sol_start(fin, ier)
+       call cg_iric_write_sol_time(fin, time, ier)
        ! Outputs grid
-       call cg_iric_write_sol_gridcoord2d_f (grid_x, grid_y, ier)
+       call cg_iric_write_sol_grid2d_coords(fin, grid_x, grid_y, ier)
        ! Outputs calculation result
-       call cg_iric_write_sol_real_f ('VelocityX', velocity_x, ier)
-       call cg_iric_write_sol_real_f ('VelocityY', velocity_y, ier)
-       call cg_iric_write_sol_real_f ('Depth', depth, ier)
-       call cg_iric_write_sol_integer_f ('Wet', wetflag, ier)
-       call cg_iric_write_sol_baseiterative_real_f ('Convergence', convergence, ier)
-       call cg_iric_flush_f(condFile, fin, ier)
-       call iric_write_sol_end_f(condFile, ier)
+       call cg_iric_write_sol_node_real(fin, 'VelocityX', velocity_x, ier)
+       call cg_iric_write_sol_node_real(fin, 'VelocityY', velocity_y, ier)
+       call cg_iric_write_sol_node_real(fin, 'Depth', depth, ier)
+       call cg_iric_write_sol_node_integer(fin, 'Wet', wetflag, ier)
+       call cg_iric_write_sol_baseiterative_real(fin, 'Convergence', convergence, ier)
+       call cg_iric_write_sol_end(fin, ier)
        iteration = iteration + 1
        if (iteration > maxiterations) exit
      end do
    
      ! Closes calculation data file
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
      stop
    end program SampleProgram
 

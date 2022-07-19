@@ -19,8 +19,8 @@ lines are shown with highlight.
    :emphasize-lines: 7-8,25-40
 
    program SampleProgram
+     use iric
      implicit none
-     include 'cgnslib_f.h'
    
      integer:: fin, ier
      integer:: icount, istatus
@@ -36,11 +36,8 @@ lines are shown with highlight.
      endif
    
      ! Opens grid generating data file. 
-     call cg_open_f(condFile, CG_MODE_MODIFY, fin, ier)
+     call cg_iric_open(condFile, IRIC_MODE_MODIFY, fin, ier)
      if (ier /=0) stop "*** Open error of CGNS file ***"
-   
-     ! Initializes iRIClib. ier will be 1, but that is not a problem.
-     call cg_iric_init_f(fin, ier)
    
      imax = 10
      jmax = 10
@@ -57,10 +54,10 @@ lines are shown with highlight.
      end do
    
      ! Outputs grid
-     cg_iric_writegridcoord2d_f(imax, jmax, grid_x, grid_y, ier)
+     cg_iric_write_grid2d_coords(fin, imax, jmax, grid_x, grid_y, ier)
    
      ! Closes grid generating data file.
-     call cg_close_f(fin, ier)
+     call cg_iric_close(fin, ier)
    end program SampleProgram
 
 When it was compiled successfully, copy the executable file to the
