@@ -96,6 +96,14 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/cg_iric_read_bc_functional
    03/cg_iric_read_bc_functional_realsingle
    03/cg_iric_read_bc_functionalwithname
+   03/cg_iric_read_grid2d_open
+   03/cg_iric_read_sol_grid2d_open
+   03/cg_iric_read_grid2d_close
+   03/cg_iric_read_grid2d_cellarea
+   03/cg_iric_read_grid2d_cellnodecount
+   03/cg_iric_read_grid2d_findcell
+   03/cg_iric_read_grid2d_interpolate
+   03/cg_iric_read_grid2d_interpolatewithcell
    03/cg_iric_read_geo_count
    03/cg_iric_read_geo_filename
    03/iric_geo_polygon_open
@@ -123,6 +131,9 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/cg_iric_write_grid1d_coords
    03/cg_iric_write_grid2d_coords
    03/cg_iric_write_grid3d_coords
+   03/cg_iric_write_namedgrid1d_coords
+   03/cg_iric_write_namedgrid2d_coords
+   03/cg_iric_write_namedgrid3d_coords
    03/cg_iric_write_grid_integer_node
    03/cg_iric_write_grid_real_node
    03/cg_iric_write_grid_integer_cell
@@ -178,5 +189,6 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/cg_iric_read_sol_iface_real
    03/cg_iric_read_sol_jface_integer
    03/cg_iric_read_sol_jface_real
+   03/cg_iric_copy_grid
    03/cg_iric_write_errorcode
    03/cg_iric_close

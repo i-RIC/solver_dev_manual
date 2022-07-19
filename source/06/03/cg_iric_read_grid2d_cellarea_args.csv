@@ -1,0 +1,5 @@
+変数名,型,I/O,内容
+g_handle,integer,I,格子のハンドル
+cell_id,integer,I,セルのID
+area,double precision,O,セルの面積
+ier,integer,O,エラーコード。0なら成功

@@ -1,0 +1,5 @@
+変数名,型,I/O,内容
+g_handle,integer,I,格子のハンドル
+cell_id,integer,I,セルID
+count,integer,O,セルの頂点の数 (3か4)
+ier,integer,O,エラーコード。0なら成功
