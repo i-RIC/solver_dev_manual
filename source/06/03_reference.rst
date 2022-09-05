@@ -48,6 +48,7 @@ Python では、エラーコードを格納する ier は出力されず、エ�
    03/functionlist
    03/cg_iric_open
    03/iric_initoption
+   03/cg_iric_clear_sol
    03/cg_iric_read_integer
    03/cg_iric_read_real
    03/cg_iric_read_realsingle
