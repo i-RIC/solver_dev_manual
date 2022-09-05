@@ -13,13 +13,13 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Grid2d_Coords_WithGridId(fid, nx, ny, x, y);
+   ier = cg_iRIC_Write_Grid2d_Coords_WithGridId(fid, nx, ny, x, y, gid);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Grid2d_Coords_WithGridId(fid, nx, ny, x, y)
+   gid = cg_iRIC_Write_Grid2d_Coords_WithGridId(fid, nx, ny, x, y)
 
 Arguments
 ---------
