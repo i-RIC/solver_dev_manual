@@ -8,19 +8,19 @@ CGNSファイルの間で格子をコピーする
 ---------------
 .. code-block:: fortran
 
-   call cg_iric_copy_grid_withgridid(fid_from, fid_to, ier)
+   call cg_iric_copy_grid_withgridid(fid_from, fid_to, gid, ier)
 
 形式 (C/C++)
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Copy_Grid_WithGridId(fid_from, fid_to);
+   ier = cg_iRIC_Copy_Grid_WithGridId(fid_from, fid_to, gid);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Copy_Grid_WithGridId(fid_from, fid_to)
+   cg_iRIC_Copy_Grid_WithGridId(fid_from, fid_to, gid)
 
 引数
 ----
