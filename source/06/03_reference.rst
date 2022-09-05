@@ -59,45 +59,85 @@ is thrown instead, if error occurs. To impelement error handling, please use try
    03/cg_iric_read_grid2d_str_size
    03/cg_iric_read_grid2d_coords
    03/cg_iric_read_grid_nodecount
+   03/cg_iric_read_grid_nodecount_withgridid
    03/cg_iric_read_grid_cellcount
+   03/cg_iric_read_grid_cellcount_withgridid
    03/cg_iric_read_grid_triangleelements
+   03/cg_iric_read_grid_triangleelements_withgridid
    03/cg_iric_read_grid_integer_node
+   03/cg_iric_read_grid_integer_node_withgridid
    03/cg_iric_read_grid_real_node
+   03/cg_iric_read_grid_real_node_withgridid
    03/cg_iric_read_grid_integer_cell
+   03/cg_iric_read_grid_integer_cell_withgridid
    03/cg_iric_read_grid_real_cell
+   03/cg_iric_read_grid_real_cell_withgridid
    03/cg_iric_read_complex_count
+   03/cg_iric_read_complex_count_withgridid
    03/cg_iric_read_complex_integer
+   03/cg_iric_read_complex_integer_withgridid
    03/cg_iric_read_complex_real
+   03/cg_iric_read_complex_real_withgridid
    03/cg_iric_read_complex_realsingle
+   03/cg_iric_read_complex_realsingle_withgridid
    03/cg_iric_read_complex_string
+   03/cg_iric_read_complex_string_withgridid
    03/cg_iric_read_complex_functionalsize
+   03/cg_iric_read_complex_functionalsize_withgridid
    03/cg_iric_read_complex_functional
+   03/cg_iric_read_complex_functional_withgridid
    03/cg_iric_read_complex_functional_realsingle
+   03/cg_iric_read_complex_functional_realsingle_withgridid
    03/cg_iric_read_complex_functionalwithname
+   03/cg_iric_read_complex_functionalwithname_withgridid
    03/cg_iric_read_grid_complex_node
+   03/cg_iric_read_grid_complex_node_withgridid
    03/cg_iric_read_grid_complex_cell
+   03/cg_iric_read_grid_complex_cell_withgridid
    03/cg_iric_read_grid_functionaltimesize
+   03/cg_iric_read_grid_functionaltimesize_withgridid
    03/cg_iric_read_grid_functionaltime
+   03/cg_iric_read_grid_functionaltime_withgridid
    03/cg_iric_read_grid_functionaldimensionsize
+   03/cg_iric_read_grid_functionaldimensionsize_withgridid
    03/cg_iric_read_grid_functionaldimension_integer
+   03/cg_iric_read_grid_functionaldimension_integer_withgridid
    03/cg_iric_read_grid_functionaldimension_real
+   03/cg_iric_read_grid_functionaldimension_real_withgridid
    03/cg_iric_read_grid_functional_integer_node
+   03/cg_iric_read_grid_functional_integer_node_withgridid
    03/cg_iric_read_grid_functional_real_node
+   03/cg_iric_read_grid_functional_real_node_withgridid
    03/cg_iric_read_grid_functional_integer_cell
+   03/cg_iric_read_grid_functional_integer_cell_withgridid
    03/cg_iric_read_grid_functional_real_cell
+   03/cg_iric_read_grid_functional_real_cell_withgridid
    03/cg_iric_read_bc_count
+   03/cg_iric_read_bc_count_withgridid
    03/cg_iric_read_bc_indicessize
+   03/cg_iric_read_bc_indicessize_withgridid
    03/cg_iric_read_bc_indices
+   03/cg_iric_read_bc_indices_withgridid
    03/cg_iric_read_bc_integer
+   03/cg_iric_read_bc_integer_withgridid
    03/cg_iric_read_bc_real
+   03/cg_iric_read_bc_real_withgridid
    03/cg_iric_read_bc_realsingle
+   03/cg_iric_read_bc_realsingle_withgridid
    03/cg_iric_read_bc_string
+   03/cg_iric_read_bc_string_withgridid
    03/cg_iric_read_bc_functionalsize
+   03/cg_iric_read_bc_functionalsize_withgridid
    03/cg_iric_read_bc_functional
+   03/cg_iric_read_bc_functional_withgridid
    03/cg_iric_read_bc_functional_realsingle
+   03/cg_iric_read_bc_functional_realsingle_withgridid
    03/cg_iric_read_bc_functionalwithname
+   03/cg_iric_read_bc_functionalwithname_withgridid
    03/cg_iric_read_grid2d_open
+   03/cg_iric_read_grid2d_open_withgridid
    03/cg_iric_read_sol_grid2d_open
+   03/cg_iric_read_sol_grid2d_open_withgridid
    03/cg_iric_read_grid2d_close
    03/cg_iric_read_grid2d_cellarea
    03/cg_iric_read_grid2d_cellnodecount
@@ -129,46 +169,82 @@ is thrown instead, if error occurs. To impelement error handling, please use try
    03/iric_geo_riversurvey_read_watersurfaceelevation
    03/iric_geo_riversurvey_close
    03/cg_iric_write_grid1d_coords
+   03/cg_iric_write_grid1d_coords_withgridid
    03/cg_iric_write_grid2d_coords
+   03/cg_iric_write_grid2d_coords_withgridid
    03/cg_iric_write_grid3d_coords
+   03/cg_iric_write_grid3d_coords_withgridid
    03/cg_iric_write_namedgrid1d_coords
+   03/cg_iric_write_namedgrid1d_coords_withgridid
    03/cg_iric_write_namedgrid2d_coords
+   03/cg_iric_write_namedgrid2d_coords_withgridid
    03/cg_iric_write_namedgrid3d_coords
+   03/cg_iric_write_namedgrid3d_coords_withgridid
    03/cg_iric_write_grid_integer_node
+   03/cg_iric_write_grid_integer_node_withgridid
    03/cg_iric_write_grid_real_node
+   03/cg_iric_write_grid_real_node_withgridid
    03/cg_iric_write_grid_integer_cell
+   03/cg_iric_write_grid_integer_cell_withgridid
    03/cg_iric_write_grid_real_cell
+   03/cg_iric_write_grid_real_cell_withgridid
    03/cg_iric_write_sol_time
    03/cg_iric_write_sol_iteration
    03/cg_iric_write_sol_grid2d_coords
+   03/cg_iric_write_sol_grid2d_coords_withgridid
    03/cg_iric_write_sol_grid3d_coords
+   03/cg_iric_write_sol_grid3d_coords_withgridid
    03/cg_iric_write_sol_baseiterative_integer
    03/cg_iric_write_sol_baseiterative_real
    03/cg_iric_write_sol_baseiterative_string
    03/cg_iric_write_sol_node_integer
+   03/cg_iric_write_sol_node_integer_withgridid
    03/cg_iric_write_sol_node_real
+   03/cg_iric_write_sol_node_real_withgridid
    03/cg_iric_write_sol_cell_integer
+   03/cg_iric_write_sol_cell_integer_withgridid
    03/cg_iric_write_sol_cell_real
+   03/cg_iric_write_sol_cell_real_withgridid
    03/cg_iric_write_sol_iface_integer
+   03/cg_iric_write_sol_iface_integer_withgridid
    03/cg_iric_write_sol_iface_real
+   03/cg_iric_write_sol_iface_real_withgridid
    03/cg_iric_write_sol_jface_integer
+   03/cg_iric_write_sol_jface_integer_withgridid
    03/cg_iric_write_sol_jface_real
+   03/cg_iric_write_sol_jface_real_withgridid
    03/cg_iric_write_sol_particle_pos2d
+   03/cg_iric_write_sol_particle_pos2d_withgridid
    03/cg_iric_write_sol_particle_pos3d
+   03/cg_iric_write_sol_particle_pos3d_withgridid
    03/cg_iric_write_sol_particle_integer
+   03/cg_iric_write_sol_particle_integer_withgridid
    03/cg_iric_write_sol_particle_real
+   03/cg_iric_write_sol_particle_real_withgridid
    03/cg_iric_write_sol_particlegroup_groupbegin
+   03/cg_iric_write_sol_particlegroup_groupbegin_withgridid
    03/cg_iric_write_sol_particlegroup_groupend
+   03/cg_iric_write_sol_particlegroup_groupend_withgridid
    03/cg_iric_write_sol_particlegroup_pos2d
+   03/cg_iric_write_sol_particlegroup_pos2d_withgridid
    03/cg_iric_write_sol_particlegroup_pos3d
+   03/cg_iric_write_sol_particlegroup_pos3d_withgridid
    03/cg_iric_write_sol_particlegroup_integer
+   03/cg_iric_write_sol_particlegroup_integer_withgridid
    03/cg_iric_write_sol_particlegroup_real
+   03/cg_iric_write_sol_particlegroup_real_withgridid
    03/cg_iric_write_sol_polydata_groupbegin
+   03/cg_iric_write_sol_polydata_groupbegin_withgridid
    03/cg_iric_write_sol_polydata_groupend
+   03/cg_iric_write_sol_polydata_groupend_withgridid
    03/cg_iric_write_sol_polydata_polygon
+   03/cg_iric_write_sol_polydata_polygon_withgridid
    03/cg_iric_write_sol_polydata_polyline
+   03/cg_iric_write_sol_polydata_polyline_withgridid
    03/cg_iric_write_sol_polydata_integer
+   03/cg_iric_write_sol_polydata_integer_withgridid
    03/cg_iric_write_sol_polydata_real
+   03/cg_iric_write_sol_polydata_real_withgridid
    03/iric_check_cancel
    03/cg_iric_check_update
    03/cg_iric_write_sol_start
@@ -180,15 +256,26 @@ is thrown instead, if error occurs. To impelement error handling, please use try
    03/cg_iric_read_sol_baseiterative_real
    03/cg_iric_read_sol_baseiterative_string
    03/cg_iric_read_sol_grid2d_coords
+   03/cg_iric_read_sol_grid2d_coords_withgridid
    03/cg_iric_read_sol_grid3d_coords
+   03/cg_iric_read_sol_grid3d_coords_withgridid
    03/cg_iric_read_sol_node_integer
+   03/cg_iric_read_sol_node_integer_withgridid
    03/cg_iric_read_sol_node_real
+   03/cg_iric_read_sol_node_real_withgridid
    03/cg_iric_read_sol_cell_integer
+   03/cg_iric_read_sol_cell_integer_withgridid
    03/cg_iric_read_sol_cell_real
+   03/cg_iric_read_sol_cell_real_withgridid
    03/cg_iric_read_sol_iface_integer
+   03/cg_iric_read_sol_iface_integer_withgridid
    03/cg_iric_read_sol_iface_real
+   03/cg_iric_read_sol_iface_real_withgridid
    03/cg_iric_read_sol_jface_integer
+   03/cg_iric_read_sol_jface_integer_withgridid
    03/cg_iric_read_sol_jface_real
+   03/cg_iric_read_sol_jface_real_withgridid
    03/cg_iric_copy_grid
+   03/cg_iric_copy_grid_withgridid
    03/cg_iric_write_errorcode
    03/cg_iric_close

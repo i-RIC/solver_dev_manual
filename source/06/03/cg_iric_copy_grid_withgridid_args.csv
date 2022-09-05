@@ -1,0 +1,5 @@
+Variable name,Type,I/O,Description
+fid_from,integer,I,File ID (Copy source)
+gid,integer,I,Grid ID
+fid_to,integer,I,File ID (Copy target)
+ier,integer,O,Error code. 0 means success.

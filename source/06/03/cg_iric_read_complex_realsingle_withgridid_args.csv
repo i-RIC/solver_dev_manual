@@ -1,0 +1,8 @@
+Variable name,Type,I/O,Description
+fid,integer,I,File ID
+gid,integer,I,Grid ID
+type,character(*),I,Attribute name
+num,integer,I,Group number
+name,character(*),I,Condition name
+value,Real,O,Attribute value
+ier,integer,O,Error code. 0 means success.
