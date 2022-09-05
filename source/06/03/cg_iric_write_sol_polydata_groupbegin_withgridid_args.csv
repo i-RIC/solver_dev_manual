@@ -1,0 +1,5 @@
+変数名,型,I/O,内容
+fid,integer,I,ファイルID
+gid,integer,I,格子ID
+name,character*,I,出力するグループの名前
+ier,integer,O,エラーコード。0なら成功

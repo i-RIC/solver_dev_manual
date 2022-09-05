@@ -1,0 +1,5 @@
+変数名,型,I/O,内容
+fid,integer,I,ファイルID
+gid,integer,I,格子ID
+type,character(*),I,境界条件の識別名
+num,integer,O,境界条件の数
