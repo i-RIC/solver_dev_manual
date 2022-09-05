@@ -13,13 +13,13 @@ cg_iric_write_grid3d_coords_withgridid
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Grid3d_Coords_WithGridId(fid, nx, ny, nz, x, y, z);
+   ier = cg_iRIC_Write_Grid3d_Coords_WithGridId(fid, nx, ny, nz, x, y, z, gid);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Grid3d_Coords_WithGridId(fid, nx, ny, nz, x, y, z)
+   gid = cg_iRIC_Write_Grid3d_Coords_WithGridId(fid, nx, ny, nz, x, y, z)
 
 引数
 ----

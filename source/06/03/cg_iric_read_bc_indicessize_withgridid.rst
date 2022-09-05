@@ -30,11 +30,11 @@ Python にはこの関数は存在しない
 備考
 ----
 
-size に返される値は、境界条件が設定される位置によって、 :numref:`bc_position_and_size` に示すように異なります。
+size に返される値は、境界条件が設定される位置によって、 :numref:`bc_position_and_size2` に示すように異なります。
 
-.. _bc_position_and_size:
+.. _bc_position_and_size2:
 
 .. csv-table:: 境界条件を設定された位置と size に返される値の関係
-   :file: cg_iric_read_bc_indicessize_withgridid_position_and_size.csv
+   :file: cg_iric_read_bc_indicessize_position_and_size.csv
    :header-rows: 1
 
