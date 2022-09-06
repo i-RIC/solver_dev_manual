@@ -13,13 +13,13 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid);
+   ier = cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid, gid);
 
 Format (Python)
 ----------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid)
+   cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid, gid)
 
 Arguments
 ---------

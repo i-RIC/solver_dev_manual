@@ -27,7 +27,7 @@ Format (Python)
 ----------------
 .. code-block:: python
 
-   ids = cg_iRIC_Read_Grid_TriangleElements_WithGridId(fid)
+   ids = cg_iRIC_Read_Grid_TriangleElements_WithGridId(fid, gid)
 
 Arguments
 ---------

@@ -19,7 +19,7 @@ Format (Python)
 ----------------
 .. code-block:: python
 
-   count = cg_iRIC_Read_Grid_NodeCount_WithGridId(fid)
+   count = cg_iRIC_Read_Grid_NodeCount_WithGridId(fid, gid)
 
 Arguments
 -----------

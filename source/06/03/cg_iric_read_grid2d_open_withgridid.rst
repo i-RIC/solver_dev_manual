@@ -23,7 +23,7 @@ Format (Python)
 ----------------
 .. code-block:: python
 
-   g_handle = cg_iRIC_Read_Grid2d_Open_WithGridId(fid)
+   g_handle = cg_iRIC_Read_Grid2d_Open_WithGridId(fid, gid)
 
 Arguments
 -----------

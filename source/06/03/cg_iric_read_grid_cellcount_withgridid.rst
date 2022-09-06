@@ -21,7 +21,7 @@ Format (Python)
 ----------------
 .. code-block:: python
 
-   count = cg_iRIC_Read_Grid_CellCount_WithGridId(fid)
+   count = cg_iRIC_Read_Grid_CellCount_WithGridId(fid, gid)
 
 Arguments
 ---------
