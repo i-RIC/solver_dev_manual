@@ -24,7 +24,7 @@ ids に、セルの数 x 3 のサイズの配列を渡すと、 1, 2, 3 番目, 
 ---------------
 .. code-block:: python
 
-   ids = cg_iRIC_Read_Grid_TriangleElements_WithGridId(fid)
+   ids = cg_iRIC_Read_Grid_TriangleElements_WithGridId(fid, gid)
 
 引数
 ----

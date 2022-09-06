@@ -19,7 +19,7 @@ cg_iric_read_grid_cellcount_withgridid
 ---------------
 .. code-block:: python
 
-   count = cg_iRIC_Read_Grid_CellCount_WithGridId(fid)
+   count = cg_iRIC_Read_Grid_CellCount_WithGridId(fid, gid)
 
 引数
 ----

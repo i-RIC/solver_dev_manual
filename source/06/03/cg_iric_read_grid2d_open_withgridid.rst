@@ -23,7 +23,7 @@ cg_iric_read_grid2d_open_withgridid
 ---------------
 .. code-block:: python
 
-   g_handle = cg_iRIC_Read_Grid2d_Open_WithGridId(fid)
+   g_handle = cg_iRIC_Read_Grid2d_Open_WithGridId(fid, gid)
 
 引数
 ----

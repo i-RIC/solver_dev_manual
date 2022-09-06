@@ -13,13 +13,13 @@ cg_iric_write_sol_polydata_groupend_withgridid
 ---------------
 .. code-block:: c
 
-   ier = cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid);
+   ier = cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid, gid);
 
 形式 (Python)
 ---------------
 .. code-block:: python
 
-   cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid)
+   cg_iRIC_Write_Sol_PolyData_GroupEnd_WithGridId(fid, gid)
 
 引数
 ----

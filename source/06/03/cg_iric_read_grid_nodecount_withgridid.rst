@@ -19,7 +19,7 @@ cg_iric_read_grid_nodecount_withgridid
 ---------------
 .. code-block:: python
 
-   count = cg_iRIC_Read_Grid_NodeCount_WithGridId(fid)
+   count = cg_iRIC_Read_Grid_NodeCount_WithGridId(fid, gid)
 
 引数
 ----
