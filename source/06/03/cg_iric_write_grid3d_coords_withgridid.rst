@@ -1,3 +1,5 @@
+.. _sec_iriclibfunc_cg_iric_write_grid3d_coords_withgridid:
+
 cg_iric_write_grid3d_coords_withgridid
 =======================================
 
