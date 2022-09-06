@@ -1,3 +1,5 @@
+.. _sec_iriclibfunc_cg_iric_write_sol_node_real:
+
 cg_iric_write_sol_node_real
 ============================
 
