@@ -54,7 +54,7 @@ calculations. The added lines are shown with highlight.
        time = time + timestep
        ! (Execute the calculation here. The grid shape changes.)
 
-       call iric_check_cancel_f(canceled)
+       call iric_check_cancel(canceled)
        if (canceled == 1) exit
        call cg_iric_write_sol_start(fin, ier)
        call cg_iric_write_sol_time(fin, time, ier)

@@ -46,7 +46,7 @@ use name \"Elevation\". iRIC will automatically load \"Elevation\" value.
    :name: elevation_output_example
    :caption: Example of source code to output elevation value in grid generating program
 
-   cg_iric_write_grid_real_node_f("Elevation", elevation, ier);
+   cg_iric_write_grid_real_node(fid, "Elevation", elevation, ier);
 
 .. _special_result_names:
 
@@ -84,6 +84,6 @@ that outputs all special calculation result.
    :name: special_result_output_example
    :caption: Example of source code to output calculation results with the special names
 
-   call cg_iric_write_sol_real_f('Elevation(m)', elevation_values, ier)
-   call cg_iric_write_sol_real_f('WaterSurfaceElevation(m)', surface_values, ier)
-   call cg_iric_write_sol_integer_f('IBC', IBC_values, ier)
+   call cg_iric_write_sol_node_real(fid, 'Elevation(m)', elevation_values, ier)
+   call cg_iric_write_sol_node_real(fid, 'WaterSurfaceElevation(m)', surface_values, ier)
+   call cg_iric_write_sol_node_integer(fid, 'IBC', IBC_values, ier)
