@@ -25,7 +25,7 @@
    integer:: ier
    character(200):: sampleitem
 
-   call cg_iric_read_string_f("sampleitem", sampleitem, ier)
+   call cg_iric_read_string(fid, "sampleitem", sampleitem, ier)
 
 .. code-block:: fortran
    :caption: 文字列の条件を読み込むための処理の記述例 (境界条件)
@@ -35,4 +35,4 @@
    integer:: ier
    character(200):: sampleitem
 
-   call cg_iric_read_bc_string_f("inflow", 1, "sampleitem", sampleitem, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "sampleitem", sampleitem, ier)

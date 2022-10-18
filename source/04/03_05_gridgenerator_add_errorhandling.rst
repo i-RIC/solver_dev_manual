@@ -38,7 +38,7 @@ JMax にそれぞれ 10000 を指定してみてください。
      if (imax * jmax > 100000 ) then
        ! 100000 より大きい格子は生成できない
        call cg_iric_write_errorcode(fin, 1, ier)
-       cg_close_f(fin, ier)
+       cg_iric_close(fin, ier)
        stop
      endif
    

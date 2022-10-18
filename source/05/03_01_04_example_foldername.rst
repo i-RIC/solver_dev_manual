@@ -25,7 +25,7 @@
    integer:: ier
    character(200):: flowdatafolder
 
-   call cg_iric_read_string_f("flowdatafolder", flowdatafolder, ier)
+   call cg_iric_read_string(fid, "flowdatafolder", flowdatafolder, ier)
 
 
 .. code-block:: fortran
@@ -36,4 +36,4 @@
    integer:: ier
    character(200):: flowdatafolder
 
-   call cg_iric_read_bc_string_f("inflow", 1, "flowdatafolder", flowdatafolder, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "flowdatafolder", flowdatafolder, ier)

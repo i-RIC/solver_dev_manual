@@ -34,8 +34,8 @@ CGNSファイル内の計算結果は、 valueType に result_gridNodeReal な�
    integer:: ier
    character(200):: cgnsName, resultName
 
-   call cg_iric_read_string_f("input_file", cgnsName, ier)
-   call cg_iric_read_string_f("result_to_read", resultName, ier)
+   call cg_iric_read_string(fid, "input_file", cgnsName, ier)
+   call cg_iric_read_string(fid, "result_to_read", resultName, ier)
 
 .. code-block:: fortran
    :caption: CGNSファイル名と計算結果の条件を読み込むための処理の記述例 (境界条件)
@@ -45,5 +45,5 @@ CGNSファイル内の計算結果は、 valueType に result_gridNodeReal な�
    integer:: ier
    character(200):: cgnsName, resultName
 
-   call cg_iric_read_bc_string_f("inflow", 1, "input_file", cgnsName, ier)
-   call cg_iric_read_bc_string_f("inflow", 1, "result_to_read", resultName, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "input_file", cgnsName, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "result_to_read", resultName, ier)

@@ -31,12 +31,12 @@
    double precision, dimension(:), allocatable:: discharge_time, discharge_value
 
    ! サイズを調べる
-   call cg_iric_read_functionalsize_f("discharge", discharge_size, ier)
+   call cg_iric_read_functionalsize(fid, "discharge", discharge_size, ier)
    ! メモリを確保
    allocate(discharge_time(discharge_size))
    allocate(discharge_value(discharge_size))
    ! 確保したメモリに値を読み込む
-   call cg_iric_read_functional_f("discharge", discharge_time, discharge_value, ier)
+   call cg_iric_read_functional(fid, "discharge", discharge_time, discharge_value, ier)
 
 
 .. code-block:: fortran
@@ -48,9 +48,9 @@
    double precision, dimension(:), allocatable:: discharge_time, discharge_value
 
    ! サイズを調べる
-   call cg_iric_read_bc_functionalsize_f("inflow", 1, "discharge", discharge_size, ier)
+   call cg_iric_read_bc_functionalsize(fid, "inflow", 1, "discharge", discharge_size, ier)
    ! メモリを確保
    allocate(discharge_time(discharge_size))
    allocate(discharge_value(discharge_size))
    ! 確保したメモリに値を読み込む
-   call cg_iric_read_bc_functional_f("inflow", 1, "discharge", discharge_time, discharge_value, ier)
+   call cg_iric_read_bc_functional(fid, "inflow", 1, "discharge", discharge_time, discharge_value, ier)

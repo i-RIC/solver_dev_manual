@@ -31,14 +31,14 @@
    double precision, dimension(:), allocatable:: discharge_value, elevation_value
 
    ! サイズを調べる
-   call cg_iric_read_functionalsize_f("discharge", discharge_size, ier)
+   call cg_iric_read_functionalsize(fid, "discharge", discharge_size, ier)
    ! メモリを確保
    allocate(time_value(discharge_size))
    allocate(discharge_value(discharge_size), elevation_value(discharge_size))
    ! 確保したメモリに値を読み込む
-   call cg_iric_read_functionalwithname_f("discharge", "time", time_value)
-   call cg_iric_read_functionalwithname_f("discharge", "discharge", discharge_value)
-   call cg_iric_read_functionalwithname_f("discharge", "elevation", elevation_value)
+   call cg_iric_read_functionalwithname(fid, "discharge", "time", time_value)
+   call cg_iric_read_functionalwithname(fid, "discharge", "discharge", discharge_value)
+   call cg_iric_read_functionalwithname(fid, "discharge", "elevation", elevation_value)
 
 .. code-block:: fortran
    :caption: 関数型 (複数の値) の条件を読み込むための処理の記述例 (境界条件)
@@ -50,11 +50,11 @@
    double precision, dimension(:), allocatable:: discharge_value, elevation_value
 
    ! サイズを調べる
-   call cg_iric_read_bc_functionalsize_f("discharge", discharge_size, ier)
+   call cg_iric_read_bc_functionalsize(fid, "discharge", discharge_size, ier)
    ! メモリを確保
    allocate(time_value(discharge_size))
    allocate(discharge_value(discharge_size), elevation_value(discharge_size))
    ! 確保したメモリに値を読み込む
-   call cg_iric_read_bc_functionalwithname_f("discharge", "time", time_value)
-   call cg_iric_read_bc_functionalwithname_f("discharge", "discharge", discharge_value)
-   call cg_iric_read_bc_functionalwithname_f("discharge", "elevation", elevation_value)
+   call cg_iric_read_bc_functionalwithname(fid, "discharge", "time", time_value)
+   call cg_iric_read_bc_functionalwithname(fid, "discharge", "discharge", discharge_value)
+   call cg_iric_read_bc_functionalwithname(fid, "discharge", "elevation", elevation_value)

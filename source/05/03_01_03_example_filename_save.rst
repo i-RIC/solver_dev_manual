@@ -25,7 +25,7 @@
    integer:: ier
    character(200):: flowdatafile
 
-   call cg_iric_read_string_f("flowdatafile", flowdatafile, ier)
+   call cg_iric_read_string(fid, "flowdatafile", flowdatafile, ier)
 
 .. code-block:: fortran
    :caption: ファイル名 (書き込み用) の条件を読み込むための処理の記述例 (境界条件)
@@ -35,4 +35,4 @@
    integer:: ier
    character(200):: flowdatafile
 
-   call cg_iric_read_bc_string_f("inflow", 1, "flowdatafile", flowdatafile, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "flowdatafile", flowdatafile, ier)

@@ -25,7 +25,7 @@
    integer:: ier
    double precision:: g
 
-   call cg_iric_read_real_f("g", g, ier)
+   call cg_iric_read_real(fid, "g", g, ier)
 
 .. code-block:: fortran
    :caption: 実数の条件を読み込むための処理の記述例 (境界条件)
@@ -35,4 +35,4 @@
    integer:: ier
    double precision:: g
 
-   call cg_iric_read_bc_real_f("inflow", 1, "g", g, ier)
+   call cg_iric_read_bc_real(fid, "inflow", 1, "g", g, ier)
