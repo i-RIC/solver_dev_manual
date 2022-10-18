@@ -29,7 +29,7 @@ Integer (Choice)
 
    integer:: ier, flowtype
 
-   call cg_iric_read_integer_f("flowtype", flowtype, ier)
+   call cg_iric_read_integer(fid, "flowtype", flowtype, ier)
 
 .. code-block:: fortran
    :caption: Code example to load a integer (choise) type condition (for boundary conditions)
@@ -38,4 +38,4 @@ Integer (Choice)
 
    integer:: ier, flowtype
 
-   call cg_iric_read_bc_integer_f("inflow", 1, "flowtype", flowtype, ier)
+   call cg_iric_read_bc_integer(fid, "inflow", 1, "flowtype", flowtype, ier)

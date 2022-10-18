@@ -24,7 +24,7 @@ Integer
 
    integer:: ier, numsteps
 
-   call cg_iric_read_integer_f("numsteps", numsteps, ier)
+   call cg_iric_read_integer(fid, "numsteps", numsteps, ier)
 
 .. code-block:: fortran
    :caption: Code example to load a integer type condition (for boundary conditions)
@@ -33,4 +33,4 @@ Integer
 
    integer:: ier, numsteps
 
-   call cg_iric_read_bc_integer_f("inflow", 1, "numsteps", numsteps, ier)
+   call cg_iric_read_bc_integer(fid, "inflow", 1, "numsteps", numsteps, ier)

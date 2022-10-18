@@ -40,7 +40,7 @@ output error codes.
      if (imax * jmax > 100000 ) then
        ! It is now possible to create a grid with more than 100000 nodes
        call cg_iric_write_errorcode(fin, 1, ier)
-       cg_close_f(fin, ier)
+       cg_iric_close(fin, ier)
        stop
      endif
    

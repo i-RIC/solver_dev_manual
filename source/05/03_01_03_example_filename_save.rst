@@ -25,7 +25,7 @@ File name (for writing)
    integer:: ier
    character(200):: flowdatafile
 
-   call cg_iric_read_string_f("flowdatafile", flowdatafile, ier)
+   call cg_iric_read_string(fid, "flowdatafile", flowdatafile, ier)
 
 .. code-block:: fortran
    :caption: Code example to load a file name (for writing) type condition (for boundary conditions)
@@ -35,4 +35,4 @@ File name (for writing)
    integer:: ier
    character(200):: flowdatafile
 
-   call cg_iric_read_bc_string_f("inflow", 1, "flowdatafile", flowdatafile, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "flowdatafile", flowdatafile, ier)

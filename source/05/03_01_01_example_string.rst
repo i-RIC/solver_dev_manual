@@ -25,7 +25,7 @@ String
    integer:: ier
    character(200):: sampleitem
 
-   call cg_iric_read_string_f("sampleitem", sampleitem, ier)
+   call cg_iric_read_string(fid, "sampleitem", sampleitem, ier)
 
 .. code-block:: fortran
    :caption: Code example to load a string type condition (for boundary conditions)
@@ -35,4 +35,4 @@ String
    integer:: ier
    character(200):: sampleitem
 
-   call cg_iric_read_bc_string_f("inflow", 1, "sampleitem", sampleitem, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "sampleitem", sampleitem, ier)

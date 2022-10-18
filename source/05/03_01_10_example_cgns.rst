@@ -35,8 +35,8 @@ cgnsFile attribute that refers the name of "CGNS file name" widget.
    integer:: ier
    character(200):: cgnsName, resultName
 
-   call cg_iric_read_string_f("input_file", cgnsName, ier)
-   call cg_iric_read_string_f("result_to_read", resultName, ier)
+   call cg_iric_read_string(fid, "input_file", cgnsName, ier)
+   call cg_iric_read_string(fid, "result_to_read", resultName, ier)
 
 .. code-block:: fortran
    :caption: Code example to load CGNS file name and Calculation result in CGNS (for boundary condition)
@@ -46,5 +46,5 @@ cgnsFile attribute that refers the name of "CGNS file name" widget.
    integer:: ier
    character(200):: cgnsName, resultName
 
-   call cg_iric_read_bc_string_f("inflow", 1, "input_file", cgnsName, ier)
-   call cg_iric_read_bc_string_f("inflow", 1, "result_to_read", resultName, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "input_file", cgnsName, ier)
+   call cg_iric_read_bc_string(fid, "inflow", 1, "result_to_read", resultName, ier)
