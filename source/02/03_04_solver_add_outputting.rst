@@ -50,7 +50,7 @@
        time = time + timestep
        ! (ここで計算を実行。格子の形状も変化)
 
-       call iric_check_cancel_f(canceled)
+       call iric_check_cancel(canceled)
        if (canceled == 1) exit
        call cg_iric_write_sol_start(fin, ier)
        call cg_iric_write_sol_time(fin, time, ier)
