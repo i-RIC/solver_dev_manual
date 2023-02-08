@@ -30,10 +30,10 @@
    * - cg_iric_read_sol_grid3d_coords
      - 計算結果の3次元構造格子を取得する
 
-   * - cg_iric_read_sol_integer
+   * - cg_iric_read_sol_node_integer
      - 整数の格子点ごとに値を持つ計算結果の値を取得する
 
-   * - cg_iric_read_sol_real
+   * - cg_iric_read_sol_node_real
      - 倍精度実数の格子点ごとに値を持つ計算結果の値を取得する
 
    * - cg_iric_read_sol_cell_integer

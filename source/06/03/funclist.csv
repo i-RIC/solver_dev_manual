@@ -1,6 +1,6 @@
 分類,名前,機能
 CGNSファイルを開く,cg_iric_open,CGNS ファイルを開く
-オプションの設定,cg_initoption,ソルバーのオプションを設定する
+オプションの設定,iric_initoption,ソルバーのオプションを設定する
 計算条件、格子生成条件の読み込み,cg_iric_read_integer,整数型変数の値を取得する
 計算条件、格子生成条件の読み込み,cg_iric_read_real,実数(倍精度)変数の値を取得する
 計算条件、格子生成条件の読み込み,cg_iric_read_realsingle,実数(単精度)変数の値を取得する
@@ -11,9 +11,9 @@ CGNSファイルを開く,cg_iric_open,CGNS ファイルを開く
 計算条件、格子生成条件の読み込み,cg_iric_read_functionalwithname,複数の値を持つ倍精度実数の関数型変数の値を取得する
 計算格子の読み込み,cg_iric_read_grid2d_str_size,格子を読み込む準備をする
 計算格子の読み込み,cg_iric_read_grid2d_coords,"格子のX, Y 座標を読み込む"
-計算格子の読み込み,cg_iric_grid_nodecount,"格子点の数を読み込む"
-計算格子の読み込み,cg_iric_grid_cellcount,"格子セルの数を読み込む"
-計算格子の読み込み,cg_iric_grid_triangleelements,"非構造格子の三角形頂点のIDリストを読み込む"
+計算格子の読み込み,cg_iric_read_grid_nodecount,"格子点の数を読み込む"
+計算格子の読み込み,cg_iric_read_grid_cellcount,"格子セルの数を読み込む"
+計算格子の読み込み,cg_iric_read_grid_triangleelements,"非構造格子の三角形頂点のIDリストを読み込む"
 計算格子の読み込み,cg_iric_read_grid_integer_node,格子点で定義された整数の属性を読み込む
 計算格子の読み込み,cg_iric_read_grid_real_node,格子点で定義された倍精度実数の属性を読み込む
 計算格子の読み込み,cg_iric_read_grid_integer_cell,セルで定義された整数の属性を読み込む
