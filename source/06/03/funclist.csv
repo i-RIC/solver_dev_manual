@@ -1,6 +1,6 @@
 Classification,Name,Description
 Opening a CGNS file,cg_iric_open,Opens a CGNS file
-Setting up options,cg_initoption,Set up solver option
+Setting up options,iric_initoption,Set up solver option
 Reading the calculation conditions,cg_iric_read_integer,Gets the value of an integer variable
 Reading the calculation conditions,cg_iric_read_real,Gets the value of a real (double-precision) variable
 Reading the calculation conditions,cg_iric_read_realsingle,Gets the value of a real (single-precision) variable
@@ -11,9 +11,9 @@ Reading the calculation conditions,cg_iric_read_functional_realsingle,Gets the v
 Reading the calculation conditions,cg_iric_read_functionalwithname,Gets the value of a f_functional-type variable (with multiple values)
 Reading a calculation grid,cg_iric_read_grid2d_str_size,Makes preparations for reading a grid
 Reading a calculation grid,cg_iric_read_grid2d_coords,Reads the x and y coordinates of a grid
-Reading a calculation grid,cg_iric_grid_nodecount,"Reads node count of a grid"
-Reading a calculation grid,cg_iric_grid_cellcount,"Reads cell count of a grid"
-Reading a calculation grid,cg_iric_grid_triangleelements,"Reads the list of ids of triangles for unstructured grid"
+Reading a calculation grid,cg_iric_read_grid_nodecount,"Reads node count of a grid"
+Reading a calculation grid,cg_iric_read_grid_cellcount,"Reads cell count of a grid"
+Reading a calculation grid,cg_iric_read_grid_triangleelements,"Reads the list of ids of triangles for unstructured grid"
 Reading a calculation grid,cg_iric_read_grid_integer_node,Reads the integer attribute values defined for grid nodes
 Reading a calculation grid,cg_iric_read_grid_real_node,Reads double-precision attribute values defined for grid nodes
 Reading a calculation grid,cg_iric_read_grid_integer_cell,Reads the integer attribute values defined for cells

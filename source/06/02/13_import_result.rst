@@ -30,10 +30,10 @@ Read calculation result from CGNS files.
    * - cg_iric_read_sol_gridcoord3d_f
      - Reads the 3D structured grid (for moving grid calculation)
 
-   * - cg_iric_read_sol_integer_f
+   * - cg_iric_read_sol_node_integer_f
      - Reads the integer-type calculation result, having a value for each grid node
 
-   * - cg_iric_read_sol_real_f
+   * - cg_iric_read_sol_node_real_f
      - Reads the double-precision real-type calculation result, having a value for each grid node
 
    * - cg_iric_read_sol_cell_integer_f
