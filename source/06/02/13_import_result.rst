@@ -9,37 +9,37 @@ Read calculation result from CGNS files.
    * - Subroutine
      - Remarks
 
-   * - cg_iric_read_sol_count_f
+   * - cg_iric_read_sol_count
      - Reads the number of calculation result
 
-   * - cg_iric_read_sol_time_f
+   * - cg_iric_read_sol_time
      - Reads the time value
 
-   * - cg_iric_read_sol_iteration_f
+   * - cg_iric_read_sol_iteration
      - Reads the loop iteration value
 
-   * - cg_iric_read_sol_baseiterative_integer_f
+   * - cg_iric_read_sol_baseiterative_integer
      - Reads the integer-type calculation result value
 
-   * - cg_iric_read_sol_baseiterative_real_f
+   * - cg_iric_read_sol_baseiterative_real
      - Reads the double-precision real-type calculation result value
 
-   * - cg_iric_read_sol_gridcoord2d_f
+   * - cg_iric_read_sol_gridcoord2d
      - Reads the 2D structured grid (for moving grid calculation)
 
-   * - cg_iric_read_sol_gridcoord3d_f
+   * - cg_iric_read_sol_gridcoord3d
      - Reads the 3D structured grid (for moving grid calculation)
 
-   * - cg_iric_read_sol_node_integer_f
+   * - cg_iric_read_sol_node_integer
      - Reads the integer-type calculation result, having a value for each grid node
 
-   * - cg_iric_read_sol_node_real_f
+   * - cg_iric_read_sol_node_real
      - Reads the double-precision real-type calculation result, having a value for each grid node
 
-   * - cg_iric_read_sol_cell_integer_f
+   * - cg_iric_read_sol_cell_integer
      - Reads the integer-type calculation result, having a value for each grid cell
 
-   * - cg_iric_read_sol_cell_real_f
+   * - cg_iric_read_sol_cell_real
      - Reads the double-precision real-type calculation result, having a value for each grid cell
 
 :numref:`example_load_calculatioin_result` shows an example of reading

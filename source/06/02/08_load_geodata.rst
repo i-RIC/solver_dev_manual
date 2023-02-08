@@ -16,49 +16,49 @@ The procedure of reading geographic data is as follows:
    * - Subroutine
      - Remarks
 
-   * - cg_iric_read_geo_count_f
+   * - cg_iric_read_geo_count
      - Reads the number of geographic data
 
-   * - cg_iric_read_geo_filename_f
+   * - cg_iric_read_geo_filename
      - Reads the file name and data type of geographic data
 
-   * - iric_geo_riversurvey_open_f
+   * - iric_geo_riversurvey_open
      - Opens the geographic data file that contains river survey data
 
-   * - iric_geo_riversurvey_read_count_f
+   * - iric_geo_riversurvey_read_count
      - Reads the number of the crosssections in river survey data
 
-   * - iric_geo_riversurvey_read_position_f
+   * - iric_geo_riversurvey_read_position
      - Reads the coordinates of the crosssection center point
 
-   * - iric_geo_riversurvey_read_direction_f
+   * - iric_geo_riversurvey_read_direction
      - Reads the direction of the crosssection as normalized vector
 
-   * - iric_geo_riversurvey_read_name_f
+   * - iric_geo_riversurvey_read_name
      - Reads the name of the crosssection as string
 
-   * - iric_geo_riversurvey_read_realname_f
+   * - iric_geo_riversurvey_read_realname
      - Reads the name of the crosssection as real number
 
-   * - iric_geo_riversurvey_read_leftshift_f
+   * - iric_geo_riversurvey_read_leftshift
      - Reads the shift offset value of the crosssection
 
-   * - iric_geo_riversurvey_read_altitudecount_f
+   * - iric_geo_riversurvey_read_altitudecount
      - Reads the number of altitude data of the crosssection
 
-   * - iric_geo_riversurvey_read_altitudes_f
+   * - iric_geo_riversurvey_read_altitudes
      - Reads the altitude data of the crosssection
 
-   * - iric_geo_riversurvey_read_fixedpointl_f
+   * - iric_geo_riversurvey_read_fixedpointl
      - Reads the data of left bank extension line of the crosssection
 
-   * - iric_geo_riversurvey_read_fixedpointr_f
+   * - iric_geo_riversurvey_read_fixedpointr
      - Reads the data of right bank extension line of the crosssection
 
-   * - iric_geo_riversurvey_read_watersurfaceelevation_f
+   * - iric_geo_riversurvey_read_watersurfaceelevation
      - Reads the water elevation at the crosssection
 
-   * - iric_geo_riversurvey_close_f
+   * - iric_geo_riversurvey_close
      - Closes the geographic data file
 
 :numref:`example_load_riversurvey` shows an example of reading river survey data.
