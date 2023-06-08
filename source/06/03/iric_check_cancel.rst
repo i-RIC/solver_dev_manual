@@ -13,7 +13,7 @@ Format (C/C++)
 ----------------
 .. code-block:: c
 
-   iRIC_Check_Cancel(&canceled);
+   canceled = iRIC_Check_Cancel();
 
 Format (Python)
 ----------------
