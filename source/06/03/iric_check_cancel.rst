@@ -13,7 +13,7 @@ iric_check_cancel
 ---------------
 .. code-block:: c
 
-   iRIC_Check_Cancel(&canceled);
+   canceled = iRIC_Check_Cancel();
 
 形式 (Python)
 ---------------
