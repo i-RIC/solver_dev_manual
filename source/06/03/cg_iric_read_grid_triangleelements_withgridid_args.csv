@@ -1,5 +1,5 @@
-変数名,型,I/O,内容
-fid,integer,I,ファイルID
+Variable name,Type,I/O,Description
+fid,integer,I,File ID
 gid,integer,I,Grid ID
-ids,"integer, dimension(:), allocatable",O,格子点のIDのリスト
-ier,integer,O,エラーコード。0なら成功
+ids,"integer, dimension(:), allocatable",O,List of IDs of grid node
+ier,integer,O,Error code. 0 means success.
