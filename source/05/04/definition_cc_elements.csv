@@ -1,5 +1,5 @@
 Name,Required,Description
 Enumeration,,"It should be specified when solver developers wants to limit the selection of the value. It can be specified only when valueType is integer or real."
 Condition,,The condition that must be met when the element become active.
-Param,,value for horizontal axis. It can be specified only when valueType is functional.
+Parameter,,value for horizontal axis. It can be specified only when valueType is functional.
 Value,,value for vertical axis. It can be specified only when valueType is functional.
