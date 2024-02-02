@@ -1,5 +1,5 @@
-Param
-=====
+Parameter
+==========
 
 計算条件 (もしくは格子生成条件) の入力ダイアログに表示するラベルの定義情報を保持します。
 
@@ -7,18 +7,18 @@ Param
 ----
 
 .. code-block:: xml
-   :caption: Param の定義例
-   :name: ref_param_example
+   :caption: Parameter の定義例
+   :name: ref_Parameter_example
    :linenos:
 
-   <Param caption="Time" valueType="real" />
+   <Parameter caption="Time" valueType="real" />
 
 定義例は :ref:`cc_widget_example_func` も参照して下さい。
 
 属性
 -----
 
-.. csv-table:: Param の属性
+.. csv-table:: Parameter の属性
    :file: param_attributes.csv
    :header-rows: 1
 
