@@ -23,7 +23,7 @@ Elements reference
    04/hboxlayout
    04/item
    04/label
-   04/param
+   04/parameter
    04/solverdefinition
    04/tab
    04/value

@@ -1,20 +1,20 @@
-Param
-=====
+Parameter
+===========
 
-Param element contains information that defines an argument of
+Parameter element contains information that defines an argument of
 functional type calculation conditions or grid creating conditions.
 
 Example
 -------
 
 .. code-block:: xml
-   :caption: Example of Param definition
-   :name: ref_param_example
+   :caption: Example of Parameter definition
+   :name: ref_Parameter_example
    :linenos:
 
-   <Param caption="Time" valueType="real" />
+   <Parameter caption="Time" valueType="real" />
 
-Refer to :ref:`cc_widget_example_func` for Param element definition example.
+Refer to :ref:`cc_widget_example_func` for Parameter element definition example.
 
 Attributes
 -----------
