@@ -1,0 +1,7 @@
+.. list-table:: option に指定可能な値
+  
+   * - option の値
+     - 内容
+
+   * - IRIC_OPTION_CANCEL
+     - iRIC_Check_Cancel を利用してキャンセルを検知できることをGUIに伝える。

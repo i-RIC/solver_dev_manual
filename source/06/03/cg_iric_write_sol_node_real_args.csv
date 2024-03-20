@@ -1,5 +1,0 @@
-Variable name,Type,I/O,Description
-fid,integer,I,File ID
-label,character*,I,Name of the value to be output.
-val,"double precision, dimension(:,:), allocatable",I,"Value to be output In the case of a 3D grid, the type should be double precision, dimension(:,:,:), allocatable."
-ier,integer,O,Error code. 0 means success.

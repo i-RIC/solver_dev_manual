@@ -1,0 +1,19 @@
+The value returned for size depends on where the boundary condition is set, as shown below.
+
+.. list-table:: 
+
+Relationship between the boundary condition position and the value of size
+
+   :header-rows: 1
+
+   * - Boundary condition position
+     - value of size
+
+   * - Node
+     - The Number of nodes
+
+   * - Cell
+     - The Number of cells
+
+   * - Edge
+     - The Number of edges

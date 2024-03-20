@@ -1,8 +1,0 @@
-Variable name,Type,I/O,Description
-fid,integer,I,File ID
-gid,integer,I,Grid ID
-type,character(*),I,Attribute name
-num,integer,I,Group number
-name,character(*),I,Condition name
-size,integer,O,The length of condition value array
-ier,integer,O,Error code. 0 means success.

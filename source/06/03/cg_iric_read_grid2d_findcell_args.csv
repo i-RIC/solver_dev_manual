@@ -1,6 +1,0 @@
-Variable name,Type,I/O,Description
-g_handle,integer,I,Grid handle
-x,double precision,I,X coordinate
-y,double precision,I,Y coordinate
-cell_id,integer,O,Cell ID
-ier,integer,O,Error code. 0 means success.

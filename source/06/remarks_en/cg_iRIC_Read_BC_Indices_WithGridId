@@ -1,0 +1,26 @@
+Values returned to idx_arr depends on the position where boundary condition
+is defined, like as shown below.
+
+Please note that when the boundary condition is defined at nodes or cells, it outputs two values 
+for each element, and when defined at edges, it outputs four values
+for each element.
+
+.. list-table:: Relationship between the position where boundary condition is defined and the values of indices
+   :header-rows: 1
+
+   * - Position where boundary condition is defined
+     - Values of indices
+   * - Nodes
+     - | I of grid node 1, J of grid node 1
+       | ...,
+       | I of grid node N, J of grid node N
+   * - Cells
+     - | I of grid cell 1, J of grid cell 1
+       | ...,
+       | I of grid cell N, J of grid cell N
+   * - Edges
+     - | I of start position of edge 1, J of start position of edge 1,
+       | I of end position of edge 1, J of end position of edge 1
+       | ...,
+       | I of start position of edge N, J of start position of edge N,
+       | I of end position of edge N, J of end position of edge N

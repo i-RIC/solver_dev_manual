@@ -1,8 +1,0 @@
-Variable name,Type,I/O,Description
-g_handle,integer,I,Grid handle
-x,double precision,I,x coordinate
-y,double precision,I,y coordinate
-cell_id,integer,I,Cell ID
-nodeids_arr,"integer, dimension(:), allocatable",O,Array of ID of the vertices of the cell
-weights_arr,"double precision, dimension(:), allocatable",O,Array of weights values to interpolate the value at the coordinates from the those defined at cell vertices
-ier,integer,O,Error code. 0 means success.

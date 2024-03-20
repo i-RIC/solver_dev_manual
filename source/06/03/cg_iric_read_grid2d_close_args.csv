@@ -1,3 +1,0 @@
-Variable name,Type,I/O,Description
-g_handle,integer,I,Grid handle
-ier,integer,O,Error code. 0 means success.
