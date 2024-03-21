@@ -1,6 +1,0 @@
-変数名,型,I/O,内容
-fid,integer,I,ファイルID
-numpoints,integer,I,ポリゴンを構成する点の数
-x,"double precision, dimension(:), allocatable",I,X座標
-y,"double precision, dimension(:), allocatable",I,Y座標
-ier,integer,O,エラーコード。0なら成功

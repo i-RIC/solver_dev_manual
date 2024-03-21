@@ -1,8 +1,0 @@
-変数名,型,I/O,内容
-g_handle,integer,I,格子のハンドル
-x,double precision,I,X座標
-y,double precision,I,Y座標
-cell_id,integer,I,セルID
-nodeids_arr,"integer, dimension(:), allocatable",O,セルを構成する頂点IDの配列
-weights_arr,"double precision, dimension(:), allocatable",O,セルを構成する頂点IDの値に基づいて補間する時の重みの配列
-ier,integer,O,エラーコード。0なら成功。

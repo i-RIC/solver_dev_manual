@@ -1,7 +1,0 @@
-変数名,型,I/O,内容
-fid,integer,I,ファイルID
-gid,integer,I,格子ID
-label,character(*),I,属性名
-dimid,integer,I,時刻のID (1 ～ 時刻の数)
-values,"double precision, dimension(:), allocatable",O,属性値
-Ier,integer,O,エラーコード。0なら成功

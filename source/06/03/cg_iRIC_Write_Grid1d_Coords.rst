@@ -1,0 +1,119 @@
+.. _sec_ref_cg_iRIC_Write_Grid1d_Coords:
+
+cg_iRIC_Write_Grid1d_Coords
+===========================
+
+1次元構造格子を出力する。
+
+形式 (FORTRAN)
+-----------------
+
+.. code-block:: fortran
+
+   call cg_iRIC_Write_Grid1d_Coords(fid, isize, x_arr, ier)
+
+形式 (C/C++)
+-----------------
+
+.. code-block:: c
+
+   ier = cg_iRIC_Write_Grid1d_Coords(fid, isize, x_arr)
+
+形式 (Python)
+-----------------
+
+.. code-block:: python
+
+   x_arr = cg_iRIC_Write_Grid1d_Coords(fid, isize)
+
+引数と戻り値
+----------------------------
+
+fid
+~~~
+
+.. list-table:: fid の説明
+   :header-rows: 1
+
+   * - 項目
+     - 値
+   * - 名前
+     - fid
+   * - 入力/出力
+     - 入力
+
+   * - 説明
+     - ファイルID
+   * - データ型 (FORTRAN)
+     - integer
+   * - データ型 (C/C++)
+     - int
+   * - データ型 (Python)
+     - int
+
+isize
+~~~~~
+
+.. list-table:: isize の説明
+   :header-rows: 1
+
+   * - 項目
+     - 値
+   * - 名前
+     - isize
+   * - 入力/出力
+     - 入力
+
+   * - 説明
+     - I方向の格子点数
+   * - データ型 (FORTRAN)
+     - integer
+   * - データ型 (C/C++)
+     - int
+   * - データ型 (Python)
+     - int
+
+x_arr
+~~~~~
+
+.. list-table:: x_arr の説明
+   :header-rows: 1
+
+   * - 項目
+     - 値
+   * - 名前
+     - x_arr
+   * - 入力/出力
+     - 出力
+
+   * - 説明
+     - X座標の配列
+   * - データ型 (FORTRAN)
+     - double precision, dimension(:)
+   * - データ型 (C/C++)
+     - double*
+   * - データ型 (Python)
+     - numpy.array
+
+ier
+~~~
+
+.. list-table:: ier の説明
+   :header-rows: 1
+
+   * - 項目
+     - 値
+   * - 名前
+     - ier
+   * - 入力/出力
+     - 出力
+
+   * - 説明
+     - エラーコード。0なら成功、エラーが起きるとそれ以外。
+   * - データ型 (FORTRAN)
+     - integer
+   * - データ型 (C/C++)
+     - int
+   * - データ型 (Python)
+     - (定義なし)
+

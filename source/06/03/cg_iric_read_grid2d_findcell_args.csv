@@ -1,6 +1,0 @@
-変数名,型,I/O,内容
-g_handle,integer,I,格子のハンドル
-x,double precision,I,X座標
-y,double precision,I,Y座標
-cell_id,integer,O,セルID
-ier,integer,O,エラーコード。0なら成功。該当するセルが見つからなかったら12が返される。

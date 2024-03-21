@@ -1,7 +1,0 @@
-変数名,型,I/O,内容
-fid,integer,I,ファイルID
-gid,integer,I,格子ID
-x,"double precision",I,X座標
-y,"double precision",I,Y座標
-z,"double precision",I,Z座標
-ier,integer,O,エラーコード。0なら成功

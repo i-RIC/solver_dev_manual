@@ -1,4 +1,0 @@
-変数名,型,I/O,内容
-fid_from,integer,I,ファイルID (格子のコピー元)
-fid_to,integer,I,ファイルID (格子のコピー先)
-ier,integer,O,エラーコード。0なら成功

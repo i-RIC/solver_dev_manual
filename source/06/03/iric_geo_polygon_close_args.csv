@@ -1,3 +1,0 @@
-変数名,型,I/O,内容
-pid,integer,I,ポリゴンのID
-ier,integer,O,エラーコード。0なら成功

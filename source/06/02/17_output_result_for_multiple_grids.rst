@@ -13,10 +13,10 @@ iRIClib では、複数の計算格子での計算結果の出力に対応して
 そのような場合、関数名に _withgridid が追加された名前の関数を使用します。
 
 例えば、2次元格子と3次元格子両方での計算結果を出力したい場合、格子の出力には、
-:ref:`sec_iriclibfunc_cg_iric_write_grid3d_coords_withgridid` を利用します。
+:ref:`sec_ref_cg_iRIC_Write_Grid3d_Coords_WithGridId` を利用します。
 
-:ref:`sec_iriclibfunc_cg_iric_write_grid3d_coords` と
-:ref:`sec_iriclibfunc_cg_iric_write_grid3d_coords_withgridid` では、以下に示すように
+:ref:`sec_ref_cg_iRIC_Write_Grid3d_Coords` と
+:ref:`sec_ref_cg_iRIC_Write_Grid3d_Coords_WithGridId` では、以下に示すように
 引数が異なります (FORTRANの場合)。"_withgridid" が付加された関数では、引数として
 gid (Grid ID) が追加されています。
 
@@ -28,16 +28,16 @@ gid (Grid ID) が追加されています。
 
    call cg_iric_write_grid3d_coords_withgridid(fid, nx, ny, nz, x, y, z, gid, ier)
 
-:ref:`sec_iriclibfunc_cg_iric_write_grid3d_coords_withgridid` は、
+:ref:`sec_ref_cg_iRIC_Write_Grid3d_Coords_WithGridId` は、
 格子を CGNS ファイルに書き込むとともに、新しい格子のIDを返します。
 
 複数の計算格子での計算結果を出力する場合、
 "_withgridid" を付加した名前の関数を使用します。
 
 例えば、格子点で定義された実数値の計算結果を出力したい場合、
-:ref:`sec_iriclibfunc_cg_iric_write_sol_node_real_withgridid` を使用します。
+:ref:`sec_ref_cg_iRIC_Write_Sol_Node_Real_WithGridId` を使用します。
 
-:ref:`sec_iriclibfunc_cg_iric_write_sol_node_real_withgridid` の引数一覧を以下に示します。
+:ref:`sec_ref_cg_iRIC_Write_Sol_Node_Real_WithGridId` の引数一覧を以下に示します。
 
 .. code-block:: fortran
 
@@ -49,5 +49,5 @@ gid (Grid ID) が追加されています。
 ソルバ内で作成して上記処理で CGNS ファイルに書き込んだ格子の gid は2となる点がポイントです。
 適切な gid を関数に渡すことで、2次元格子と3次元格子の計算結果両方を出力することが出来ます。
 
-:ref:`sec_iriclibfunc_cg_iric_write_sol_node_real` と同様に、格子に関する入出力用の
+:ref:`sec_ref_cg_iRIC_Write_Sol_Node_Real_WithGridId` と同様に、格子に関する入出力用の
 関数には、全て _withgridid が付加された名前の関数が存在します。
