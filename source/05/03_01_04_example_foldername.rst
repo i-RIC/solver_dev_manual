@@ -2,7 +2,7 @@
 -----------
 
 .. code-block:: xml
-   :caption: ファイル名 (書き込み用) の条件の定義例
+   :caption: フォルダ名の条件の定義例
    :name: widget_example_foldername_def
    :linenos:
 
