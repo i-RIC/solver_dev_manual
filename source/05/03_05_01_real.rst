@@ -1,0 +1,64 @@
+実数
+=====
+
+定義方法
+----------
+
+.. code-block:: xml
+   :caption: 実数の計算結果の定義例
+   :name: result_example_real_def
+   :linenos:
+
+   <Output name="depth" caption="Depth">
+     <Definition valueType="real" position="node" />
+   </Output>
+
+出力処理の記述方法
+---------------------------
+
+FORTRAN
+''''''''''
+
+.. code-block:: fortran
+   :caption: 格子点で定義された実数の計算結果を出力するための処理の記述例 FORTRAN
+   :name: result_example_real_output_fortran
+   :linenos:
+
+   double precision, dimension(:), allocatable:: depth
+
+   ! メモリを確保
+   allocate(depth(nodecount))
+   ! 出力する値をメモリに書き込む (以下では仮に全て0を出力)
+   depth = 0
+   ! 値を出力する
+   call cg_iRIC_Write_Sol_Node_Real(fid, "depth", depth, ier)
+
+C/C++
+'''''''
+
+.. code-block:: c
+   :caption: 格子点で定義された実数の計算結果を出力するための処理の記述例 C++
+   :name: result_example_real_output_c
+   :linenos:
+
+   std::vector<double> depth;
+
+   ! メモリを確保
+   depth.assign(nodecount, 0);
+   ! 値を出力する
+   ier = cg_iRIC_Write_Sol_Node_Real(fid, "depth", depth.data())
+
+Python
+'''''''
+
+.. code-block:: python
+   :caption: 格子点で定義された実数の計算結果を出力するための処理の記述例 Python
+   :name: result_example_real_output_python
+   :linenos:
+
+   import numpy
+   
+   # メモリを確保
+   depth = numpy.zeros(shape=(nodecount,))
+   # 値を出力する
+   cg_iRIC_Write_Sol_Node_Real(fid, "depth", depth)

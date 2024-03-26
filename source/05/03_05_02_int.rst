@@ -1,0 +1,69 @@
+整数
+=====
+
+定義方法
+----------
+
+.. code-block:: xml
+   :caption: 整数の計算結果の定義例
+   :name: result_example_int_def
+   :linenos:
+
+   <Output name="wet" caption="Wet">
+     <Definition valueType="integer" position="node">
+       <Enumerations>
+         <Enumeration value="0" caption="Dry" />
+         <Enumeration value="1" caption="Wet" />
+       </Enumerations>
+     </Definition>
+   </Output>
+
+出力処理の記述方法
+---------------------------
+
+FORTRAN
+''''''''''
+
+.. code-block:: fortran
+   :caption: 格子点で定義された整数の計算結果を出力するための処理の記述例 FORTRAN
+   :name: result_example_int_output_fortran
+   :linenos:
+
+   integer, dimension(:), allocatable:: wet
+
+   ! メモリを確保
+   allocate(wet(nodecount))
+   ! 出力する値をメモリに書き込む (以下では仮に全て0を出力)
+   wet = 0
+   ! 値を出力する
+   call cg_iRIC_Write_Sol_Node_Integer(fid, "wet", wet, ier)
+
+C/C++
+'''''''
+
+.. code-block:: c
+   :caption: 格子点で定義された整数の計算結果を出力するための処理の記述例 C++
+   :name: result_example_int_output_c
+   :linenos:
+
+   std::vector<int> wet;
+
+   ! メモリを確保
+   wet.assign(nodecount, 0);
+   ! 値を出力する
+   ier = cg_iRIC_Write_Sol_Node_Integer(fid, "wet", wet.data())
+
+Python
+'''''''
+
+.. code-block:: python
+   :caption: 格子点で定義された整数の計算結果を出力するための処理の記述例 Python
+   :name: result_example_int_output_python
+   :linenos:
+
+   import numpy
+   
+   # メモリを確保
+   depth = numpy.zeros(shape=(nodecount,))
+   # 値を出力する
+   cg_iRIC_Write_Sol_Node_Integer(fid, "wet", wet)
