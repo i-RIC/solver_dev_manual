@@ -81,7 +81,6 @@ FORTRAN
      call cg_iRIC_Read_Complex_String(fid, "fish", "remarks", fish_remarks(i), ier)
    end do
 
-
 C/C++
 ''''''''''
 

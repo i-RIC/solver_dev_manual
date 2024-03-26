@@ -1,0 +1,85 @@
+整数
+=====
+
+定義方法
+----------
+
+.. code-block:: xml
+   :caption: 整数の格子属性の定義例
+   :name: grid_att_example_int_def
+   :linenos:
+
+   <Item name="obst" caption="Obstacle">
+     <Definition valueType="integer" position="cell">
+       <Enumerations>
+         <Enumeration value="0" caption="Normal cell" />
+         <Enumeration value="1" caption="Obstacle" />
+       </Enumerations>
+     </Definition>
+   </Item>
+
+条件の表示例
+---------------
+
+.. _grid_att_example_int_object_browser:
+
+.. figure:: images/grid_att_example_int_object_browser.png
+   :width: 200pt
+
+   セルで定義された整数の条件のオブジェクトブラウザでの表示例
+
+.. _grid_att_example_int_edit_dialog:
+
+.. figure:: images/grid_att_example_int_edit_dialog.png
+   :width: 300pt
+
+   セルで定義された整数の条件の編集ダイアログ表示例
+
+読み込み処理の記述方法
+---------------------------
+
+FORTRAN
+''''''''''
+
+.. code-block:: fortran
+   :caption: セルで定義された整数の格子属性を読み込むための処理の記述例 FORTRAN
+   :name: grid_att_example_int_load_fortran
+   :linenos:
+
+   integer:: ier, cellcount
+   integer, dimension(:), allocatable:: obst
+
+   ! サイズを調べる
+   call cg_iRIC_Read_Grid_CellCount(fid, cellcount, ier)
+   ! メモリを確保
+   allocate(roughness(cellcount))
+   ! 確保したメモリに値を読み込む
+   call cg_iRIC_Read_Grid_Integer_Cell(fid, "obst", obst, ier)
+
+C/C++
+'''''''
+
+.. code-block:: c
+   :caption: セルで定義された整数の格子属性を読み込むための処理の記述例 C++
+   :name: grid_att_example_int_load_c
+   :linenos:
+
+   int ier, cellcount;
+   std::vector<int> obst;
+
+   // サイズを調べる
+   ier = cg_iRIC_Read_Grid_CellCount(fid, &cellcount);
+   // メモリを確保
+   obst.assign(cellcout, 0);
+   // 確保したメモリに値を読み込む
+   ier = cg_iRIC_Read_Grid_Integer_Cell(fid, "obst", obst.data());
+
+Python
+'''''''
+
+.. code-block:: python
+   :caption: セルで定義された整数の格子属性を読み込むための処理の記述例 Python
+   :name: grid_att_example_int_load_python
+   :linenos:
+
+   obst = cg_iRIC_Read_Grid_Integer_Cell(fid, "obst")
