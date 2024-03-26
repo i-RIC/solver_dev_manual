@@ -17,3 +17,4 @@ result_gridEdgeJInteger,J方向のエッジ定義された整数の計算結果�
 result_gridEdgeJReal,J方向のエッジで定義された実数の計算結果の選択
 result_baseIterativeInteger,グローバルな整数の計算結果の選択
 result_baseIterativeReal,グローバルな実数の計算結果の選択
+complex,複合型
