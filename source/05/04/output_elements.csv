@@ -1,0 +1,4 @@
+名前,必須,説明
+Definition,○,要素の定義
+ColorMapSetting,,デフォルトのカラーマップ設定 (実数値の場合)
+EnumerateColorMapSetting,,デフォルトのカラーマップ設定 (整数値の場合)

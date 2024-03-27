@@ -9,6 +9,7 @@
    04/condition
    04/definition_cc
    04/definition_ga
+   04/definition_output
    04/dimension
    04/enumeration
    04/errorcode
@@ -23,6 +24,7 @@
    04/hboxlayout
    04/item
    04/label
+   04/output
    04/parameter
    04/solverdefinition
    04/tab

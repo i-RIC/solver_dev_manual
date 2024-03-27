@@ -1,0 +1,2 @@
+名前,必須,説明
+Enumeration,,"値の選択肢が限られている場合に指定する。valueType が integer の場合のみ指定できる。"

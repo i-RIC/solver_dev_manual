@@ -1,0 +1,7 @@
+値,意味
+node,格子点
+cell,セル
+iface,I方向の格子セルの境界面 (エッジ)
+jface,J方向の格子セルの境界面 (エッジ)
+particle,パーティクル
+polydata,ポリゴン・折れ線

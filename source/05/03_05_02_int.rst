@@ -11,10 +11,8 @@
 
    <Output name="wet" caption="Wet">
      <Definition valueType="integer" position="node">
-       <Enumerations>
-         <Enumeration value="0" caption="Dry" />
-         <Enumeration value="1" caption="Wet" />
-       </Enumerations>
+       <Enumeration value="0" caption="Dry" />
+       <Enumeration value="1" caption="Wet" />
      </Definition>
    </Output>
 

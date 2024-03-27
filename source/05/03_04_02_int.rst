@@ -11,10 +11,8 @@
 
    <Item name="obst" caption="Obstacle">
      <Definition valueType="integer" position="cell">
-       <Enumerations>
-         <Enumeration value="0" caption="Normal cell" />
-         <Enumeration value="1" caption="Obstacle" />
-       </Enumerations>
+       <Enumeration value="0" caption="Normal cell" />
+       <Enumeration value="1" caption="Obstacle" />
      </Definition>
    </Item>
 
