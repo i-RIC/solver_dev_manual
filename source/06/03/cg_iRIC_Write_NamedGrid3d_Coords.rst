@@ -24,7 +24,7 @@ Format (Python)
 
 .. code-block:: python
 
-   x_arr, y_arr, z_arr = cg_iRIC_Write_NamedGrid3d_Coords(fid, name, isize, jsize, ksize)
+   cg_iRIC_Write_NamedGrid3d_Coords(fid, name, isize, jsize, ksize, x_arr, y_arr, z_arr)
 
 Arguments and returned value
 -------------------------------

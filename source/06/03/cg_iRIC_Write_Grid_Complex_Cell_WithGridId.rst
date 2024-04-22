@@ -24,7 +24,7 @@ Format (Python)
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Grid_Complex_Cell_WithGridId(fid, gid, groupname)
+   cg_iRIC_Write_Grid_Complex_Cell_WithGridId(fid, gid, groupname, v_arr)
 
 Arguments and returned value
 -------------------------------

@@ -24,7 +24,7 @@ Format (Python)
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Grid_Integer_Node(fid, name)
+   cg_iRIC_Write_Grid_Integer_Node(fid, name, v_arr)
 
 Arguments and returned value
 -------------------------------

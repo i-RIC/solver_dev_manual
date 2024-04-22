@@ -24,7 +24,7 @@ Format (Python)
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Sol_Particle_Integer_WithGridId(fid, gid, name)
+   cg_iRIC_Write_Sol_Particle_Integer_WithGridId(fid, gid, name, v_arr)
 
 Arguments and returned value
 -------------------------------

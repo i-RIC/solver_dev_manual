@@ -24,7 +24,7 @@ Format (Python)
 
 .. code-block:: python
 
-   idx_arr = cg_iRIC_Write_BC_Indices_WithGridId(fid, gid, type, num, length)
+   cg_iRIC_Write_BC_Indices_WithGridId(fid, gid, type, num, length, idx_arr)
 
 Arguments and returned value
 -------------------------------

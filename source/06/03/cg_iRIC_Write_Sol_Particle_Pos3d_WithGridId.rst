@@ -24,7 +24,7 @@ Format (Python)
 
 .. code-block:: python
 
-   x_arr, y_arr, z_arr = cg_iRIC_Write_Sol_Particle_Pos3d_WithGridId(fid, gid, count)
+   cg_iRIC_Write_Sol_Particle_Pos3d_WithGridId(fid, gid, count, x_arr, y_arr, z_arr)
 
 Arguments and returned value
 -------------------------------

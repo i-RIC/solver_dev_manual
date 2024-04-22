@@ -24,7 +24,7 @@ Format (Python)
 
 .. code-block:: python
 
-   x_arr, y_arr = cg_iRIC_Write_Grid2d_Coords(fid, isize, jsize)
+   cg_iRIC_Write_Grid2d_Coords(fid, isize, jsize, x_arr, y_arr)
 
 Arguments and returned value
 -------------------------------
