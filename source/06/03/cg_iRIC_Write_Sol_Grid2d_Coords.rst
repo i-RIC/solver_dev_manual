@@ -24,7 +24,7 @@ cg_iRIC_Write_Sol_Grid2d_Coords
 
 .. code-block:: python
 
-   x_arr, y_arr = cg_iRIC_Write_Sol_Grid2d_Coords(fid)
+   cg_iRIC_Write_Sol_Grid2d_Coords(fid, x_arr, y_arr)
 
 引数と戻り値
 ----------------------------

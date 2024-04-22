@@ -24,7 +24,7 @@ cg_iRIC_Write_Grid3d_Coords
 
 .. code-block:: python
 
-   x_arr, y_arr, z_arr = cg_iRIC_Write_Grid3d_Coords(fid, isize, jsize, ksize)
+   cg_iRIC_Write_Grid3d_Coords(fid, isize, jsize, ksize, x_arr, y_arr, z_arr)
 
 引数と戻り値
 ----------------------------

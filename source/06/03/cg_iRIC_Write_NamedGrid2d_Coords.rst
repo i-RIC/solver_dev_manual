@@ -24,7 +24,7 @@ cg_iRIC_Write_NamedGrid2d_Coords
 
 .. code-block:: python
 
-   x_arr, y_arr = cg_iRIC_Write_NamedGrid2d_Coords(fid, name, isize, jsize)
+   cg_iRIC_Write_NamedGrid2d_Coords(fid, name, isize, jsize, x_arr, y_arr)
 
 引数と戻り値
 ----------------------------

@@ -106,7 +106,7 @@ def build_python_format(f):
     args = list()
 
     for a in f['args']:
-        if a['type'] != 'const char*' and '*' in a['type']:
+        if a['type'] != 'const char*' and '*' in a['type'] and not 'Write' in f['name']:
             rets.append(a['name'])
         else:
             args.append(a['name'])

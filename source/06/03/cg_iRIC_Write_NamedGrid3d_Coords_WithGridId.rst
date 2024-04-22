@@ -24,7 +24,7 @@ cg_iRIC_Write_NamedGrid3d_Coords_WithGridId
 
 .. code-block:: python
 
-   x_arr, y_arr, z_arr, gid = cg_iRIC_Write_NamedGrid3d_Coords_WithGridId(fid, name, isize, jsize, ksize)
+   cg_iRIC_Write_NamedGrid3d_Coords_WithGridId(fid, name, isize, jsize, ksize, x_arr, y_arr, z_arr, gid)
 
 引数と戻り値
 ----------------------------

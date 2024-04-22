@@ -26,7 +26,7 @@ cg_iRIC_Write_Sol_PolyData_Polyline
 
 .. code-block:: python
 
-   x_arr, y_arr = cg_iRIC_Write_Sol_PolyData_Polyline(fid, numPoints)
+   cg_iRIC_Write_Sol_PolyData_Polyline(fid, numPoints, x_arr, y_arr)
 
 引数と戻り値
 ----------------------------

@@ -24,7 +24,7 @@ cg_iRIC_Write_Grid_Complex_JFace
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Grid_Complex_JFace(fid, groupname)
+   cg_iRIC_Write_Grid_Complex_JFace(fid, groupname, v_arr)
 
 引数と戻り値
 ----------------------------

@@ -24,7 +24,7 @@ cg_iRIC_Write_Sol_JFace_Integer_WithGridId
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Sol_JFace_Integer_WithGridId(fid, gid, name)
+   cg_iRIC_Write_Sol_JFace_Integer_WithGridId(fid, gid, name, v_arr)
 
 引数と戻り値
 ----------------------------

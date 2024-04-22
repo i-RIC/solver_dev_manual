@@ -24,7 +24,7 @@ cg_iRIC_Write_BC_Indices
 
 .. code-block:: python
 
-   idx_arr = cg_iRIC_Write_BC_Indices(fid, type, num, length)
+   cg_iRIC_Write_BC_Indices(fid, type, num, length, idx_arr)
 
 引数と戻り値
 ----------------------------

@@ -24,7 +24,7 @@ cg_iRIC_Write_FunctionalWithName
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_FunctionalWithName(fid, name, paramname, length)
+   cg_iRIC_Write_FunctionalWithName(fid, name, paramname, length, v_arr)
 
 引数と戻り値
 ----------------------------

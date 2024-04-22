@@ -24,7 +24,7 @@ cg_iRIC_Write_Sol_Cell_Integer
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Sol_Cell_Integer(fid, name)
+   cg_iRIC_Write_Sol_Cell_Integer(fid, name, v_arr)
 
 引数と戻り値
 ----------------------------

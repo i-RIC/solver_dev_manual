@@ -24,7 +24,7 @@ cg_iRIC_Write_Sol_Particle_Pos2d_WithGridId
 
 .. code-block:: python
 
-   x_arr, y_arr = cg_iRIC_Write_Sol_Particle_Pos2d_WithGridId(fid, gid, count)
+   cg_iRIC_Write_Sol_Particle_Pos2d_WithGridId(fid, gid, count, x_arr, y_arr)
 
 引数と戻り値
 ----------------------------

@@ -24,7 +24,7 @@ cg_iRIC_Write_Grid_Complex_Cell
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Grid_Complex_Cell(fid, groupname)
+   cg_iRIC_Write_Grid_Complex_Cell(fid, groupname, v_arr)
 
 引数と戻り値
 ----------------------------

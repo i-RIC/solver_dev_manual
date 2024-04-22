@@ -24,7 +24,7 @@ cg_iRIC_Write_BC_Functional
 
 .. code-block:: python
 
-   x_arr, y_arr = cg_iRIC_Write_BC_Functional(fid, type, num, name, length)
+   cg_iRIC_Write_BC_Functional(fid, type, num, name, length, x_arr, y_arr)
 
 引数と戻り値
 ----------------------------

@@ -24,7 +24,7 @@ cg_iRIC_Write_Grid1d_Coords
 
 .. code-block:: python
 
-   x_arr = cg_iRIC_Write_Grid1d_Coords(fid, isize)
+   cg_iRIC_Write_Grid1d_Coords(fid, isize, x_arr)
 
 引数と戻り値
 ----------------------------

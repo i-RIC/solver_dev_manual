@@ -24,7 +24,7 @@ cg_iRIC_Write_Grid_Integer_IFace
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Grid_Integer_IFace(fid, name)
+   cg_iRIC_Write_Grid_Integer_IFace(fid, name, v_arr)
 
 引数と戻り値
 ----------------------------

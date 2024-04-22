@@ -24,7 +24,7 @@ cg_iRIC_Write_Sol_Node_Real_WithGridId
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_Sol_Node_Real_WithGridId(fid, gid, name)
+   cg_iRIC_Write_Sol_Node_Real_WithGridId(fid, gid, name, v_arr)
 
 引数と戻り値
 ----------------------------

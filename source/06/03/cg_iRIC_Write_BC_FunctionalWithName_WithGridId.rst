@@ -24,7 +24,7 @@ cg_iRIC_Write_BC_FunctionalWithName_WithGridId
 
 .. code-block:: python
 
-   v_arr = cg_iRIC_Write_BC_FunctionalWithName_WithGridId(fid, gid, type, num, name, paramname, length)
+   cg_iRIC_Write_BC_FunctionalWithName_WithGridId(fid, gid, type, num, name, paramname, length, v_arr)
 
 引数と戻り値
 ----------------------------
