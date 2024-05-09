@@ -1,4 +1,5 @@
 Name,Value,Required,Description
 valueType,Refer to the table below,Yes,Value type
 position,Refer to the table below,Yes,Definition position
+direction,Boolean,,Can only be specified for cell attributes. If true is specified, the attribute is recognised as representing the direction of flow and an arrow is displayed in the cell.
 default,String,,"Default value.If \\""min\\"" or \\""max\\"" is specified, the minimum value or the maximum value, respectively, of the input geographical information will be used for an area devoid of geographical information."
