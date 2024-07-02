@@ -76,9 +76,9 @@ FORTRAN
    allocate(fish_remarks(fish_count))
    ! 確保したメモリに値を読み込む
    do i = 1, fish_count
-     call cg_iRIC_Read_Complex_Integer(fid, "fish", "type", fish_type(i), ier)
-     call cg_iRIC_Read_Complex_Real(fid, "fish", "size", fish_size(i), ier)
-     call cg_iRIC_Read_Complex_String(fid, "fish", "remarks", fish_remarks(i), ier)
+     call cg_iRIC_Read_Complex_Integer(fid, "fish", i, "type", fish_type(i), ier)
+     call cg_iRIC_Read_Complex_Real(fid, "fish", i, "size", fish_size(i), ier)
+     call cg_iRIC_Read_Complex_String(fid, "fish", i, "remarks", fish_remarks(i), ier)
    end do
 
 C/C++
@@ -103,12 +103,12 @@ C/C++
    fish_remarks.assign(fish_count, "");
    // 確保したメモリに値を読み込む
    for (int i = 0; i < fish_count; ++i) {
-     ier = cg_iRIC_Read_Complex_Integer(fid, "fish", "type", &fish_type[i]);
-     call cg_iRIC_Read_Complex_Real(fid, "fish", "size", &fish_size[i]);
+     ier = cg_iRIC_Read_Complex_Integer(fid, "fish", i + 1, "type", &fish_type[i]);
+     call cg_iRIC_Read_Complex_Real(fid, "fish", i + 1, "size", &fish_size[i]);
      auto& remarks = fish_remarks[i];
-     call cg_iRIC_Read_Complex_StringLen(fid, "fish", "remarks", &strlen);
+     call cg_iRIC_Read_Complex_StringLen(fid, "fish", i + 1, "remarks", &strlen);
      remarks.assign(strlen + 1, 0);
-     call cg_iRIC_Read_Complex_String(fid, "fish", "remarks", remarks.data());
+     call cg_iRIC_Read_Complex_String(fid, "fish", i + 1, "remarks", remarks.data());
    }
 
 Python
@@ -128,6 +128,14 @@ Python
    fish_remarks = list()
 
    for i in range(fish_count):
-     fish_type.append(cg_iRIC_Read_Complex_Integer(fid, "fish", "type"))
-     fish_size.append(cg_iRIC_Read_Complex_Real(fid, "fish", "size"))
-     fish_remarks.append(cg_iRIC_Read_Complex_String(fid, "fish", "remarks"))
+     fish_type.append(cg_iRIC_Read_Complex_Integer(fid, "fish", i + 1, "type"))
+     fish_size.append(cg_iRIC_Read_Complex_Real(fid, "fish", i + 1, "size"))
+     fish_remarks.append(cg_iRIC_Read_Complex_String(fid, "fish", i + 1, "remarks"))
+
+名前の読み込み
+-----------------
+
+複合型の項目につけた名前 (例: :numref:`widget_example_complex` の例なら「Item2」) を読み込みたい時は、
+cg_iRIC_Read_Complex_String を、引数 name に "_caption" を指定して実行します。
+
+引数の詳細な説明は :ref:`sec_ref_cg_iRIC_Read_Complex_String` を参照してください。
