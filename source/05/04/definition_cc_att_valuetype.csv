@@ -16,3 +16,4 @@ result_gridEdgeJInteger,Select integer value calculation result defined at J-dir
 result_gridEdgeJReal,Select real value calculation result defined at J-direction edges
 result_baseIterativeInteger,Select integer value calculation result defined globally
 result_baseIterativeReal,Select real value calculation result defined globally
+complex,Complex type

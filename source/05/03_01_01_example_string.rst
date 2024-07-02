@@ -1,5 +1,8 @@
 String
--------
+===========
+
+Definition
+-------------
 
 .. code-block:: xml
    :caption: Example of a string type condition definition
@@ -10,6 +13,9 @@ String
      <Definition valueType="string" />
    </Item>
 
+Example of widget
+------------------------
+
 .. _widget_example_string:
 
 .. figure:: images/widget_example_string.png
@@ -17,22 +23,81 @@ String
 
    Widget example of a string type condition
 
+Example code to read data
+------------------------------
+
+Calculation condition, Grid generating condition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FORTRAN
+'''''''''''
+
 .. code-block:: fortran
-   :caption: Code example to load a string type condition (for calculation conditions and grid generating conditions)
-   :name: widget_example_string_load_calccond
+   :caption: Code example to load a string type condition (for calculation conditions and grid generating conditions) FORTRAN
+   :name: widget_example_string_load_calccond_fortran
+   :linenos:
+
+   call cg_iRIC_Read_String(fid, "sampleitem", sampleitem, ier)
+
+
+C/C++
+'''''''
+
+.. code-block:: c
+   :caption: Code example to load a string type condition (for calculation conditions and grid generating conditions) C/C++
+   :name: widget_example_string_load_calccond_c
+   :linenos:
+
+   int ier;
+   char sampleitem[200];
+
+   ier = cg_iRIC_Read_String(fid, "sampleitem", sampleitem)
+
+Python
+'''''''
+
+.. code-block:: python
+   :caption: Code example to load a string type condition (for calculation conditions and grid generating conditions) Python
+   :name: widget_example_string_load_calccond_python
+   :linenos:
+
+   sampleitem = cg_iRIC_Read_String(fid, "sampleitem")
+
+Boundary condition
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+FORTRAN
+''''''''''
+
+.. code-block:: fortran
+   :caption: Code example to load a string type condition (for boundary conditions) FORTRAN
+   :name: widget_example_string_load_bcond_fortran
    :linenos:
 
    integer:: ier
    character(200):: sampleitem
 
-   call cg_iric_read_string(fid, "sampleitem", sampleitem, ier)
+   call cg_iRIC_Read_BC_String(fid, "inflow", 1, "sampleitem", sampleitem, ier)
 
-.. code-block:: fortran
-   :caption: Code example to load a string type condition (for boundary conditions)
-   :name: widget_example_string_load_bcond
+C/C++
+''''''''''
+
+.. code-block:: c
+   :caption: Code example to load a string type condition (for boundary conditions) C/C++
+   :name: widget_example_string_load_bcond_c
    :linenos:
 
-   integer:: ier
-   character(200):: sampleitem
+   int ier;
+   char sampleitem[200];
 
-   call cg_iric_read_bc_string(fid, "inflow", 1, "sampleitem", sampleitem, ier)
+   ier = cg_iRIC_Read_BC_String(fid, "inflow", 1, "sampleitem", sampleitem)
+
+Python
+''''''''''
+
+.. code-block:: python
+   :caption: Code example to load a string type condition (for boundary conditions) Python
+   :name: widget_example_string_load_bcond_python
+   :linenos:
+
+   sampleitem = cg_iRIC_Read_BC_String(fid, "inflow", 1, "sampleitem")

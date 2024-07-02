@@ -1,7 +1,7 @@
 .. _calccond_def_examples:
 
 Examples of calculation conditions, boundary conditions, and grid generating condition
----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 Example of definitions of calculating conditions in solver definition
 files, grid generating condition if grid generating program definition
@@ -41,7 +41,7 @@ show the sample codes for loading, so please refer to :ref:`how_to_dev_solver`,
    :header-rows: 1
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    03_01_01_example_string
    03_01_02_example_filename_read
@@ -53,3 +53,4 @@ show the sample codes for loading, so please refer to :ref:`how_to_dev_solver`,
    03_01_08_example_func
    03_01_09_example_func_multi
    03_01_10_example_cgns
+   03_01_11_example_complex

@@ -1,8 +1,8 @@
 CGNS file name etc.
----------------------
+==========================
 
 Abstract
-~~~~~~~~~~~~~~~~
+-----------------
 
 "CGNS file name" and "Calculation result in CGNS file" is used together.
 
@@ -11,11 +11,8 @@ Widget to select CGNS file name can be created with valueType attribute "cgns_fi
 Widget to select calculation result in CGNS file can be created with valueType attribute "result_gridNodeReal" etc., and 
 cgnsFile attribute that refers the name of "CGNS file name" widget.
 
-An example of definition to display widget to select CGNS file, and widget to select calculation result with real values defined at grid nodes, that is
-contained in the CGNS file, are shown in :numref:`widget_example_cgns_def`. The widgets created with the definition are shown in :numref:`widget_example_cgns`.
-
-An example of FORTRAN programs to read the values that users have input with the widgets
-are shown in :numref:`widget_example_cgns_load_calccond` and :numref:`widget_example_cgns_load_bcond`.
+Definition
+-----------------
 
 .. code-block:: xml
    :caption: Example of a CGNS file name and Calculation result in CGNS
@@ -29,6 +26,9 @@ are shown in :numref:`widget_example_cgns_load_calccond` and :numref:`widget_exa
      <Definition valueType="result_gridNodeReal" cgnsFile="input_file" />
    </Item>
 
+Example of widget
+------------------------
+
 .. _widget_example_cgns:
 
 .. figure:: images/widget_example_cgns.png
@@ -36,30 +36,96 @@ are shown in :numref:`widget_example_cgns_load_calccond` and :numref:`widget_exa
 
    Widget example of CGNS file name and Calculation result in CGNS
 
+Example code to read data
+------------------------------
+
+Calculation condition, Grid generating condition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FORTRAN
+'''''''''''
+
 .. code-block:: fortran
-   :caption: Code example to load CGNS file name and Calculation result in CGNS (for calculation conditions and grid generating conditions)
-   :name: widget_example_cgns_load_calccond
+   :caption: Code example to load CGNS file name and Calculation result in CGNS (for calculation conditions and grid generating conditions) FORTRAN
+   :name: widget_example_cgns_load_calccond_fortran
    :linenos:
 
    integer:: ier
    character(200):: cgnsName, resultName
 
-   call cg_iric_read_string(fid, "input_file", cgnsName, ier)
-   call cg_iric_read_string(fid, "result_to_read", resultName, ier)
+   call cg_iRIC_Read_String(fid, "input_file", cgnsName, ier)
+   call cg_iRIC_Read_String(fid, "result_to_read", resultName, ier)
+
+C/C++
+''''''''''
+
+.. code-block:: c
+   :caption: Code example to load CGNS file name and Calculation result in CGNS (for calculation conditions and grid generating conditions) C/C++
+   :name: widget_example_cgns_load_calccond_c
+   :linenos:
+
+   int ier;
+   char cgnsName[200], resultName[200];
+
+   ier = cg_iRIC_Read_String(fid, "input_file", cgnsName);
+   ier = cg_iRIC_Read_String(fid, "result_to_read", resultName);
+
+
+Python
+''''''''''
+
+.. code-block:: python
+   :caption: Code example to load CGNS file name and Calculation result in CGNS (for calculation conditions and grid generating conditions) Python
+   :name: widget_example_cgns_load_calccond_python
+   :linenos:
+
+   cgnsName = cg_iRIC_Read_String(fid, "input_file")
+   resultName = cg_iRIC_Read_String(fid, "result_to_read")
+
+Boundary condition
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+FORTRAN
+''''''''''
 
 .. code-block:: fortran
-   :caption: Code example to load CGNS file name and Calculation result in CGNS (for boundary condition)
-   :name: widget_example_cgns_load_bcond
+   :caption: Code example to load CGNS file name and Calculation result in CGNS (for boundary conditions) FORTRAN
+   :name: widget_example_cgns_load_bcond_fortran
    :linenos:
 
    integer:: ier
    character(200):: cgnsName, resultName
 
-   call cg_iric_read_bc_string(fid, "inflow", 1, "input_file", cgnsName, ier)
-   call cg_iric_read_bc_string(fid, "inflow", 1, "result_to_read", resultName, ier)
+   call cg_iRIC_Read_BC_String(fid, "inflow", 1, "input_file", cgnsName, ier)
+   call cg_iRIC_Read_BC_String(fid, "inflow", 1, "result_to_read", resultName, ier)
+
+C/C++
+''''''''''
+
+.. code-block:: c
+   :caption: Code example to load CGNS file name and Calculation result in CGNS (for boundary conditions) C/C++
+   :name: widget_example_cgns_load_bcond_c
+   :linenos:
+
+   int ier;
+   char cgnsName[200], resultName[200];
+
+   ier = cg_iRIC_Read_BC_String(fid, "inflow", 1, "input_file", cgnsName)
+   ier = cg_iRIC_Read_BC_String(fid, "inflow", 1, "result_to_read", resultName)
+
+Python
+''''''''''
+
+.. code-block:: python
+   :caption: Code example to load CGNS file name and Calculation result in CGNS (for boundary conditions) Python
+   :name: widget_example_cgns_load_bcond_python
+   :linenos:
+
+   cgnsName = cg_iRIC_Read_BC_String(fid, "inflow", 1, "input_file")
+   resultName = cg_iRIC_Read_BC_String(fid, "inflow", 1, "result_to_read")
 
 Calculation result types and corresponding "valueType" values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------
 
 The list of calculation result types and corresponding "valueType" values are shown in :numref:`cgns_resulttype_table`.
 
