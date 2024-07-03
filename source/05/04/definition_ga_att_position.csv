@@ -1,3 +1,5 @@
 Value,Meaning
 node,Grid nodes
 cell,Grid cells
+iface,Edges between cells (I-direction)
+jface,Edges between cells (J-direction)
