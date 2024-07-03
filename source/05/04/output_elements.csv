@@ -1,0 +1,4 @@
+Name,Required,Description
+Definition,Yes,Definition of element
+ColorMapSetting,,Default colormap setting (In case of real number type)
+EnumerateColorMapSetting,,Default colormap setting (In case of integer type)
