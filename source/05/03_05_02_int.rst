@@ -1,0 +1,67 @@
+integer
+===========
+
+Definition
+-------------
+
+.. code-block:: xml
+   :caption: Example of a integer type calculation result
+   :name: result_example_int_def
+   :linenos:
+
+   <Output name="wet" caption="Wet">
+     <Definition valueType="integer" position="node">
+       <Enumeration value="0" caption="Dry" />
+       <Enumeration value="1" caption="Wet" />
+     </Definition>
+   </Output>
+
+Example code to output data
+--------------------------------
+
+FORTRAN
+''''''''''
+
+.. code-block:: fortran
+   :caption: Code example to output a integer type calculation result defined at nodes FORTRAN
+   :name: result_example_int_output_fortran
+   :linenos:
+
+   integer, dimension(:), allocatable:: wet
+
+   ! Allocate memory
+   allocate(wet(nodecount))
+   ! Write data to memory
+   wet = 0
+   ! Output data
+   call cg_iRIC_Write_Sol_Node_Integer(fid, "wet", wet, ier)
+
+C/C++
+'''''''
+
+.. code-block:: c
+   :caption: Code example to output a integer type calculation result defined at nodes C++
+   :name: result_example_int_output_c
+   :linenos:
+
+   std::vector<int> wet;
+
+   ! Allocate memory
+   wet.assign(nodecount, 0);
+   ! Output data
+   ier = cg_iRIC_Write_Sol_Node_Integer(fid, "wet", wet.data())
+
+Python
+'''''''
+
+.. code-block:: python
+   :caption: Code example to output a integer type calculation result defined at nodes Python
+   :name: result_example_int_output_python
+   :linenos:
+
+   import numpy
+   
+   # Allocate memory
+   depth = numpy.zeros(shape=(nodecount,))
+   # Output data
+   cg_iRIC_Write_Sol_Node_Integer(fid, "wet", wet)

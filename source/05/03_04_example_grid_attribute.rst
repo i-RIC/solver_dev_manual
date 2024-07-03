@@ -3,7 +3,7 @@
 Example of grid attribute definition
 =============================================
 
-Examples of definitions of grid attributes and example code to read data are show below.
+Examples of definitions of grid attributes and example code to read data are shown below.
 
 .. toctree::
    :maxdepth: 2

@@ -1,0 +1,64 @@
+Real number
+================
+
+Definition
+-------------
+
+.. code-block:: xml
+   :caption: Example of a real number type calculation result
+   :name: result_example_real_def
+   :linenos:
+
+   <Output name="depth" caption="Depth">
+     <Definition valueType="real" position="node" />
+   </Output>
+
+Example code to output data
+--------------------------------
+
+FORTRAN
+''''''''''
+
+.. code-block:: fortran
+   :caption: Code example to output a real number type calculation result defined at nodes FORTRAN
+   :name: result_example_real_output_fortran
+   :linenos:
+
+   double precision, dimension(:), allocatable:: depth
+
+   ! Allocate memory
+   allocate(depth(nodecount))
+   ! Write data to memory
+   depth = 0
+   ! Output data
+   call cg_iRIC_Write_Sol_Node_Real(fid, "depth", depth, ier)
+
+C/C++
+'''''''
+
+.. code-block:: c
+   :caption: Code example to output a real number type calculation result defined at nodes C++
+   :name: result_example_real_output_c
+   :linenos:
+
+   std::vector<double> depth;
+
+   ! Allocate memory
+   depth.assign(nodecount, 0);
+   ! Output data
+   ier = cg_iRIC_Write_Sol_Node_Real(fid, "depth", depth.data())
+
+Python
+'''''''
+
+.. code-block:: python
+   :caption: Code example to output a real number type calculation result defined at nodes Python
+   :name: result_example_real_output_python
+   :linenos:
+
+   import numpy
+   
+   # Allocate memory
+   depth = numpy.zeros(shape=(nodecount,))
+   # Output data
+   cg_iRIC_Write_Sol_Node_Real(fid, "depth", depth)
