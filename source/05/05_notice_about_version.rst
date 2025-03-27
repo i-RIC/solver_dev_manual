@@ -31,9 +31,8 @@ Fix number can be omitted.
 
 In iRIC, project files compatibility is like the following:
 
-* Project files with different major number are not compatible.
-* Project files with same major number and smaller minor number are compatible.
-* Project files with same major number, same minor number and different fix number are compatible.
+* Project files with smaller or equal major number are compatible.
+* minor number and fix number are not used for compatibility check.
 
 :numref:`version_compatibility` shows the examples of compatibility with
 different solver version numbers.
