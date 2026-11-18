@@ -1,3 +1,4 @@
 Name,Value,Required,Description
 name,String,Yes,Name of element
 caption,String,,String to be displayed on the dialog
+tooltips,String,,"Can only be specified in the definition of grid attributes. Hint information, displayed as a tooltip in the object browser. If omitted, the tooltips attribute of the child Definition element is used."

@@ -2,4 +2,4 @@ Name,Value,Required,Description
 valueType,Refer to the table below,Yes,Value type
 default,String,,Default value
 noSort,true or false,,When value "true" is specified, the table on the dialog is not sorted by Param value.
-tooltips,String,,Hint information
+tooltips,String,,"Hint information. Displayed as a tooltip on the input item. It can be translated with the solver translation files."

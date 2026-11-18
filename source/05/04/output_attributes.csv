@@ -1,3 +1,4 @@
 Name,Value,Required,Description
 name,String,Yes,Name of element
 caption,String,Yes,String to be displayed on the dialog
+tooltips,String,,"Hint information. Displayed as a tooltip in the object browser. It can be translated with the solver translation files."
